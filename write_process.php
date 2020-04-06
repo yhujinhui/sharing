@@ -1,4 +1,4 @@
-<!-- 메인화면에서 입력한 정보를 mysql에 연동 -->
+<!-- 빵굽기화면에서 입력한 정보를 mysql에 연동 -->
 <?php 
 require_once('conn.php');
 

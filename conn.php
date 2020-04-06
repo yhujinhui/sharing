@@ -1,3 +1,3 @@
 <?php  
-$conn=mysqli_connect('localhost','jinhee','wlsgml1004','sharing');
+$conn=mysqli_connect('192.168.198.1','jinhee','wlsgml1004','sharing');
 ?>

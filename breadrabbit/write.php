@@ -9,14 +9,14 @@
 	<meta charset="UTF-8">
 	<title>빵굽기</title>
 	<style>
-      @import url("css/store.css");      
+      @import url("css/header.css");
+      @import url("css/write.css");
 	</style>
 </head>
 <body>
-	<header>
-		<span><a href="javascript:void(0);"  id="main_title" onClick="top.location='javascript:location.reload()'">빵굽는 토끼</a></span>
-		<span><a href="" id="store">상점</a></span>		
-	</header>
+	<?php 
+	    require_once("urls/header.html");
+	?>
 	<article>
 		<form action="write_process.php" method="post">
 			<div><input type="text" name="title" placeholder="빵 이름을 지어주세요"></div>

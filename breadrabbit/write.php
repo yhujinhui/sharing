@@ -9,6 +9,7 @@
 	<meta charset="UTF-8">
 	<title>빵굽기</title>
 	<style>
+
 		#main_title{
 			font-size: 1rem;
 		}
@@ -17,6 +18,10 @@
 			float:right;
 		}
 		header{
+			width:100%;
+                float : left;
+                height : 70px;
+                background-color : #FFB7B7;
 			border:1px solid gray;
 			padding:10px;
 		}
@@ -30,6 +35,8 @@
 		}
 	</style>
 </head>
+
+
 <body>
 	<header>
 		<span><a href="javascript:void(0);"  id="main_title" onClick="top.location='javascript:location.reload()'">빵굽는 토끼</a></span>

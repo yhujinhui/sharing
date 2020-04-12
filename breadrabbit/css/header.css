@@ -1,0 +1,49 @@
+body{
+    margin:0px;
+}
+header{ 
+    width:100%;
+    float : left;
+    height : 70px;
+    background-color : #FFB7B7;
+}
+#cookrabbit{
+    float : left;
+    margin-left : 40px;
+    margin-top : -5px;
+    color : white;
+    font-family : 'Gothic A1', sans-serif;
+    cursor:pointer;
+}
+#bake{
+    float : left;
+    color : white;
+    font-family : 'Gothic A1', sans-serif;
+    font-size : 25px;
+    font-weight : bold;
+    margin-left : 1150px;
+    margin-top : -5px;
+    cursor : pointer;
+}
+#store{
+    float : right;
+    color : white;
+    font-family : 'Gothic A1', sans-serif;
+    font-size : 25px;
+    font-weight : bold;
+    margin-right : 20px;
+    margin-top : -5px;
+    cursor : pointer;
+}
+hr{
+   border : solid 2px #CEA0A0;
+   margin-bottom : 0px;
+}
+main{
+   width : 100%;
+   float : left;
+   height : 90%;
+}
+body{
+    background-color : #FFC8C8;
+}

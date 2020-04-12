@@ -1,0 +1,23 @@
+#main_title{
+	font-size: 1rem;
+}
+#store{
+	font-size: 1rem;
+	float:right;
+}
+header{
+	width:100%;
+        float : left;
+        height : 70px;
+        background-color : #FFB7B7;
+	border:1px solid gray;
+	padding:10px;
+}
+article{
+	border:1px solid gray;
+	text-align: center;
+	padding:10px;
+}
+body{
+	margin:0px;
+}

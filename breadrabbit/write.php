@@ -9,25 +9,7 @@
 	<meta charset="UTF-8">
 	<title>빵굽기</title>
 	<style>
-		#main_title{
-			font-size: 1rem;
-		}
-		#store{
-			font-size: 1rem;
-			float:right;
-		}
-		header{
-			border:1px solid gray;
-			padding:10px;
-		}
-		article{
-			border:1px solid gray;
-			text-align: center;
-			padding:10px;
-		}
-		body{
-			margin:0px;
-		}
+      @import url("css/store.css");      
 	</style>
 </head>
 <body>

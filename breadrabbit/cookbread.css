@@ -1,0 +1,21 @@
+.left-button{
+    background: url("images/leftarrow.png") no-repeat;
+    border: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    overflow: visible;
+}
+
+.right-button{
+    background: url("images/rightarrow.png") no-repeat;
+    border: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.breadImg{
+    width: 125px;
+    height: 100px;
+}

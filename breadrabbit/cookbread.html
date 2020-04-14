@@ -2,28 +2,41 @@
     <head>
         <meta charset="UTF-8">
         <title>빵 굽기 화면</title>
-        <link href="css/cookbread.css" rel="stylesheet">   
+        <link href="cookbread.css" rel="stylesheet">   
     </head>
 
         <body>
 
             <form action="cookbreadAction.php" method="post">
+
                 <div>
-                    <input type="button" class="left-button">
-                    <img src="images/bread2.png" class="breadImg">
-                    <input type="button" class="right-button">
+                    <img src="images/bread1.png" id="breadImg">
                 </div>
+                <div class="selectKinds">
+                    <select id="selectKinds" onchange="alert_select_value(this)">
+                        <option vlaue="none" disabled selected="selected">빵 종류를 선택하세요</option>
+                        <option value="course">진로</option>
+                        <option value="family">가족</option>
+                        <option value="friend">친구</option>
+                        <option value="love">사랑</option>
+                        <option value="other">기타</option>
+                    </select>
+                    <br/>
+                </div>
+
                 <div>
                     <p>
-                        <input type="text" name="breadName" value="빵 이름을 지어주세요">
+                        <input type="text" name="breadName" id="breadText" placeholder="빵 이름을 지어주세요">
                     </p>
                     <p>
-                        <input type="textarea" name="breadContents" value="고민을 적어주세요">
+                        <textarea rows="10" cols="33" name="breadContents" id="breadTextArea" placeholder="고민을 적어주세요"></textarea>
                     </p>
-                    <input type="image" src="images/leftarrow.png" alt="">
+                    <img src = "images/bakingButton.png" width = "200px" height = "50px" onmouseover="this.src='images/bakingButton2.png'" onmouseout="this.src='images/bakingButton.png'">               
                 </div>
+
             </form>
         
+            <script src="cookbread.js"></script>
         </body>
    
 </html>

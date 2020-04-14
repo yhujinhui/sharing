@@ -15,7 +15,7 @@
 </head>
 <body>
 	<?php 
-	    require_once("urls/header.html");
+	    require_once("lib/header.html");
 	?>
 	<article>
 		<form action="write_process.php" method="post">

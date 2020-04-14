@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
+    <title></title>
+  
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
+    <!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      @import url("css/login.css");
+  </style>
+
+  </head>
+  <body class="text-center">
+  		<header>
+     		<a href="login.html" id='title'><h1>로그인</h1></a>
+    	</header>
+  		 
+  		<article>
+  			<form action="login_process.php" method="post" autocomplete='off'>
+     			<label for="input_id">
+        			<div><input type="text" name='id' placeholder="email" id="input_id" autocomplete='off'></div>
+      			</label><br>
+      			<label for="input_password">
+        			<div><input type="password" name='password' placeholder="password" id="input_password" autocomplete='off'></div>
+            </label><br>
+      			<div><input type="submit" value="로그인" cols="30" style="font-size:2rem"></div>
+    		</form>
+        <p><a href="sign.php" id='sign' style="margin-top:5px">회원가입</a></p>  
+    		<hr width="400px"color="gray" size="1">
+  		</article>
+    	<nav>
+        	<a href="#">아이디찾기</a>
+        	<a href="#">비밀번호찾기 </a>
+    	</nav>
+    <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+   <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

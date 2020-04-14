@@ -12,7 +12,7 @@
   </head>
   <body>
     <?php
-    require_once("urls/header.html");
+    require_once("lib/header.html");
     ?>
      <main>
          <div id="storeback"> <img src="images/store.png" width="1540px" height="690px"></div>

@@ -1,0 +1,59 @@
+#title{
+  text-decoration: none;
+  padding:100px;  
+  font-size: 2rem;
+    
+}
+ h2{
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+.fieldlabel{
+  float:left;
+  width:120px;
+  text-align:left;
+  margin-top: 20px;
+  padding-left:10px;
+}
+.formfield{
+  margin-top: 10px;
+}
+.btnfield{
+  margin-top:15px;
+  float:left;
+}
+.container{
+  border :1px ;
+  width:700px;
+}
+@media screen and (max-width: 767px) { 
+input,hr{
+  width:450px;
+}
+h1{
+  font-size:25px;
+}
+
+  input{
+ 
+    height:45px;
+  }
+}
+
+@media screen and (min-width: 768px) { 
+
+  input{
+      width:400px;
+      height:45px;
+  }
+  hr{
+      margin-top: 40px;
+      margin-bottom: 20px;
+  }
+  footer a{
+    text-decoration: none;  
+  }
+  input:-webkit-autofill{
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+  }
+}

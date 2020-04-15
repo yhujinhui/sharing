@@ -38,3 +38,13 @@ function checkPw() {
     return true;
   }
 }//패스워드 일치하는지 확인
+
+function mouseover(){ 
+  document.getElementById("container-right").style.width="1200px";
+  document.getElementById("container-right").style.display="block";
+
+
+}
+function mouseleave(){
+  document.getElementById("container-right").style.display="none";
+}

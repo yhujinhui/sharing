@@ -19,9 +19,11 @@
     <style>
       @import url("css/login.css");
   </style>
-
+<!--  -->
   </head>
-  <body class="text-center">
+  <body class="text-center" onload="document.querySelector('body').style.backgroundColor='#F5E5DE';">
+    <a href=""><img src="images/logo.png" alt="로고" height="200px" width="200px" id="logo"></a>
+    <div id="content-center" class="text-center">
   		<header>
      		<a href="login.html" id='title'><h1>로그인</h1></a>
     	</header>
@@ -34,15 +36,16 @@
       			<label for="input_password">
         			<div><input type="password" name='password' placeholder="password" id="input_password" autocomplete='off'></div>
             </label><br>
-      			<div><input type="submit" value="로그인" cols="30" style="font-size:2rem"></div>
+      			<div><input type="submit" value="로그인" cols="30" style="font-size:2rem; background-color:#FCE6C3; border:0; outline: 0"></div>
     		</form>
-        <p><a href="sign.php" id='sign' style="margin-top:5px">회원가입</a></p>  
+        <p><a href="sign.php" id='sign' style="margin-top:8px;">회원가입</a></p>  
     		<hr width="400px"color="gray" size="1">
-  		</article>
-    	<nav>
-        	<a href="#">아이디찾기</a>
-        	<a href="#">비밀번호찾기 </a>
-    	</nav>
+      	<nav id="nav">
+          	<a href="#">아이디찾기</a>
+          	<a href="#">비밀번호찾기 </a>
+      	</nav>
+      </article>
+      </div>
     <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->

@@ -21,11 +21,15 @@
       @import url("css/sign.css");
     </style>
   </head>
-  <body class="text-center">
-    <div class="container">
-      <script src="js/sign.js"></script> 
+  <body class="text-center" onload="document.querySelector('body').style.backgroundColor='#F5E5DE';">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/sign.js"></script> 
+    <a href=""><img src="images/logo.png" alt="로고" height="200px" width="200px" id="logo"></a>
+    <div class="container" id="container" onmouseover="mouseover()" onmouseleave="mouseleave(1)"> 
+
+      <span class="container-left" class="text-center">
       <header>
-        <a href="sign.php" id='title'><h2 style="margin-top:170px;">회원가입</h2></a>
+        <a href="sign.php" id='title'><h2 class="text-center">회원가입</h2></a>
       </header>
         <!-- onSubmit="return checkPw(this)" -->
       <article>
@@ -44,11 +48,15 @@
           <div id="passwordCheckText"></div>
           <div class="fieldlabel"><label for="input_tel">휴대폰</label></div>
           <div class="formfield"><input type="tel" name='tel' placeholder="ex)010-0000-0000" id="input_tel" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" onKeyup="inputPhoneNumber(this);" maxlength="13"required></div>       
-          <div class="btnfield"><input type="submit" value="가입" style="font-size:2rem; width:595px; height: 65px"></div>
+          <div class="btnfield"><input type="submit" value="가입" id="signbutton"></div>
         </form>  
-        <hr width="400px"color="gray" size="1">
       </article>
+      </span>
+      <span class="container-right" id="container-right">
+        <img src="images/logo.png" alt="로고이미지" height="500px" width="500px" id="image">
+      </span>
     </div>
+
     <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->

@@ -71,12 +71,21 @@ article{
   float:left;
 }
 #container-right{
-  /*border: 1px solid gray;*/
+  padding-top: 60px;
   /*float:right;*/
   width:0px;
   display:none;
 }
+.image{
+  margin:0px 10px 10px 0px;
+  height: 180px;
+  width:180px;
+  /*border :1px gray;*/
+}
 
+#rabbit{
+  border : 3px dashed #F94373;
+}
 @media screen and (max-width: 767px) { 
 input{
   width:450px;

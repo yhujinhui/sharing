@@ -10,9 +10,6 @@ $filtered=array(
 );
 $bool=true;
 while($row=mysqli_fetch_array($result)){
-  //print_r($row);
-  // print_r($filtered['id']);
-  // print_r($filtered['password']);
   if(!empty($filtered['id'])&&!empty($filtered['password'])){
     if($filtered['id']==$row['id']&&$filtered['password']==$row['password']){
       $bool=false;

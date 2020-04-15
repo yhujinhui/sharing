@@ -8,7 +8,9 @@ $filtered=array(
 'id'=>mysqli_real_escape_string($conn,$_POST['id']),
 'password'=>mysqli_real_escape_string($conn,$_POST['password']),
 'tel'=>mysqli_real_escape_string($conn,$_POST['tel']),
-'name'=>mysqli_real_escape_string($conn,$_POST['name'])
+'name'=>mysqli_real_escape_string($conn,$_POST['name']),
+'profile'=>mysqli_real_escape_string($conn,$_POST['profile']),
+
 );
 
 $bool=true;
@@ -33,7 +35,7 @@ while($row=mysqli_fetch_array($result)){
   }
 }
 if($bool){
-	$sql_sign="insert sign(id,password,tel,name) values('{$filtered['id']}','{$filtered['password']}','{$filtered['tel']}','{$filtered['name']}')";
+	$sql_sign="insert sign(id,password,tel,name,profile) values('{$filtered['id']}','{$filtered['password']}','{$filtered['tel']}','{$filtered['name']}','{$filtered['profile']}')";
  	$check=mysqli_error($conn);
  	$result_sign=mysqli_query($conn,$sql_sign);
 	  echo '<script>

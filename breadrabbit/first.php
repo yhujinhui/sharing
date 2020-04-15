@@ -15,7 +15,7 @@
 
       <div class="container" id="main_left">
         <span><h1 id="title">빵 굽는 토끼</h1></span> 
-         <img src="images/first_deco.png" width="1000px" height="957px"id=first_decoimg >
+         <img src="images/first_deco.png" backgroud-attachment:fixed width="1000px" height="957px"id=first_decoimg >
          <img src="images/backbaking.png" width="650px" height="544px" id=backbakingimg >
          
         <p id="description">입 밖으로 꺼내지 못하는 고민이 있거나

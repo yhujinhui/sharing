@@ -10,7 +10,8 @@
   </head>
   <body>
           <?php
-          $conn = mysqli_connect("localhost","root","mirim2","saying","3307");
+          // $conn = mysqli_connect("localhost","root","mirim2","saying","3307");
+          require_once('conn.php');
 
           if(!$conn){
               echo "Faild to connect to MySQl: ".mysqli_connect_error();

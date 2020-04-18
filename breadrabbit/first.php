@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <title>빵 굽는 토끼🐰</title>
         <style type = "text/css">
-         /* @import url("css/header.css");*/
           @import url("css/first.css");
         </style>
     </head>

@@ -10,7 +10,14 @@
     </head>
     <body>
       <header>
-        <div id=logo>로고</div>
+        <link href="https://fonts.googleapis.com/css?family=Gothic+A1&display=swap" rel="stylesheet">
+        <div id="login" onclick="location.href='login.html'"> <p> 로그인 </p> </div>
+        <div id="store" onclick="location.href='store.php'">    <p> 상점 가기</p>
+        </div>
+        <div id="breadcook" onclick="location.href='cookbread.html'"> <p> 빵 굽기 </p>
+</div>
+<div id=logo onclick="location.href='first.php'"><img src="images/logo.png" width="150px" height="150px"></div>
+
       </header>
 
       <div class="container" id="main_left">

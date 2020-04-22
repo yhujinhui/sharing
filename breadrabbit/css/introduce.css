@@ -1,11 +1,11 @@
+
 body{
     margin:0px;
+    background-color:#F5E5DE;
+    font-family : 'Gothic A1', sans-serif;
 }
 header{
-    float:left;
-    width:100%;
     height:30%;
-    
     background-color:#F5E5DE;
 }
 #login{
@@ -34,80 +34,41 @@ header{
     cursor: pointer;
 }
 main{
-    float:left;
-    width:100%;
-    height:70%;
-    background-color:#F5E5DE;
+    text-align: center;
+    margin-top:-50px;
+}
+.row{
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top:40px;
 }
 
-#yejin{
-    float:left;
-    position: relative;
-    top:-10%;
-    left:15%;
-    border-radius: 70%; 
-    /* 원형 */
-    overflow: hidden;
-}
-
-#jinhee{
-    float:left;
-    position: relative;
-    top:-10%;
-    left:26%;
+.item{
+    flex-basis:350px;
+    flex-shrink: 1;
+    margin:0px 70px 0px 70px;
+    overflow: hidden;/*이미지가 div에 맞게*/
     border-radius: 70%;
-    overflow: hidden;
+    width:250px;
+    height: 250px;
 }
-#dayeon{
-    float:left;
-    position: relative;
-    top:-10%;
-    left:37%;
-    border-radius: 70%;
-    overflow: hidden;
-}
-#y_name{
-    float:left;
-    margin-top:15%;
-    margin-left:-30%;
-    font-family : 'Gothic A1', sans-serif;
-    font-size:24px;
-}
-#j_name{
-    float:left;
-    margin-top:15%;
-    margin-left:-3%;
-    font-family : 'Gothic A1', sans-serif;
-    font-size:24px;
-}
-#d_name{
-    float:left;
-    margin-top:15%;
-    margin-left:18%;
-    font-family : 'Gothic A1', sans-serif;
-    font-size:24px;
-}
-#y_mail{
-    float:left;
-    margin-top:0%;
-    margin-left:13%;
-    font-family : 'Gothic A1', sans-serif;
-    font-size:24px;
+.container{
+    text-align: center;
 
 }
-#j_mail{
-    float:left;
-    margin-top:0%;
-    margin-left:6%;
-    font-family : 'Gothic A1', sans-serif;
-    font-size:24px;
-
+.profile{
+     width: 250px;
+    height: 250px;
+    object-fit: cover;  
 }
-#d_mail{
-    float:left;
-    margin-top:0%;
-    margin-left:5%;
-    font-family : 'Gothic A1', sans-serif;
-    font-size:24px;
-
+.content{
+     font-size:24px;
 }
+a{
+    text-decoration: none;
+}
+ a:link { color: black; text-decoration: none;}
+ a:visited { color: black; text-decoration: none;}
+ a:hover { color: black; text-decoration: none;}

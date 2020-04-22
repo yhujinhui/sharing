@@ -5,155 +5,63 @@
     <meta charset="UTF-8">
     <title>빵 굽는 토끼🐰</title>
     <style type = "text/css">
-body{
-    margin:0px;
-}
-header{
-    float:left;
-    width:100%;
-    height:30%;
-    
-    background-color:#F5E5DE;
-}
-#login{
-    float:right;
-    margin-right:3%;
-    font-family : 'Gothic A1', sans-serif;
-    cursor: pointer;
-    font-size:24px;
-}
-#store{
-    float:right;
-    margin-right:2%;
-    font-family : 'Gothic A1', sans-serif;
-    cursor: pointer;
-    font-size:24px;
-}
-#breadcook{
-    float:right;
-    margin-right:2%;
-    font-family : 'Gothic A1', sans-serif;
-    cursor: pointer;
-    font-size:24px;
-}
 
-#logo{
-    cursor: pointer;
-}
-main{
-    float:left;
-    width:100%;
-    height:70%;
-    background-color:#F5E5DE;
-}
-
-#yejin{
-    float:left;
-    position: relative;
-    top:-10%;
-    left:15%;
-    border-radius: 70%; 
-    /* 원형 */
-    overflow: hidden;
-}
-
-#jinhee{
-    float:left;
-    position: relative;
-    top:-10%;
-    left:26%;
-    border-radius: 70%;
-    overflow: hidden;
-}
-#dayeon{
-    float:left;
-    position: relative;
-    top:-10%;
-    left:37%;
-    border-radius: 70%;
-    overflow: hidden;
-}
-#y_name{
-    float:left;
-    margin-top:15%;
-    margin-left:-30%;
-    font-family : 'Gothic A1', sans-serif;
-    font-size:24px;
-}
-#j_name{
-    float:left;
-    margin-top:15%;
-    margin-left:-3%;
-    font-family : 'Gothic A1', sans-serif;
-    font-size:24px;
-}
-#d_name{
-    float:left;
-    margin-top:15%;
-    margin-left:11%;
-    font-family : 'Gothic A1', sans-serif;
-    font-size:24px;
-}
-#y_mail{
-    float:left;
-    margin-top:0%;
-    margin-left:13%;
-    font-family : 'Gothic A1', sans-serif;
-    font-size:24px;
-
-}
-#j_mail{
-    float:left;
-    margin-top:0%;
-    margin-left:6%;
-    font-family : 'Gothic A1', sans-serif;
-    font-size:24px;
-
-}
-#d_mail{
-    float:left;
-    margin-top:0%;
-    margin-left:5%;
-    font-family : 'Gothic A1', sans-serif;
-    font-size:24px;
-
-}
-
-
-        </style>
-
-    
+        @import url("css/introduce.css");
+    </style>
 </head>
 <body>
     <header>
 
     <link href="https://fonts.googleapis.com/css?family=Gothic+A1&display=swap" rel="stylesheet">
     <div id="login" onclick="location.href='login.html'"> <p> 로그인 </p> </div>
-        <div id="store" onclick="location.href='store.php'">    <p> 상점 가기</p>
+        <div id="store" onclick="location.href='store.php'"><p> 상점 가기</p>
         </div>
         <div id="breadcook" onclick="location.href='cookbread.html'"> <p> 빵 굽기 </p>
         
 </div> 
 <div id=logo onclick="location.href='first.php'"><img src="images/logo.png" width="150px" height="150px"></div>
-
     </header>
 
     <main>
         <link href="https://fonts.googleapis.com/css?family=Gothic+A1&display=swap" rel="stylesheet">
-
-        <div id= "yejin"> <img src="images/yejin.jpg" width="250px" height="250px"> </div>
-        <div id="jinhee"><img src="images/jinhee.jpg" width="250px" height="250px"></div>
-        <div id="dayeon"><img src="images/dayeon.jpg" width="250px" height="250px"></div>
-        <div id="y_name">  이름: 이예진<br> SNS: _y._.zin</div>
-        <div id="j_name"    >  이름: 유진희<br> SNS: yoojinhee030207 </div>
-        <div id="d_name">  이름: 최다연<br> SNS:da_yeon_.__</div>
-        <div id="y_mail"> Mail: s2018s16@e-mirim.hs.kr<br> 학교: 미림여자정보과학고등학교</div>
-        <div id="j_mail"> Mail: s2018s11@e-mirim.hs.kr<br> 학교: 미림여자정보과학고등학교</div>
-        <div id="d_mail"> Mail: s2018s20@e-mirim.hs.kr<br> 학교: 미림여자정보과학고등학교</div>
-
-        
-
-
+        <div class="container">
+            <div class="row">
+                <div>
+                    <div class="item">
+                        <img class="profile"src="images/yejin.jpg" >
+                    </div><br>
+                    <div class="content">
+                        이름: 이예진<br>
+                        SNS: <a href="">_y._.zin</a><br>
+                        Mail: s2018s16@e-mirim.hs.kr<br>
+                        학교: 미림여자정보과학고등학교
+                    </div>
+                </div>
+                <div>
+                    <div class="item">
+                        <img class="profile"src="images/jinhee.jpg">
+                    </div><br>
+                    <div class="content">
+                        이름: 유진희<br>
+                        SNS: <a href="https://github.com/yoojinhee">yoojinhee</a><br>
+                        Mail: s2018s11@e-mirim.hs.kr<br>
+                        학교: 미림여자정보과학고등학교
+                    </div>
+                </div>
+                <div>
+                    <div class="item">
+                        <img class="profile"src="images/dayeon.jpg">
+                    </div><br>
+                    <div class="content">
+                        이름: 최다연<br>
+                        SNS: <a href="">da_yeon_.__</a><br>
+                        Mail: s2018s20@e-mirim.hs.kr<br>
+                        학교: 미림여자정보과학고등학교
+                    </div>
+                </div>
+                
+            </div>
+        </div>
     </main>
 </body>
 </html>

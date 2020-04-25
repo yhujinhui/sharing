@@ -1,5 +1,5 @@
 html{
-    background: url(images/cookBackground.png) no-repeat center center fixed; 
+    background: url(../images/cookBackground.png) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -70,14 +70,14 @@ select, input, input::placeholder, textarea, textarea::placeholder{
 }
 
 input#submitButton{
-    background: url(images/bakingButton.png);
+    background: url(../images/bakingButton.png);
     background-repeat: no-repeat;
     width: 250px;
     height: 65px;
     border: 0;
 }
 input#submitButton:hover{
-    background: url(images/bakingButton2.png);
+    background: url(../images/bakingButton2.png);
     background-repeat: no-repeat;
     width: 250px;
     height: 65px;

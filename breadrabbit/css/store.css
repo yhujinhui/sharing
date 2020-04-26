@@ -2,33 +2,7 @@ body{
     margin:0px;
     background-color:#F5E5DE;
 }
-header{
-    /*float:left;*/
-    /*width:100%;*/
-    /*height:30%;*/
-    background-color:#F5E5DE;
-}
-#login{
-    float:right;
-    margin-right:3%;
-    font-family : 'Gothic A1', sans-serif;
-    cursor: pointer;
-    font-size:24px;
-}
-#store{
-    float:right;
-    margin-right:2%;
-    font-family : 'Gothic A1', sans-serif;
-    cursor: pointer;
-    font-size:24px;
-}
-#breadcook{
-    float:right;
-    margin-right:2%;
-    font-family : 'Gothic A1', sans-serif;
-    cursor: pointer;
-    font-size:24px;
-}
+
 #logo{
     cursor: pointer;
 }
@@ -43,25 +17,26 @@ main{
 
 #storeimg{
     /*border:1px solid gray;*/
-    width:1900px;
-    height:766px;
-    position: fixed;
+    width:1200px;
+    height:600px;
+    position:relative;
+    /*position:fixed;*/
     bottom:10px;
     right: 10px;
     margin-bottom: 0px;
 }
-
+.breadimg{
+    width:220px;
+}
 .container{
-    width:1900px;
-    height:620px;
+    width:1500px;
+    height:610px;
     /*border: 1px solid gray;*/
-    position: fixed;
+    position:absolute;
     /*background-color: gray;*/
     /*margin:0px 0px 0px 40px;*/
     bottom:10px;
     right: 10px;
-    
-
 }
 
 .item{
@@ -69,5 +44,30 @@ main{
     width: 300px;
 }
 .item:nth-child(n){
-    margin:5px 20px 0px 20px;
+    margin:5px 30px 0px 15px;
+}
+.location{
+    position:absolute;
+    top:40px;
+    right: 10px;
+}
+.location a{
+     font-family : 'Gothic A1', sans-serif;
+     font-size:24px;
+     margin-right: 15px;
+     text-decoration: none;
+}
+
+a:link { color: black; text-decoration: none;}
+a:visited { color: black; text-decoration: none;}
+a:hover { color: black; text-decoration: none;}
+.row1{
+    margin-top:10px;
+}
+
+.row2{
+    margin-top:20px;
+}
+.row3{
+    margin-top:15px;
 }

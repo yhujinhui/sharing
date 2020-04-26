@@ -2,32 +2,24 @@
 <?php 
     require_once('conn.php');
     
-    // $conn=mysqli_connect('localhost','root','mirim2','breadrabbit','3307');
-
-    $kinds = $_POST['Kinds'];
-    $title = $_POST['breadName'];
-    $description = $_POST['breadContents'];
-
-    // echo "kinds :  {$kinds} <br>";
-    // echo "title : {$title}<br>";
-    // echo "description : {$description}<br>";
+    $filtered=array(
+        'kinds' => mysqli_real_escape_string($conn,$_POST['Kinds']),
+        'title' => mysqli_real_escape_string($conn,$_POST['breadName']),
+        'description' => mysqli_real_escape_string($conn,$_POST['breadContents']),
+        'user_id' => mysqli_real_escape_string($conn,$_POST['user_id'])
+    );
     
-    $query = 'INSERT INTO content(title, description, created, kinds) values("'.$title.'", "'.$description.'", now(), "'.$kinds.'");';
-    // echo $query;
+    $query = 
+    "insert into content(title, description, created, kinds,user_id) 
+    values('{$filtered['title']}','{$filtered['description']}',now(),'{$filtered['kinds']}','{$filtered['user_id']}')";
 
     $result = mysqli_query($conn, $query);
-    print_r(mysqli_error($conn));
 
-    // $filtered=array(
-    // 'title'=>mysqli_real_escape_string($conn,$_POST['title']),
-    // 'description'=>mysqli_real_escape_string($conn,$_POST['description'])
-    // );
+    if($result==false){
+        echo '에러';
+        echo mysqli_error($conn);
 
-    // $sql=
-    // "insert into content(title,description,created)
-    // values('{$filtered['title']}','{$filtered['description']}',now())";
-
-    // $result=mysqli_query($conn,$sql);
-    // print_r(mysqli_error($conn));
-
+    }else{
+        header("Location: store.php?id={$filtered['user_id']}");
+    }
 ?>

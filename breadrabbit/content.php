@@ -18,12 +18,18 @@ $sql_content=
 "select * from content left join sign on content.user_id=sign.user_id where content.id={$filtered['id']}";
 $result_content=mysqli_query($conn,$sql_content);
 $row_content=mysqli_fetch_array($result_content);
+// print_r($row_content);
 $escaped_created=htmlspecialchars($row_content['created']);
 $escaped_title=htmlspecialchars($row_content['title']);
 $escaped_description=htmlspecialchars($row_content['description']);
 $escaped_kinds=htmlspecialchars($row_content['kinds']);
 $escaped_name=htmlspecialchars($row_content['name']);
-
+if(isset($_GET['user_id'])){
+		if($filtered['user_id']==$row_content['user_id']){
+			$update=
+			"<a href='update.php?id={$row_content[4]}'>수정하기</a>";
+		}
+	}
 $comment='';
 $sql_comment=
 "select * from content left join comment on comment.content_id =content.id where comment.content_id= {$filtered['id']}";
@@ -40,13 +46,8 @@ while($row_comment=mysqli_fetch_array($result_comment)){
 		<span> 댓글내용:".$escaped_comment."</span>
 		<span> 댓글쓴 날짜:".$escaped_comment_created."</span></div>"
 	;
-	if(isset($_GET['user_id'])){
+	
 }
-if($filtered['user_id']==$row_content['user_id']){
-			$update=
-			"<a href='update.php?id={$row_content[4]}'>수정하기</a>";
-		}
-	}
 ?>
 
 <!DOCTYPE html>

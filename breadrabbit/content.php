@@ -63,10 +63,10 @@ while($row_comment=mysqli_fetch_array($result_comment)){
 			"<form action='comment_delete_process.php' method='post'>
 			<input type='hidden' name='user_id' value='".$filtered['user_id']."'>
 			<input type='hidden' name='id' value='".$escaped_comment_id."'>
-	      	<input type='submit' value='삭제하기' onclick='return deletechk()'></form>"
-			;
+			  <input type='submit' value='삭제하기' onclick='return deletechk()'></form>";
 		}
 	}
+
 	$comment=$comment.
 	"<div class='comment'>
 		<span><img src='images/{$escaped_user_profile}profile.png' style='width:50px; height: 50px'></span>
@@ -74,6 +74,7 @@ while($row_comment=mysqli_fetch_array($result_comment)){
 		<span> 댓글내용:".$escaped_comment."</span>
 		<span> 댓글쓴 날짜:".$escaped_comment_created."</span>
 		<span>".$comment_delete."</span>
+		<span>".$content_delete."</span>
 		<span></span></div>
 		"
 	;
@@ -110,5 +111,27 @@ while($row_comment=mysqli_fetch_array($result_comment)){
 		<input type="hidden" name=user_id value="<?=$filtered['user_id']?>">
         <input type="submit" id="submitButton" name="submit" alt="" value="댓글달기" onclick="<?=$logchk?>">
 	</form>
+
+	<form action='content_delete_process.php' method='post'>
+	<?
+	$sql_content= "select * from content;";
+	
+	$result_content=mysqli_query($conn,$sql_comment);
+	
+	while($row_content=mysqli_fetch_array($result_content)){
+		if(isset($_GET['user_id'])){
+			if($filtered['user_id']==$row_content['user_id']){
+				
+	?>
+				<input type='hidden' name='id' value="<?=$filtered['id']?>">	
+				<input type="hidden" name='user_id' value="<?=$filtered['user_id']?>">
+				<input type='submit' value='빵 제거하기' onclick='return contentdeletechk()'>
+	<?
+			}
+		}
+	?>
+	</form>
+
+
 </body>
 </html>

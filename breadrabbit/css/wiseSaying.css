@@ -1,7 +1,7 @@
 @font-face { font-family: 'NotoSerifKR'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NotoSerifKR.woff') format('woff'); font-weight: normal; font-style: normal; }
 
 html{
-    background: url(bookbackground.png) no-repeat center center fixed; 
+    background: url(../images/bookbackground.png) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

@@ -3,6 +3,8 @@
 require_once("conn.php");
 $filtered=array(
 	'id'=>mysqli_real_escape_string($conn,$_GET['id']),
+    'user_id'=>mysqli_real_escape_string($conn,$_GET['user_id']),
+
 	// content id
 );
 $sql="select * from content where id={$filtered['id']}";
@@ -46,7 +48,9 @@ $escaped_description=htmlspecialchars($row['description']);
             <p>
                 <textarea rows="10" cols="33" name="breadContents" id="breadTextArea" placeholder="고민을 적어주세요" required><?=$escaped_description?></textarea>
             </p>
-            <input type="hidden" name="user_id" value="<?=$escaped_user_id?>">
+            <input type="hidden" name="content_id" value="<?=$filtered['id']?>">
+            <input type="hidden" name="user_id" value="<?=$filtered['user_id']?>">
+
                 <input type="submit" id="submitButton" name="submit" alt="빵 굽기!" value="">
         </div>
 

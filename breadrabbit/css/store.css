@@ -6,6 +6,10 @@ body{
 #logo{
     cursor: pointer;
 }
+.logo{
+    width:150px;
+    height:150px;
+}
 main{
     /*border:1px solid gray;*/
     text-align: center;
@@ -32,6 +36,7 @@ main{
     width:1500px;
     height:610px;
     /*border: 1px solid gray;*/
+    /*position:relative;*/
     position:absolute;
     /*background-color: gray;*/
     /*margin:0px 0px 0px 40px;*/

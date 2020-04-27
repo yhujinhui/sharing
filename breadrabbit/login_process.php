@@ -2,7 +2,7 @@
 require_once('conn.php');
 $sql='select * from sign';
 $result=mysqli_query($conn,$sql);
-
+// <input type="hidden" name="user_id" value=<?=$row[]
 
 $filtered=array(
 'id'=>mysqli_real_escape_string($conn,$_POST['id']),
@@ -39,8 +39,7 @@ if($bool){
   <title>Document</title>
 </head>
 <body>
-  <form method="post" name="form" action="first.php">
-    <input type="hidden" name="user_id" value=<?=$row['user_id']?>>
+  <form method="post" name="form" action="first.php?id=<?=$row['user_id']?>">
     <script>document.form.submit();</script>
   </form>
 </body>

@@ -6,7 +6,8 @@ $escaped_name='';
 $user_id='';
 $log_href="login.html";
 $cookbread_href="login.html";
-
+$logo_href="first.php";
+$store_href="store.php";
 if(isset($_GET['id'])){
   $filtered_user_id=mysqli_real_escape_string($conn,$_GET['id']);
   $user_id="&user_id=".$filtered_user_id;
@@ -17,6 +18,8 @@ if(isset($_GET['id'])){
   print_r(mysqli_error($conn));
   $log_href="#";
   $cookbread_href="cookbread.php?id={$filtered_user_id}";
+  $logo_href="first.php?id={$filtered_user_id}";
+  $store_href="store.php?id={$filtered_user_id}";
   $log='로그아웃';
   $escaped_name=htmlspecialchars($row['name']).'님';
 }
@@ -91,12 +94,12 @@ while($row=mysqli_fetch_array($result)){
     <header>
     <link href="https://fonts.googleapis.com/css?family=Gothic+A1&display=swap" rel="stylesheet">
     <div class="location">
-        <a href="store.php">상점 가기</a>
+        <a href="<?=$store_href?>">상점 가기</a>
         <a href="<?=$cookbread_href?>">빵 굽기</a>
         <a href='javascript:void(0);' onClick="top.location='javascript:location.reload()'" id="name"><?=$escaped_name?></a>
         <a href="<?=$log_href?>" id="log" onclick="javascript:return logoutchk();" ><?=$log?></a>
     </div>
-       <div id="logo" onclick="location.href='store.php'"> <img src="images/logo.png" width="10%" heigh="10%"></div>
+       <div><a href="<?=$logo_href?>"><img src="images/logo.png" class="logo"></a></div>
     </header>
     <main>
         <img id="storeimg" src="images/store.png">

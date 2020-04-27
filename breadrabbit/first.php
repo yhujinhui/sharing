@@ -8,8 +8,8 @@ $log_href="login.html";
 $cookbread_href="login.html";
 $store_href="store.php";
 
-if(isset($_POST['user_id'])){
-  $filtered_user_id=mysqli_real_escape_string($conn,$_POST['user_id']);
+if(isset($_GET['id'])){
+  $filtered_user_id=mysqli_real_escape_string($conn,$_GET['id']);
   $sql=
   "select name from sign where user_id={$filtered_user_id}";
   $result=mysqli_query($conn,$sql);
@@ -42,8 +42,7 @@ if(isset($_POST['user_id'])){
           <a href='javascript:void(0);' onClick="top.location='javascript:location.reload()'" id="name"><?=$escaped_name?></a>
           <a href="<?=$log_href?>" id="log" onclick="javascript:return logoutchk();" ><?=$log?></a>
         </div>
-<div id=logo onclick="location.href='first.php'"><img src="images/logo.png" width="150px" height="150px"></div>
-
+        <div id=logo><a href='javascript:void(0);' onClick="top.location='javascript:location.reload()'"><img src="images/logo.png" width="150px" height="150px"></a></div>
       </header>
 
       <div class="container">

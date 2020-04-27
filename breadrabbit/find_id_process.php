@@ -33,7 +33,7 @@ if($bool){
 	echo
 	'<script>
     alert("입력하신 정보가 존재하지 않습니다");
-		location.href="login.html";
+		location.href="find_id.php"; //없으면 다시
     </script>';
 }
 ?>

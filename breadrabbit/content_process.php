@@ -1,4 +1,6 @@
 <?php  
+	$prevPage = $_SERVER['HTTP_REFERER'];
+
 	require_once("conn.php");
 
 	$filtered=array(
@@ -9,18 +11,17 @@
 	$sql_name="select name from sign where user_id={$filtered['user_id']}";
 	$result=mysqli_query($conn,$sql_name);
 	$row=mysqli_fetch_array($result);
-	print_r($row);
-	$escaped_name=htmlspecialchars($row['name']);
+	// print_r($row);
+	// $escaped_name=htmlspecialchars($row['name']);
 
 	$sql=
 	"
-	insert into comment(content_id,user_id,comment,created,name)
+	insert into comment(content_id,user_id,comment,created)
 	values(
 	  '{$filtered['content_id']}',
 	  '{$filtered['user_id']}',
 	  '{$filtered['comment']}',
-	  now(),
-	  '{$escaped_name}'
+	  now()
 	  )
 	";
 
@@ -29,6 +30,7 @@ if($result==false){
 	echo'에러';
 	echo mysqli_error($conn);
 }else{
-	header("Location: content.php?id={$filtered['content_id']}&user_id={$filtered['user_id']}");
+		header('location:'.$prevPage);
+	// header("Location: content.php?id={$filtered['content_id']}&user_id={$filtered['user_id']}");
 }
 ?>

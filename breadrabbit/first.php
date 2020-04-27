@@ -7,7 +7,7 @@ $escaped_name='';
 $log_href="login.html";
 $cookbread_href="login.html";
 $store_href="store.php";
-
+$logchk='return logchk()';
 if(isset($_GET['id'])){
   $filtered_user_id=mysqli_real_escape_string($conn,$_GET['id']);
   $sql=
@@ -19,6 +19,7 @@ if(isset($_GET['id'])){
   $cookbread_href="cookbread.php?id={$filtered_user_id}";
   $store_href="store.php?id={$filtered_user_id}";
   $log='로그아웃';
+  $logchk='';
   $escaped_name=htmlspecialchars($row['name']).'님';
 }
 
@@ -38,7 +39,7 @@ if(isset($_GET['id'])){
         <link href="https://fonts.googleapis.com/css?family=Gothic+A1&display=swap" rel="stylesheet">
         <div class="location">
           <a href="<?=$store_href?>">상점 가기</a>
-          <a href="<?=$cookbread_href?>">빵 굽기</a>
+          <a href="<?=$cookbread_href?>" onclick="<?=$logchk?>">빵 굽기</a>
           <a href='javascript:void(0);' onClick="top.location='javascript:location.reload()'" id="name"><?=$escaped_name?></a>
           <a href="<?=$log_href?>" id="log" onclick="javascript:return logoutchk();" ><?=$log?></a>
         </div>

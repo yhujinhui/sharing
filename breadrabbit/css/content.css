@@ -1,16 +1,8 @@
-/* header{
+html{
     background-color:#F5E5DE; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     font-family: 'NanumBarunGothic';
-} */
-
-
-.container{
-	border:1px solid gray;
-	margin-left: 100px;
-	margin-right: 100px;
-	text-align: center;
 }

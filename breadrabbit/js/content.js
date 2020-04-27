@@ -6,12 +6,3 @@ function logchk(){
     	return false;
 	}
 }//로그아웃 체크
-
-function deletechk(){
-	if(confirm("댓글을 삭제하시겠습니까?")){
-		history.back();
-		return true;
-	} else {
-    	return false;
-	}
-}//로그아웃 체크

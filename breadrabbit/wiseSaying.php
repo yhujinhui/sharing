@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <title>빵 굽는 토끼</title>
 
-    <link href="wiseSaying.css" rel="stylesheet">   
+    <link href="css/wiseSaying.css" rel="stylesheet">   
   </head>
   <body>
           <?php

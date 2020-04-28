@@ -33,8 +33,10 @@ if(isset($_GET['user_id'])){
 		"<a href='update.php?id={$row_content[4]}&user_id={$filtered['user_id']}'>수정하기</a>";
 		// content_id
 		$delete=
-		"<a href='update.php?id={$row_content[4]}&user_id={$filtered['user_id']}'>삭제하기</a>";
-		// a말고 버튼으로 수정해야함
+		"<form action='content_delete_process.php' method='post'>
+		<input type='hidden' name='user_id' value='".$filtered['user_id']."'>
+		<input type='hidden' name='id' value='".$row_content[4]."'>
+		<input type='submit' value='빵제거하기' onclick='return contentdeletechk()'></form>";
 	}
 }
 $comment='';
@@ -74,7 +76,6 @@ while($row_comment=mysqli_fetch_array($result_comment)){
 		<span> 댓글내용:".$escaped_comment."</span>
 		<span> 댓글쓴 날짜:".$escaped_comment_created."</span>
 		<span>".$comment_delete."</span>
-		<span>".$content_delete."</span>
 		<span></span></div>
 		"
 	;
@@ -111,27 +112,5 @@ while($row_comment=mysqli_fetch_array($result_comment)){
 		<input type="hidden" name=user_id value="<?=$filtered['user_id']?>">
         <input type="submit" id="submitButton" name="submit" alt="" value="댓글달기" onclick="<?=$logchk?>">
 	</form>
-
-	<form action='content_delete_process.php' method='post'>
-	<?
-	$sql_content= "select * from content;";
-	
-	$result_content=mysqli_query($conn,$sql_comment);
-	
-	while($row_content=mysqli_fetch_array($result_content)){
-		if(isset($_GET['user_id'])){
-			if($filtered['user_id']==$row_content['user_id']){
-				
-	?>
-				<input type='hidden' name='id' value="<?=$filtered['id']?>">	
-				<input type="hidden" name='user_id' value="<?=$filtered['user_id']?>">
-				<input type='submit' value='빵 제거하기' onclick='return contentdeletechk()'>
-	<?
-			}
-		}
-	?>
-	</form>
-
-
 </body>
 </html>

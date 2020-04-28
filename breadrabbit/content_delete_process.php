@@ -4,22 +4,23 @@
 
     require_once('conn.php');
     
-    $delete_id = $_REQUEST['id'];
-    $delete_user_id = $_REQUEST['user_id'];
+    $filtered=array(
+        'user_id' => mysqli_real_escape_string($conn,$_POST['user_id']),
+        'id' => mysqli_real_escape_string($conn,$_POST['id']),
+    );
 
-
-    $sql = "DELETE FROM content WHERE id=$delete_id;";
+    $contentsql = "delete from content where id={$filtered['id']}";
     //echo $sql;
-    $result = mysqli_query($conn,$sql);
-    print_r(mysqli_error($conn));
+    $contentresult = mysqli_query($conn,$contentsql);
 
-    if($result==false){
+    $commentsql = "delete from comment where content_id={$filtered['id']}";
+    $commentresult = mysqli_query($conn,$commentsql);
+
+    if($contentresult==false||$commentresult==false){
         echo '에러';
         echo mysqli_error($conn);
 
     }else{
-        
-        //header('location:'.$prevPage);
-        echo("<script>location.replace('store.php?id=$delete_user_id');</script>"); 
+       header("Location: store.php?id={$filtered['user_id']}");
     }
 ?>

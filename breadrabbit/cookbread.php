@@ -10,20 +10,22 @@
     <head>
         <meta charset="UTF-8">
         <title>빵 굽기 화면</title>
-        <link href="css/cookbread.css" rel="stylesheet">   
+        <link href="css/cookbread.css" rel="stylesheet"> 
+
+    
     </head>
 
         <body>
             <header>
                 <a href=""></a>
             </header>
-            <form action="cookbread_process.php" method="post">
+            <form action="cookbread_process.php" method="post" name="formBread" onsubmit="return chkBreadKinds();">
                 <div>
                     <img src="images/bread1.png" id="breadImg">
                 </div>
                 <div class="selectKinds">
                     <select id="selectKinds" name="Kinds" onchange="alert_select_value(this)" required>
-                        <option vlaue="none" disabled selected="selected">빵 종류를 선택하세요</option>
+                        <option value="none" selected>빵 종류를 선택하세요</option>
                         <option value="course">진로</option>
                         <option value="family">가족</option>
                         <option value="friend">친구</option>
@@ -41,7 +43,7 @@
                         <textarea rows="10" cols="33" name="breadContents" id="breadTextArea" placeholder="고민을 적어주세요" required></textarea>
                     </p>
                     <input type="hidden" name="user_id" value="<?=$escaped_user_id?>">
-                        <input type="submit" id="submitButton" name="submit" alt="빵 굽기!" value=""onclick=" return showWiseSaying();">
+                        <input type="submit" id="submitButton" name="submit" alt="빵 굽기!" value="">
                 </div>
 
             </form>

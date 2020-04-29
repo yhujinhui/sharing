@@ -37,9 +37,8 @@ if($bool){
     </script>';
 }
 ?>
-	<div class="container">
-	  	<div>패스워드</div>
-	  	<div><?=$password?></div>
-	  </div>
+		<div class="container">
+		  	<div  style="text-align: center">패스워드 : <?=$password?></div>
+		</div>
 	</body>
 </html>

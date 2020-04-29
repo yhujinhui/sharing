@@ -37,9 +37,8 @@ if($bool){
     </script>';
 }
 ?>
-	<div class="container">
-	  	<div>아이디</div>
-	  	<div><?=$id?></div>
-	  </div>
+		<div class="container">
+		  	<div  style="text-align: center">아이디 : <?=$id?></div>
+		</div>
 	</body>
 </html>

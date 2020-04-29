@@ -1,29 +1,10 @@
 <?php 
-require_once('conn.php');
+require_once('lib/header_php.php');
 
-$log='로그인';
-$escaped_name='';
 $user_id='';
-$log_href="login.html";
-$cookbread_href="login.html";
-$logo_href="first.php";
-$store_href="store.php";
 if(isset($_GET['id'])){
-  $filtered_user_id=mysqli_real_escape_string($conn,$_GET['id']);
-  $user_id="&user_id=".$filtered_user_id;
-  $sql=
-  "select name from sign where user_id={$filtered_user_id}";
-  $result=mysqli_query($conn,$sql);
-  $row=mysqli_fetch_array($result);
-  print_r(mysqli_error($conn));
-  $log_href="#";
-  $cookbread_href="cookbread.php?id={$filtered_user_id}";
-  $logo_href="first.php?id={$filtered_user_id}";
-  $store_href="store.php?id={$filtered_user_id}";
-  $log='로그아웃';
-  $escaped_name=htmlspecialchars($row['name']).'님';
+    $user_id="&user_id=".$filtered_user_id;
 }
-
 $sql=
 "select * from content";
 $result=mysqli_query($conn,$sql);
@@ -91,17 +72,9 @@ while($row=mysqli_fetch_array($result)){
 <body>
     <script src="js/first.js"></script>
     <script src="script/store.js"></script>
-    <header>
-    <link href="https://fonts.googleapis.com/css?family=Gothic+A1&display=swap" rel="stylesheet">
-    <div class="location">
-        <a href="<?=$store_href?>">상점 가기</a>
-        <a href="<?=$cookbread_href?>">빵 굽기</a>
-        <a href="introduce.html">개발자 소개</a>
-        <a href='javascript:void(0);' onClick="top.location='javascript:location.reload()'" id="name"><?=$escaped_name?></a>
-        <a href="<?=$log_href?>" id="log" onclick="javascript:return logoutchk();" ><?=$log?></a>
-    </div>
-       <div><a href="<?=$logo_href?>"><img src="images/logo.png" class="logo"></a></div>
-    </header>
+    <?php  
+      require_once("lib/header_html.php");
+    ?>
     <main>
         <img id="storeimg" src="images/store.png">
         <div class="container">

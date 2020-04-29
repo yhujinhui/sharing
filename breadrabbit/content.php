@@ -13,7 +13,7 @@ if(isset($_GET['user_id'])){
 	$filtered['user_id']=mysqli_real_escape_string($conn,$_GET['user_id']);
 	
 }else{
-	$logchk='logchk()';
+	$logchk='return logchk()';
 }
 $sql_content=
 "select * from content left join sign on content.user_id=sign.user_id where content.id={$filtered['id']}";

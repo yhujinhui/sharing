@@ -19,3 +19,8 @@ function alert_select_value(selectBread){
         document.getElementById("breadImg").src = "images/bread5.png";
     }    
 };
+
+function showWiseSaying(){
+    window.open("wiseSaying.php","책 속의 한줄","width=600, height=500, left=100, top=50");
+
+}

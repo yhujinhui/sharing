@@ -4,6 +4,8 @@
     if(isset($_GET['id'])){
         $escaped_user_id=mysqli_real_escape_string($conn,$_GET['id']);
     }
+    $escaped_title='';
+    $escaped_description='';
 ?>
 <!DOCTYPE html>
 <html>

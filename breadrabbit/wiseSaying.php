@@ -10,7 +10,7 @@
   </head>
   <body>
           <?php
-          // $conn = mysqli_connect("localhost","root","mirim2","saying","3307");
+
           require_once('conn.php');
 
           if(!$conn){
@@ -42,10 +42,9 @@
           
           <?php
           }
-
-          
-
           ?>
+
+          <input type="button" value="" id="closeButton" onclick="self.close();">
     <script src="jsWiseSaying.js"></script>
   </body>
 </html>

@@ -10,12 +10,29 @@ html{
 }
 div{
     text-align: center;
-    border: 2px 2px red solid;
 }
 .contents{
     text-align: center;
-    padding-top: 320px;
+    padding-top: 160px;
 }
 .source{
-    padding-top: 50px;
+    padding-top: 20px;
+}
+
+input#closeButton{
+    margin-top: 180px;
+    margin-left: 325px;
+
+    background: url(../images/closeButton.png);
+    background-repeat: no-repeat;
+    width: 140px;
+    height: 37px;
+    border: 0;
+}
+input#closeButton:hover{
+    background: url(../images/closeButton2.png);
+    background-repeat: no-repeat;
+    width: 140px;
+    height: 37px;
+    border: 0;
 }

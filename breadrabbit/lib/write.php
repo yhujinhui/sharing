@@ -2,7 +2,7 @@
     <header>
         <a href=""></a>
     </header>
-    <form action="cookbread_process.php" method="post" name="formBread" onsubmit="return chkBreadKinds();">
+    <form action="<?=$formhref?>" method="post" name="formBread" onsubmit="return chkBreadKinds();">
         <div>
             <img src="images/bread1.png" id="breadImg">
         </div>

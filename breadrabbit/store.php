@@ -72,9 +72,7 @@ while($row=mysqli_fetch_array($result)){
         $item='';
     }
 }
-
 include("page.php");
-
 
 ?>
 <!DOCTYPE html>

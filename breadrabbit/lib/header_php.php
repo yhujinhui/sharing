@@ -5,7 +5,7 @@ $log='로그인';
 $escaped_name='';
 $log_href="login.html";
 $cookbread_href="login.html";
-$store_href="store.php";
+$store_href="store.php?page=1";
 $logo_href="first.php";
 $logchk='return logchk()';
 if(isset($_GET['id'])){
@@ -17,7 +17,7 @@ if(isset($_GET['id'])){
   print_r(mysqli_error($conn));
   $log_href="#";
   $cookbread_href="cookbread.php?id={$filtered_user_id}";
-  $store_href="store.php?id={$filtered_user_id}";
+  $store_href="store.php?page=1&id={$filtered_user_id}";
   $logo_href="first.php?id={$filtered_user_id}";
   $log='로그아웃';
   $logchk='';

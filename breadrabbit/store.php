@@ -1,12 +1,26 @@
 <?php 
 require_once('lib/header_php.php');
 
+$page=$_GET['page'];
+
+$pagesql="select count(*) totalCount from content";//게시물 총 개수
+$pageresult=mysqli_query($conn,$pagesql);
+$pagerow=mysqli_fetch_array($pageresult);
+$total_article=$pagerow['totalCount'];//게시물 총 개수13
+// print_r($total_article);
+
+$view_article=12;//페이지당 게시물 개수2
+if(!$page)$page=1;
+$start=($page-1)*$view_article;
+
 $user_id='';
+$id='';
 if(isset($_GET['id'])){
     $user_id="&user_id=".$filtered_user_id;
+    $id="&id=".$filtered_user_id;
 }
 $sql=
-"select * from content";
+"select * from content limit $start, $view_article";
 $result=mysqli_query($conn,$sql);
 
 $item='';
@@ -58,6 +72,10 @@ while($row=mysqli_fetch_array($result)){
         $item='';
     }
 }
+
+include("page.php");
+
+
 ?>
 <!DOCTYPE html>
 </html>
@@ -89,5 +107,11 @@ while($row=mysqli_fetch_array($result)){
             </div>
         </div>
     </main>
+    <div class="footer">
+        <?=$prev_group?>
+        <?=$paging?>
+        <?=$next_group?>
+
+    </div>
 </body>
 </html>

@@ -21,6 +21,6 @@
         echo mysqli_error($conn);
 
     }else{
-       header("Location: store.php?page=1&id={$filtered['user_id']}");
+       header("Location: store.php?page=1&id={$filtered['user_id']}&kinds=1");
     }
 ?>

@@ -1,5 +1,6 @@
 <?php  
 require_once("lib/header_php.php");
+$introduce="개발자 소개";
 ?>
 <!DOCTYPE html>
 <html lang="ko">

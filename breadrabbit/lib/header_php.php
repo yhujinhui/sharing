@@ -7,6 +7,7 @@ $log_href="login.html";
 $cookbread_href="login.html";
 $store_href="store.php?page=1";
 $logo_href="first.php";
+
 $logchk='return logchk()';
 if(isset($_GET['id'])){
   $filtered_user_id=mysqli_real_escape_string($conn,$_GET['id']);

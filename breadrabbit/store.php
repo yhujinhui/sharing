@@ -1,6 +1,8 @@
 <?php 
 require_once('lib/header_php.php');
 
+$introduce="";
+
 $page=$_GET['page'];
 
 $pagesql="select count(*) totalCount from content";//게시물 총 개수

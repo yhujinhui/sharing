@@ -23,7 +23,7 @@ if($prev<1)$prev=1;
 
 $next=$start_page+$page_group;
 if($next>$total_page)$next=$total_page;
-if($total_article>1){
+if($total_article>=1){
 	if($page!=1) $prev_group="<a href='store.php?page=$prev".$id."''><</a>&nbsp;&nbsp;";
 	if($page!=$total_page) $next_group="<a href='store.php?page=$next".$id."''>></a>&nbsp;&nbsp;";
 	for($i=$start_page; $i<$end_page; $i++){

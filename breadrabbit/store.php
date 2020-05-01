@@ -109,7 +109,6 @@ include("page.php");
         <?=$prev_group?>
         <?=$paging?>
         <?=$next_group?>
-
     </div>
 </body>
 </html>

@@ -1,9 +1,8 @@
 function alert_select_value(selectBread){
     var selected_index = selectBread.selectedIndex; // selectbox에서 선택된 index를 찾음 
     var selected_value = selectBread.options[selected_index].value;     // 선택된 index의 value를 찾음 
-    var src=document.getElementById("breadImg").src;
-    src = "images/"+selected_value+".png";  
-}
+    document.getElementById("breadImg").src="images/"+selected_value+".png";  
+}   
 function alerted_selected_value(kinds){
     document.getElementById("selectKinds").value=kinds;
  }

@@ -6,6 +6,7 @@
     }
     $escaped_title='';
     $escaped_description='';
+    $img_src='course';
     $formhref="cookbread_process.php";
 ?>
 <!DOCTYPE html>
@@ -15,6 +16,7 @@
         <title>빵 굽기 화면</title>
         <link href="css/cookbread.css" rel="stylesheet"> 
     </head>
+     <body>
     <?php
         require_once("lib/write.php");
     ?>

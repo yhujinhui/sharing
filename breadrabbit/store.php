@@ -1,28 +1,19 @@
-
 <?php 
 require_once('lib/header_php.php');
 
-
 $introduce="";
-
 $page=$_GET['page'];
-
 $kinds=$_GET['kinds'];
 
-switch ($kinds) {
-    case 1:$pagesql="select count(*) totalCount from content";break;
-    case 2:$pagesql="select count(*) totalCount from content where kinds='course'";break;
-    case 3:$pagesql="select count(*) totalCount from content where kinds='family'";break;
-    case 4:$pagesql="select count(*) totalCount from content where kinds='friend' ";break;
-    case 5:$pagesql="select count(*) totalCount from content where kinds='love' ";break;
-    case 6:$pagesql="select count(*) totalCount from content where kinds='other' ";break;
-    case 7:$pagesql="select count(*) totalCount from content where user_id={$_GET['id']}";break;
+switch($kinds){
+    case 'all':$pagesql="select count(*) totalCount from content";break;
+    case 'mine':$pagesql="select count(*) totalCount from content where user_id={$_GET['id']}";break;
+    default : $pagesql="select count(*) totalCount from content where kinds='{$kinds}'";break;
 }
 
 $pageresult=mysqli_query($conn,$pagesql);
 $pagerow=mysqli_fetch_array($pageresult);
-// $pagerow=mysqli_query($conn,$pagesql);
-$total_article=$pagerow['totalCount'];//게시물 총 개수13
+$total_article=$pagerow['totalCount'];//게시물 총 개수
 // print_r($total_article);
 
 $view_article=12;//페이지당 게시물 개수2
@@ -39,17 +30,10 @@ if(isset($_GET['id'])){
     $option='<option value="mine">내빵</option>';
 }
 
-//////////////////////////////////////////////////////////////////////////////////
 switch ($kinds) {
-    case 1:$sql="select * from content limit $start, $view_article";break;
-    case 2:$sql= "select * from content where kinds='course' limit $start, $view_article";break;
-    case 3:$sql= "select * from content where kinds='family' limit $start, $view_article";break;
-    case 4:$sql= "select * from content where kinds='friend' limit $start, $view_article";break;
-    case 5:$sql= "select * from content where kinds='love' limit $start, $view_article";break;
-    case 6:$sql= "select * from content where kinds='other' limit $start, $view_article";break;
-    case 7:
-        $sql= "select kinds,id from content where user_id={$_GET['id']} limit $start, $view_article";break;
-         
+    case 'all':$sql="select * from content limit $start, $view_article";break;
+    case 'mine':$sql= "select kinds,id from content where user_id={$_GET['id']} limit $start, $view_article";break;
+    default:$sql= "select * from content where kinds='{$kinds}' limit $start, $view_article";break;
 }
 
 $result=mysqli_query($conn,$sql);
@@ -60,7 +44,6 @@ $content2='';
 $content3='';
 $breadlocation='';
 
-// $datacnt = mysqli_num_rows($result);
 $cnt=0;
 while($row=mysqli_fetch_array($result)){
     $row_top='';
@@ -69,21 +52,7 @@ while($row=mysqli_fetch_array($result)){
     // print_r($row);
     $escaped_bread=htmlspecialchars($row['kinds']);
     $escaped_id=htmlspecialchars($row['id']);
-    if($escaped_bread=="course"){
-        $breadlocation='images/bread1.png';
-    }
-    else if($escaped_bread=="family"){
-        $breadlocation='images/bread2.png';
-    }
-    else if($escaped_bread=="friend"){
-        $breadlocation='images/bread3.png';
-    }
-    else if($escaped_bread=="love"){
-        $breadlocation='images/bread4.png';
-    }
-    else if($escaped_bread=="other"){
-        $breadlocation='images/bread5.png';
-    }
+    $breadlocation='images/'.$escaped_bread.'.png';
     
     $item=$item.
     "<span class='item'>
@@ -103,7 +72,7 @@ while($row=mysqli_fetch_array($result)){
         $item='';
     }
 }
-include("page.php");
+include("lib/page.php");
 ?>
 
 <!DOCTYPE html>
@@ -116,7 +85,7 @@ include("page.php");
         @import url("css/store.css");
     </style>
 </head>
-<body onload="alert_selected_value(<?=$kinds?>)">
+<body onload="alert_selected_value('<?=$kinds?>')">
     <script src="js/first.js"></script>
     <script src="js/store.js"></script>
     <?php  

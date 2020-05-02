@@ -1,14 +1,14 @@
- <body>
+
     <header>
         <a href=""></a>
     </header>
     <form action="<?=$formhref?>" method="post" name="formBread" onsubmit="return chkBreadKinds();">
         <div>
-            <img src="images/bread1.png" id="breadImg">
+            <img src="images/<?=$img_src?>.png" id="breadImg">
         </div>
         <div class="selectKinds">
             <select id="selectKinds" name="Kinds" onchange="alert_select_value(this)" required>
-                <option value="none" selected>빵 종류를 선택하세요</option>
+                <option value="none">빵 종류를 선택하세요</option>
                 <option value="course">진로</option>
                 <option value="family">가족</option>
                 <option value="friend">친구</option>

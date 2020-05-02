@@ -13,7 +13,7 @@ $escaped_title=htmlspecialchars($row['title']);
 $escaped_description=htmlspecialchars($row['description']);
 $escaped_kinds=htmlspecialchars($row['kinds']);
 $formhref="update_process.php";
-
+$img_src=$escaped_kinds;
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -22,6 +22,7 @@ $formhref="update_process.php";
 	<title>Document</title>
     <link href="css/cookbread.css" rel="stylesheet">   
 </head>
+ <body onload="alerted_selected_value('<?=$escaped_kinds?>')">
 <?php
     require_once("lib/write.php");
 ?>

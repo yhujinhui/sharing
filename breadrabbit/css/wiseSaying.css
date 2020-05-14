@@ -20,8 +20,8 @@ div{
 }
 
 input#closeButton{
-    margin-top: 180px;
-    margin-left: 325px;
+    margin-top: 25%;
+    margin-left: 42%;
 
     background: url(../images/closeButton.png);
     background-repeat: no-repeat;

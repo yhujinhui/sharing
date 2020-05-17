@@ -16,7 +16,7 @@ $pagerow=mysqli_fetch_array($pageresult);
 $total_article=$pagerow['totalCount'];//게시물 총 개수
 // print_r($total_article);
 
-$view_article=12;//페이지당 게시물 개수2
+$view_article=15;//페이지당 게시물 개수2
 if(!$page)$page=1;
 $start=($page-1)*$view_article;
 
@@ -49,7 +49,8 @@ while($row=mysqli_fetch_array($result)){
     $row_top='';
     $row_bottom='';
     $cnt++;
-    // print_r($row);
+    //echo $cnt;
+    //echo print_r($row);
     $escaped_bread=htmlspecialchars($row['kinds']);
     $escaped_id=htmlspecialchars($row['id']);
     $breadlocation='images/'.$escaped_bread.'.png';
@@ -61,13 +62,13 @@ while($row=mysqli_fetch_array($result)){
         </a>
     </span>"
     ;
-    if($cnt<=4){
+    if($cnt<=5){
         $content1=$content1.$item;
         $item='';
-    }else if($cnt<=8){
+    }else if($cnt<=10){
         $content2=$content2.$item;
         $item='';
-    }else if($cnt<=12){
+    }else if($cnt<=15){
         $content3=$content3.$item;
         $item='';
     }
@@ -104,24 +105,27 @@ include("lib/page.php");
                 <?=$option?>
             </select>
         </span>
-        <img id="storeimg" src="images/store.png">
 
         <div class="container">
             <div class="row1">
                 <?=$content1?>
             </div>
-             <div class="row2">
+            <div class="row2">
                 <?=$content2?>
             </div>
-             <div class="row3">
+            <div class="row3">
                 <?=$content3?>
             </div>
         </div>
+
+        
     </main>
     <div class="footer">
-        <?=$prev_group?>
-        <?=$paging?>
-        <?=$next_group?>
+        <div class="number">
+            <?=$prev_group?>
+            <?=$paging?>
+            <?=$next_group?>
+        </div>
     </div>
 </body>
 </html>

@@ -98,6 +98,10 @@ body .boxProfile{
     color: #BD9690;
     font-size: 14px;
 }
+.updateButton:hover{
+    background-color: #BD9690;
+    color: #F7E0DC;
+}
 .deleteButton{
     float: left;
     width: 127px;
@@ -109,4 +113,8 @@ body .boxProfile{
     background-color: #F7E0DC;
     color: #BD9690;
     font-size: 14px;
+}
+.deleteButton:hover{
+    background-color: #BD9690;
+    color: #F7E0DC;
 }

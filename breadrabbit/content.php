@@ -89,25 +89,33 @@ while($row_comment=mysqli_fetch_array($result_comment)){
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<link href="css/content.css" rel="stylesheet">
+
 </head>
 <body>
 	<script src="js/content.js"></script>
-	<div>프로필:<img src='images/<?=$escaped_profile?>profile.png' style="width:50px; height: 50px"></div>
-	<div>이름:<?=$escaped_name?></div>
-	<div>날짜:<?=$escaped_created?></div>
-	<div>제목:<?=$escaped_title?></div>
-	<div>본문:<?=$escaped_description?></div>
+	<div class="boxProfile"> 
+	<div id="title">제목:<?=$escaped_title?></div>
+	<div id="contentt">본문:<?=$escaped_description?></div>
+	<div id="name">이름:<?=$escaped_name?></div>
+	<div id="date">날짜:<?=$escaped_created?></div>
+
+	<div><img src='images/<?=$escaped_profile?>profile.png' id="profile" style="width:50px; height: 50px"></div>
+
+	</div>
+
 	<?=$update?>
 	<?=$delete?>
 	<br>
 	<br>
+	<div class="boxtwo">
 	<div id="commentdiv">
 		<div class="comment">
 			<?=$comment?>
-		</div>
 	</div>
+</div>
 	<form action="content_process.php" method="post">
-		<div>댓글:<textarea name="comment" id="comment" cols="30" rows="10" required></textarea></div>
+		<div><textarea name="comment" id="comment" cols="33"  required></textarea></div>
 		<input type="hidden" name=content_id value="<?=$filtered['id']?>">
 		<input type="hidden" name=user_id value="<?=$filtered['user_id']?>">
         <input type="submit" id="submitButton" name="submit" alt="" value="댓글달기" onclick="<?=$logchk?>">

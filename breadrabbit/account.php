@@ -18,18 +18,33 @@ require_once("conn.php");
 <head>
 	<meta charset="UTF-8">
 	<title><?=$escaped_name?>님 계정</title>
-	
+	<link href="css/account.css" rel="stylesheet">
 </head>
 <body>
-	<script src="js/account.js"></script>
-  <div><img src="images/<?=$escaped_profile?>profile.png" alt="프로필"></div>
-  <div>이름 : <?=$escaped_name?></div>
-  <div>id : <?=$escaped_id?></div>
-  <div>password : <?=$escaped_password?></div>
-  <div>tel : <?=$escaped_tel?></div>
-  <div><a href="account_update.php?id=<?=$filtered_user_id?>">계정 수정하기</a></div>
-  <div><form action='account_delete_process.php' method='post'>
-    <input type='hidden' name='id' value="<?=$filtered_user_id?>">
-    <input type='submit' value='계정 삭제하기' onclick='return accountdeletechk()'></form></div>
+  <script src="js/account.js"></script>
+  
+  <div class="boxProfile"> 
+
+    <div class="text">프로필</div>
+
+    <div><img src="images/<?=$escaped_profile?>profile.png" alt="프로필"  class="image"></div>
+
+    <div class="info">
+      <div class="name">이름</div> <div class="name2"><?=$escaped_name?></div>
+      <div class="id">아이디</div> <div class="id2"><?=$escaped_id?></div>
+      <div class="pw">비밀번호</div> <div class="pw2"><?=$escaped_password?></div>
+      <div class="tel">전화번호</div> <div class="tel2"><?=$escaped_tel?></div>
+    </div>
+
+    <div>
+      <form action='account_delete_process.php' method='post'>
+      <input type='button' value='수정' class="updateButton" onClick="location.href='account_update.php?id=<?=$filtered_user_id?>'">
+      <input type='hidden' name='id' value="<?=$filtered_user_id?>">
+      <input type='submit' value='삭제' class="deleteButton" onclick='return accountdeletechk()'>
+    </form>
+    </div>
+
+  </div>
+  
 </body>
 </html>

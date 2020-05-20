@@ -51,7 +51,5 @@ require_once("conn.php");
 
 		</form>
 	</div>
-
-	<script src="js/account.js"></script>
 </body>
 </html>

@@ -35,6 +35,7 @@ main{
     width: 1250px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 5%;
     /*border: 1px solid gray;*/
     /*position:relative;*/
     /* position:absolute; */
@@ -55,6 +56,7 @@ main{
 
 .row1{
     margin-top:10px;
+    padding-top: 5px;
 }
 
 .row2{
@@ -94,5 +96,15 @@ main{
 #select option:hover{
     background: #000 !important;
         /* background-color: rgb(208, 173, 154); */
+}
+.location {
+    margin-top: 40px;
+    text-align: center;
+    height: 90px;
+    /* position: absolute; */
+    top: 40px;
+    /* right: auto; */
+    /* left: auto; */
+    /* right: 150px; */
 }
 

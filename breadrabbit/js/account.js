@@ -6,3 +6,7 @@ function accountdeletechk(){
     	return false;
 	}
 }
+
+function goback(){
+	window.history.back()
+}

@@ -41,10 +41,11 @@ require_once("conn.php");
       <input type='button' value='수정' class="updateButton" onClick="location.href='account_update.php?id=<?=$filtered_user_id?>'">
       <input type='hidden' name='id' value="<?=$filtered_user_id?>">
       <input type='submit' value='삭제' class="deleteButton" onclick='return accountdeletechk()'>
-    </form>
+      </form>
     </div>
-
   </div>
-  
+
+  <button type="button" class="backButton" onclick="goback();">뒤로가기</button>
+
 </body>
 </html>

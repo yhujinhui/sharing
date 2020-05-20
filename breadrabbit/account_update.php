@@ -47,8 +47,11 @@ require_once("conn.php");
 			</div>
 
 			<input type="submit" value="완료" id="signbutton" onclick="imageChecked()" class="okButton">
+			<input type="button" value="취소" id="signbutton" onclick="imageChecked()" class="cancelButton">
 
 		</form>
 	</div>
+
+	<script src="js/account.js"></script>
 </body>
 </html>

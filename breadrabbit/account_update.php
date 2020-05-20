@@ -18,7 +18,7 @@ require_once("conn.php");
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>계정 수정</title>
 	 <style>
       @import url("css/account_update.css");
     </style>
@@ -26,21 +26,28 @@ require_once("conn.php");
 <body onload="checkedprofile('<?=$escaped_profile?>')">
 	<script src="js/sign.js"></script>
 	<script src="js/account_update.js"></script>
-	<div>
+	<div class="profileBox">
 		<form action="account_update_process.php?id=<?=$filtered_user_id?>" method="post" >
 			<div class="container-right" id="container-right">
-		    <div><h4 style="margin-bottom: 20px">프로필을 선택해주세요</h4></div>
-		    <a href='javascript:imageClicked("rabbit")'><img src="images/rabbitprofile.png" alt="로고이미지" class="image" id="rabbit" ></a>
-		    <a href='javascript:imageClicked("mouse")'><img src="images/mouseprofile.png" alt="로고이미지"  class="image" id="mouse" ></a>
-		    <a href='javascript:imageClicked("monkey")'><img src="images/monkeyprofile.png" alt="로고이미지" class="image" id="monkey" ></a>
-		    <a href='javascript:imageClicked("giraffe")'><img src="images/giraffeprofile.png" alt="로고이미지" class="image" id="giraffe"></a>
-	     	</div>
-	     	<input type="hidden" name="profile" id="profile" value="">
-			<div>이름 : <input type="text" value="<?=$escaped_name?>" name="name" required></div>
-			<div>id : <input type="text" value="<?=$escaped_id?>" name="id" required></div>
-			<div>password : <input type="text" value="<?=$escaped_password?>" name="password" required ></div>
-			<div>tel : <input type="tel" value="<?=$escaped_tel?>" name="tel" required></div>
-			<div><input type="submit" value="완료" id="signbutton" onclick="imageChecked()"></div>
+				<div class="title"><h4>프로필 수정</h4></div>
+				<div class="selectImage">
+					<a href='javascript:imageClicked("rabbit")'><img src="images/rabbitprofile.png" alt="로고이미지" class="image" id="rabbit" ></a>
+					<a href='javascript:imageClicked("mouse")'><img src="images/mouseprofile.png" alt="로고이미지"  class="image" id="mouse" ></a>
+					<a href='javascript:imageClicked("monkey")'><img src="images/monkeyprofile.png" alt="로고이미지" class="image" id="monkey" ></a>
+					<a href='javascript:imageClicked("giraffe")'><img src="images/giraffeprofile.png" alt="로고이미지" class="image" id="giraffe"></a>
+				</div>
+			</div>
+			 			
+			<input type="hidden" name="profile" id="profile" value="">
+			<div class="dateBox">
+				<div class="name">이름</div> <div class="name2"><input type="text" value="<?=$escaped_name?>" name="name" required></div>
+				<div class="id">아이디</div> <div class="id2"><input type="text" value="<?=$escaped_id?>" name="id" required></div>
+				<div class="pw">비밀번호</div> <div class="pw2"><input type="text" value="<?=$escaped_password?>" name="password" required ></div>
+				<div class="tel">전화번호</div> <div class="tel2"><input type="tel" value="<?=$escaped_tel?>" name="tel" required></div>
+			</div>
+
+			<input type="submit" value="완료" id="signbutton" onclick="imageChecked()" class="okButton">
+
 		</form>
 	</div>
 </body>

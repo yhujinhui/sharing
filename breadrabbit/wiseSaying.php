@@ -8,7 +8,7 @@
 
     <link href="css/wiseSaying.css" rel="stylesheet">   
   </head>
-  <body>
+  <body onresize="parent.resizeTo(1000,700)" onload="parent.resizeTo(1000,700)">
           <?php
 
           require_once('conn.php');
@@ -37,13 +37,10 @@
             <div class="source">
               <?php echo "- ".$row['source']." -"; ?>
             </div>
-
             
-          
           <?php
           }
           ?>
-
           <input type="button" value="" id="closeButton" onclick="self.close();">
     <script src="jsWiseSaying.js"></script>
   </body>

@@ -7,6 +7,9 @@ body{
     background-color:#F5E5DE;
 
 }
+img{
+    margin-top:10px;
+}
 #logo{
     cursor: pointer;
 }
@@ -26,10 +29,10 @@ main{
 }
 .container{
     background-image: url('../images/store.png');
-    background-size: 100% 100%;
+    background-size: 100% 102%;
 
-    height:500px;
-    width: 1000px;
+    height:510px;
+    width: 1250px;
     margin-left: auto;
     margin-right: auto;
     /*border: 1px solid gray;*/

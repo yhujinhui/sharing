@@ -1,12 +1,10 @@
 body{
     background-color:#F5E5DE;
-
-    padding-left: 22%;
     padding-top: 7%;
 }
 body .boxProfile{
     float: left;
-    
+    margin-left: 23%;
     left: 100px;
     width: 801px;
     height: 480px;
@@ -117,4 +115,17 @@ body .boxProfile{
 .deleteButton:hover{
     background-color: #BD9690;
     color: #F7E0DC;
+}
+.backButton{
+    float: left;
+    clear: both;
+    margin-top: 4%;
+    margin-left: 3%;
+    width: 100px;
+    height: 28px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #BD9690;
+
+    background-repeat: no-repeat;
 }

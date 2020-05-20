@@ -22,5 +22,5 @@ function chkBreadKinds(){
 }
 
 function showWiseSaying(){
-    window.open("wiseSaying.php","책 속의 한줄","width=600, height=500, left=100, top=50");
+    window.open("wiseSaying.php","책 속의 한줄","left=100, top=100");
 }

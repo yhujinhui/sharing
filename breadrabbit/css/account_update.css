@@ -39,7 +39,7 @@ body{
 .profileBox .dateBox{
   float: left;
   clear: both;
-  margin-left: 35%;
+  margin-left: 33%;
   margin-top: 2%;
 }
 .profileBox .dateBox div{
@@ -92,10 +92,11 @@ body{
 }
 .okButton{
   float: left;
+  clear: both;
   width: 127px;
   height: 42px;
-  margin-left: 42%;
-  margin-top: 4%;
+  margin-left: 28%;
+  margin-top: 6%;
 
   border-radius: 10px;
   border: 0;
@@ -106,6 +107,25 @@ body{
   color: #BD9690;
 }
 .okButton:hover{
+  background-color: #BD9690;
+  color: #F7E0DC;
+}
+.cancelButton{
+  float: left;
+  width: 127px;
+  height: 42px;
+  margin-left: 15%;
+  margin-top: 6%;
+
+  border-radius: 10px;
+  border: 0;
+  outline: 0;
+  background-color: #F7E0DC;
+
+  font-size: 14px;
+  color: #BD9690;
+}
+.cancelButton:hover{
   background-color: #BD9690;
   color: #F7E0DC;
 }

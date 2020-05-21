@@ -1,5 +1,5 @@
 <?php  
-define('ALLOWED', true); 
+//define('ALLOWED', true); 
 require_once("lib/header_php.php");
 ?>
 <!DOCTYPE html>

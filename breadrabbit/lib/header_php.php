@@ -1,6 +1,6 @@
 <?php 
 require_once("conn.php");
-if (!defined('ALLOWED')) exit;
+//if (!defined('ALLOWED')) exit;
 
 $log='로그인';
 $escaped_name='';

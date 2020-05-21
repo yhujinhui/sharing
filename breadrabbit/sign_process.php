@@ -19,7 +19,7 @@ while($row=mysqli_fetch_array($result)){
     echo 
     '<script>
     alert("이미 가입한 계정입니다");
-    location.href="login.html";
+    location.href="login.php";
     </script>';
     $bool=false;
     break;
@@ -40,7 +40,7 @@ if($bool){
  	$result_sign=mysqli_query($conn,$sql_sign);
 	  echo '<script>
   			alert("회원가입을 완료하였습니다");
-  			location.href="login.html";
+  			location.href="login.php";
   			</script>';
 }
 ?>

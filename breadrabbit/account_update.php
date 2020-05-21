@@ -24,8 +24,8 @@ require_once("conn.php");
     </style>
 </head>
 <body onload="checkedprofile('<?=$escaped_profile?>')">
-	<script src="js/sign.js"></script>
 	<script src="js/account_update.js"></script>
+	<script src="js/sign.js"></script>
 	<div class="profileBox">
 		<form action="account_update_process.php?id=<?=$filtered_user_id?>" method="post" >
 			<div class="container-right" id="container-right">
@@ -46,8 +46,8 @@ require_once("conn.php");
 				<div class="tel">전화번호</div> <div class="tel2"><input type="tel" value="<?=$escaped_tel?>" name="tel" required></div>
 			</div>
 
-			<input type="submit" value="완료" id="signbutton" onclick="imageChecked()" class="okButton">
-			<input type="button" value="취소" id="signbutton" onclick="imageChecked()" class="cancelButton">
+			<input type="submit" value="완료" id="signbutton" onclick='updateimageChecked("<?=$escaped_profile?>")' class="okButton">
+			<input type="button" value="취소" id="signbutton" onclick="history.back()" class="cancelButton">
 
 		</form>
 	</div>

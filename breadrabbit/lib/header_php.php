@@ -1,10 +1,11 @@
 <?php 
 require_once("conn.php");
+if (!defined('ALLOWED')) exit;
 
 $log='로그인';
 $escaped_name='';
-$log_href="login.html";
-$cookbread_href="login.html";
+$log_href="login.php";
+$cookbread_href="login.php";
 $store_href="store.php?page=1&kinds=all";
 $logo_href="first.php";
 $filtered_user_id='';

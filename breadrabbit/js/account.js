@@ -7,6 +7,3 @@ function accountdeletechk(){
 	}
 }
 
-function goback(){
-	window.history.back()
-}

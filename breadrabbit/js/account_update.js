@@ -1,3 +1,4 @@
+animal="";
 function checkedprofile(profile){
 	var clickprofile=document.getElementById(profile);
 	var color;
@@ -10,5 +11,13 @@ function checkedprofile(profile){
 	}else if(profile==="giraffe"){
 		color="#F9BD00";
 	}
+	animal=profile;
 	clickprofile.style.border="3px dashed"+color;
+}
+
+function updateimageChecked(profile){ 
+  if(!animal){
+  animal=profile;
+  }
+  document.getElementById("profile").value=animal;
 }

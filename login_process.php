@@ -12,7 +12,12 @@ $bool=true;
 while($row=mysqli_fetch_array($result)){
   if(!empty($filtered['id'])&&!empty($filtered['password'])){
     if($filtered['id']==$row['id']&&$filtered['password']==$row['password']){
+      session_start();
+      $_SESSION['id']=$filtered['id'];
+      $_SESSION['password']=$filtered['password'];
+      $_SESSION['user_id']=$row['user_id'];
       $bool=false;
+      header("Location: first.php");
       break;
     }
   }else{
@@ -32,15 +37,3 @@ if($bool){
     </script>';
 }
 ?>
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-</head>
-<body>
-  <form method="post" name="form" action="first.php?id=<?=$row['user_id']?>">
-    <script>document.form.submit();</script>
-  </form>
-</body>
-</html>

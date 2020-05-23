@@ -20,12 +20,10 @@ $view_article=15;//페이지당 게시물 개수2
 if(!$page)$page=1;
 $start=($page-1)*$view_article;
 
-$user_id='';
 $id='';
 $option='';
 
-if(isset($_GET['id'])){
-    $user_id="&user_id=".$filtered_user_id;
+if(isset($_SESSION['user_id'])){
     $id="&id=".$filtered_user_id;
     $option='<option value="mine">내빵</option>';
 }
@@ -57,7 +55,7 @@ while($row=mysqli_fetch_array($result)){
     
     $item=$item.
     "<span class='item'>
-        <a href='content.php?id={$escaped_id}".$user_id."'>
+        <a href='content.php?id={$escaped_id}'>
             <img class='breadimg' src={$breadlocation}>
         </a>
     </span>"
@@ -96,7 +94,7 @@ include("lib/page.php");
     
     <main>
         <span class="select">
-            <select id="select" name="select" onchange="alert_select_value(this,<?=$filtered_user_id?>)">
+            <select id="select" name="select" onchange="alert_select_value(this)">
                 <option value="all">모든고민</option>
                 <option value="course">진로고민</option>
                 <option value="family">가족고민</option>

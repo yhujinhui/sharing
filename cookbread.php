@@ -1,8 +1,9 @@
 <?php 
     require_once("conn.php");
-
-    if(isset($_GET['id'])){
-        $escaped_user_id=mysqli_real_escape_string($conn,$_GET['id']);
+    require_once("lib/logchk.php");
+   
+    if(isset($_SESSION['user_id'])){
+        $escaped_user_id=mysqli_real_escape_string($conn,$_SESSION['user_id']);
     }
     $escaped_title='';
     $escaped_description='';

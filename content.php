@@ -1,5 +1,6 @@
 <?php 
 require_once("conn.php");
+session_start();
 
 $filtered=array(
 	'id'=>mysqli_real_escape_string($conn,$_GET['id']),
@@ -9,8 +10,8 @@ $logchk='';
 $update='';
 $delete='';
 
-if(isset($_GET['user_id'])){
-	$filtered['user_id']=mysqli_real_escape_string($conn,$_GET['user_id']);
+if(isset($_SESSION['user_id'])){
+	$filtered['user_id']=mysqli_real_escape_string($conn,$_SESSION['user_id']);
 	
 }else{
 	$logchk='return logchk()';
@@ -27,10 +28,10 @@ $escaped_title=htmlspecialchars($row_content['title']);
 $escaped_description=htmlspecialchars($row_content['description']);
 $escaped_kinds=htmlspecialchars($row_content['kinds']);
 $escaped_name=htmlspecialchars($row_content['name']);
-if(isset($_GET['user_id'])){
+if(isset($_SESSION['user_id'])){
 	if($filtered['user_id']==$row_content['user_id']){
 		$update=
-		"<a href='update.php?id={$row_content[4]}&user_id={$filtered['user_id']}'>수정하기</a>";
+		"<a href='update.php?id={$row_content[4]}'>수정하기</a>";
 		// content_id
 		$delete=
 		"<form action='content_delete_process.php' method='post'>

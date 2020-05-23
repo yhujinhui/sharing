@@ -15,7 +15,8 @@
     "update content set 
     	kinds='{$filtered['kinds']}',
     	title='{$filtered['title']}',
-    	description='{$filtered['description']}' 
+    	description='{$filtered['description']}',
+        created=now()
     	where id={$filtered['content_id']}
     	";
 

@@ -7,7 +7,7 @@
  </head>
  <body>
  	<div class="container">
-		<form action="admin.php" method="post">
+		<form action="admin_login_process.php" method="post">
 	 		<table border="1">
 	 			<tr>
 	 				<td>아이디</td>

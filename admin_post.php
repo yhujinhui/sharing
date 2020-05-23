@@ -1,5 +1,7 @@
 <?php 
 require_once("conn.php");
+require_once("lib/admin_logchk.php");
+
 $sql=
 "select * from content left join sign on content.user_id=sign.user_id";
 $result=mysqli_query($conn,$sql);

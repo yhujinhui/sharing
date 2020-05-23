@@ -20,12 +20,10 @@ trigger.addEventListener("click", toggleModal);
  cancel.addEventListener("click", toggleModal); 
  window.addEventListener("click", windowOnClick); 
 
- function alert_select_value(select,id){
+ function alert_select_value(select){
     var selected_index = select.selectedIndex; // selectbox에서 선택된 index를 찾음 
     var selected_value = select.options[selected_index].value;     // 선택된 index의 value를 찾음 
-    if(!id){
-        location.href="store.php?page=1"+"&kinds="+selected_value;
-    }else location.href="store.php?page=1&id="+id+"&kinds="+selected_value;
+    location.href="store.php?page=1"+"&kinds="+selected_value;
 }
 
  function alert_selected_value(kinds){

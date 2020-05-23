@@ -1,5 +1,7 @@
 <?php 
 require_once("conn.php");
+require_once("lib/admin_logchk.php");
+
 $sql="select * from sign";
 $result=mysqli_query($conn,$sql);
 $user_list='';

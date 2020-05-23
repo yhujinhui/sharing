@@ -1,9 +1,10 @@
 <?php  
-
 require_once("conn.php");
+session_start();
+
 $filtered=array(
 	'id'=>mysqli_real_escape_string($conn,$_GET['id']),
-    'user_id'=>mysqli_real_escape_string($conn,$_GET['user_id']),
+    'user_id'=>mysqli_real_escape_string($conn,$_SESSION['user_id']),
 	// content id
 );
 $sql="select * from content where id={$filtered['id']}";

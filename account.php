@@ -1,7 +1,8 @@
 <?php  
 require_once("conn.php");
+require_once("lib/header_php.php");
 
- $filtered_user_id=mysqli_real_escape_string($conn,$_GET['id']);
+ $filtered_user_id=mysqli_real_escape_string($conn,$_SESSION['user_id']);
   $sql=
   "select * from sign where user_id={$filtered_user_id}";
   $result=mysqli_query($conn,$sql);
@@ -13,9 +14,7 @@ require_once("conn.php");
   $escaped_tel=htmlspecialchars($row['tel']);
   $escaped_profile=htmlspecialchars($row['profile']);
 ?>
-<?php  
-require_once("lib/header_php.php");
-?>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -29,6 +28,7 @@ require_once("lib/header_php.php");
       require_once("lib/header_html.php");
      ?>
   <script src="js/account.js"></script>
+  <script src="js/first.js"></script>
   <div class="boxProfile"> 
     <div class="text">프로필</div>
     <div><img src="images/<?=$escaped_profile?>profile.png" alt="프로필"  class="image"></div>
@@ -39,8 +39,8 @@ require_once("lib/header_php.php");
       <div class="tel">전화번호</div> <div class="tel2"><?=$escaped_tel?></div>
     </div>
     <div>
+        <input type='button' value='수정' class="updateButton" onClick="location.href='account_update.php'">
       <form action='account_delete_process.php' method='post'>
-      <input type='button' value='수정' class="updateButton" onClick="location.href='account_update.php?id=<?=$filtered_user_id?>'">
       <input type='hidden' name='id' value="<?=$filtered_user_id?>">
       <input type='submit' value='삭제' class="deleteButton" onclick='return accountdeletechk()'>
       </form>

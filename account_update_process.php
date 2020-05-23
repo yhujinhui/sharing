@@ -1,6 +1,6 @@
 <?php  
 require_once("conn.php");
-
+session_start();
 
 $filtered=array(
     'name' => mysqli_real_escape_string($conn,$_POST['name']),
@@ -10,7 +10,7 @@ $filtered=array(
     'profile' => mysqli_real_escape_string($conn,$_POST['profile']),
 
 );
-$filtered_user_id=mysqli_real_escape_string($conn,$_GET['id']);
+$filtered_user_id=mysqli_real_escape_string($conn,$_SESSION['user_id']);
 $sql=
   "update sign set
 	name='{$filtered['name']}',
@@ -27,6 +27,6 @@ $sql=
         echo mysqli_error($conn);
 
     }else{
-        header("Location: account.php?id={$filtered_user_id}");
+        header("Location: account.php");
     }
 ?>

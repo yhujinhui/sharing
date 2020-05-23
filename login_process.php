@@ -24,7 +24,7 @@ while($row=mysqli_fetch_array($result)){
     echo
     '<script>
     alert("아이디나 비밀번호를 입력해주세요");
-    location.href="login.html";
+    location.href="login.php";
     </script>';
   }	
 }
@@ -33,7 +33,7 @@ if($bool){
 	  echo 
     '<script>
     alert("가입하지 않은 아이디이거나, 잘못된 비밀번호입니다.");
-    location.href="login.html";
+    location.href="login.php";
     </script>';
 }
 ?>

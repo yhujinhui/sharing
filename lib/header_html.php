@@ -2,7 +2,7 @@
   <link href="https://fonts.googleapis.com/css?family=Gothic+A1&display=swap" rel="stylesheet">
   <div class="nav-log">
   	<a href="<?=$log_href?>" id="log" onclick="javascript:return logoutchk();" ><?=$log?></a>
-	<a href='account.php?id=<?=$filtered_user_id?>' id="name"><?=$escaped_name?>
+	<a href='account.php' id="name"><?=$escaped_name?>
   </div>
   <div class="nav">
   	<a href="<?=$logo_href?>"  class="logo"><img src="" alt="">로고</a>

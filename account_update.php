@@ -1,8 +1,9 @@
 <?php 
 //account.php랑 코드 겹침 나중에 나누기
 require_once("conn.php");
+session_start();
 
- $filtered_user_id=mysqli_real_escape_string($conn,$_GET['id']);
+ $filtered_user_id=mysqli_real_escape_string($conn,$_SESSION['user_id']);
   $sql=
   "select * from sign where user_id={$filtered_user_id}";
   $result=mysqli_query($conn,$sql);

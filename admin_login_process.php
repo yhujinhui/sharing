@@ -11,8 +11,8 @@
 		if($id==$row['id'] && $password==$row['password']){
 			$chk=true;
 			session_start();
-			$_SESSION['id']=$id;
-			$_SESSION['password']=$password;
+			$_SESSION['admin_id']=$id;
+			$_SESSION['admin_password']=$password;
 			header("Location: admin.php");
 			break;
 		}else{

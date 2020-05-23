@@ -7,7 +7,7 @@ $kinds=$_GET['kinds'];
 
 switch($kinds){
     case 'all':$pagesql="select count(*) totalCount from content";break;
-    case 'mine':$pagesql="select count(*) totalCount from content where user_id={$_GET['id']}";break;
+    case 'mine':$pagesql="select count(*) totalCount from content where user_id={$_SESSION['user_id']}";break;
     default : $pagesql="select count(*) totalCount from content where kinds='{$kinds}'";break;
 }
 
@@ -30,7 +30,7 @@ if(isset($_SESSION['user_id'])){
 
 switch ($kinds) {
     case 'all':$sql="select * from content limit $start, $view_article";break;
-    case 'mine':$sql= "select kinds,id from content where user_id={$_GET['id']} limit $start, $view_article";break;
+    case 'mine':$sql= "select kinds,id from content where user_id={$_SESSION['user_id']} limit $start, $view_article";break;
     default:$sql= "select * from content where kinds='{$kinds}' limit $start, $view_article";break;
 }
 

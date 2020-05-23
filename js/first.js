@@ -31,10 +31,16 @@ function showSlides() {
         dots[i].className = dots[i].className.replace(" active", "");
         
     }
-    container[0].style.backgroundImage = "url('images/slide0"+count+".png')";
+    container[0].style.backgroundImage = "url('images/slide"+count+".png')";
     dots[slideIndex-1].className += " active";
-    if(count==0){
-    	container[0].style.backgroundColor="#ffffff";
+    if(count==1){
+        container[0].style.backgroundColor="#F7C6C6";
+    }
+    if(count==2){
+    	container[0].style.backgroundColor="#C6F4CC";
+    }
+    if(count==2){
+        container[0].style.backgroundColor="#C6F4C9";
     }
     if(count==3){//사진 갯수
     	count=0;

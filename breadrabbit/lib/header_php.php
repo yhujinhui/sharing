@@ -7,7 +7,6 @@ $escaped_name='';
 $log_href="login.php";
 $cookbread_href="login.php";
 $store_href="store.php?page=1&kinds=all";
-$logo_href="first.php";
 $event_href="event.php";
 $filtered_user_id='';
 $logchk='return logchk()';

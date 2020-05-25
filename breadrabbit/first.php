@@ -6,6 +6,7 @@ $row=mysqli_fetch_array($result);
 $escaped_description=htmlspecialchars($row['description']);
 $escaped_comment=htmlspecialchars($row['comment']);
 $container_bottom="";
+
 if($escaped_description&&$escaped_comment){
   $container_bottom=
   '
@@ -15,8 +16,6 @@ if($escaped_description&&$escaped_comment){
     <div class="comment">'.$escaped_comment.'</div>
   </div>
   ';
-}else{
-  $container_bottom="이벤트 참여 ㄱㄱ";
 }
 ?>
 <!DOCTYPE html>
@@ -42,6 +41,9 @@ if($escaped_description&&$escaped_comment){
         </footer>
       </div>
       <?=$container_bottom?>
+      <div class="event">
+        이벤트 참여 ㄲㄲㄲㄲ(디자인 해야함)
+    </div>
       <div class="footer">
         <footer>
           <span><a href="introduce.html">개발자소개</a></span>

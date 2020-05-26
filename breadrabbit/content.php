@@ -28,7 +28,7 @@ $escaped_title=htmlspecialchars($row_content['title']);
 $escaped_description=htmlspecialchars($row_content['description']);
 $escaped_kinds=htmlspecialchars($row_content['kinds']);
 $escaped_name=htmlspecialchars($row_content['name']);
-if(isset($_SESSION['user_id'])){
+if(isset($filtered['user_id'])){
 	if($filtered['user_id']==$row_content['user_id']){
 		$update=
 		"<a href='update.php?id={$row_content[4]}'>수정하기</a>";
@@ -40,6 +40,7 @@ if(isset($_SESSION['user_id'])){
 		<input type='submit' value='빵제거하기' onclick='return contentdeletechk()'></form>";
 	}
 }
+
 $comment='';
 $sql_comment=
 "select * from content left join comment on comment.content_id =content.id where comment.content_id= {$filtered['id']}";
@@ -60,7 +61,7 @@ while($row_comment=mysqli_fetch_array($result_comment)){
 	$row_user=mysqli_fetch_array($result_user);
 	$escaped_user_profile=htmlspecialchars($row_user['profile']);
 	$escaped_user_name=htmlspecialchars($row_user['name']);
-	if(isset($_GET['user_id'])){
+	if(isset($filtered['user_id'])){
 		if($filtered['user_id']==$row_comment['user_id']){
 			$comment_delete=
 			"<form action='comment_delete_process.php' method='post'>
@@ -69,7 +70,13 @@ while($row_comment=mysqli_fetch_array($result_comment)){
 			  <input type='submit' value='삭제하기' onclick='return deletechk()'></form>";
 		}
 	}
-
+	$comment_report="";
+	if($filtered['user_id']!=$row_comment['user_id']){
+		$comment_report=
+		"<form action='comment_report_process.php' method='post'>
+		<input type='hidden' name='id' value='".$escaped_comment_id."'>
+		<input type='submit' value='신고하기' onclick='return reportchk()'></form>";
+	}
 	$comment=$comment.
 	"<div class='comment'>
 		<span><img src='images/{$escaped_user_profile}profile.png' style='width:50px; height: 50px'></span>
@@ -77,6 +84,7 @@ while($row_comment=mysqli_fetch_array($result_comment)){
 		<span> 댓글내용:".$escaped_comment."</span>
 		<span> 댓글쓴 날짜:".$escaped_comment_created."</span>
 		<span>".$comment_delete."</span>
+		<span>".$comment_report."</span>
 		<span></span></div>
 		"
 	;

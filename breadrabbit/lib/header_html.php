@@ -5,8 +5,8 @@
 	<a href='account.php' id="name"><?=$escaped_name?>
   </div>
   <div class="nav">
-  	<a href="<?=$logo_href?>"  class="logo"><img src="" alt="">로고</a>
-  	<a href="">홈</a>
+  	<a href=""  class="logo"><img src="" alt="">로고</a>
+  	<a href="first.php">홈</a>
   	<a href="<?=$event_href?>">이벤트</a>
   	<a href="chatIntro.php">상담</a>
   	<a href="trialTest.php">심리검사</a>

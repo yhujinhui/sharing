@@ -22,3 +22,11 @@ function contentdeletechk(){
     	return false;
 	}
 }
+function reportchk(){
+	if(confirm("댓글을 신고하시겠습니까?")){
+		history.back();
+		return true;
+	} else {
+    	return false;
+	}
+}

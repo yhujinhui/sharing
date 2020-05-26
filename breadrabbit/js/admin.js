@@ -10,3 +10,9 @@ if(confirm("올리면 되돌릴 수 없습니다. 올리시겠습니까?")){
 	return true;
 } else return false;
 }
+
+function commentchk(){
+if(confirm("댓글을 삭제하시겠습니까?")){
+	return true;
+} else return false;
+}

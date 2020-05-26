@@ -1,0 +1,33 @@
+.container .Intro{
+    margin-top: 9em;
+    text-align: center;
+}
+.container .Intro .title{
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 0.5em;
+}
+.container .Intro .content{
+    font-size: 15px;
+    margin-bottom: 5em;
+}
+.container .Intro .chattingButton{
+    width: 120px;
+    height: 120px;
+    border: 0;
+    outline: 0;
+    font-size: 14px;
+    background: #2f3640;
+    color: #ffffff;
+    border-radius: 50%;
+    margin-bottom: 8em;
+
+}
+.container .Intro .chattingButton:hover{
+    background: #ffffff;
+    color: #2f3640;
+    border: 1px solid #2f3640;
+}
+.container .Intro .content2{
+    font-size: 13px;
+}

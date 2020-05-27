@@ -30,7 +30,7 @@ if($escaped_description&&$escaped_comment){
 
         </style>
     </head>
-    <body onload="javascript:showSlides();">
+    <body onload="javascript:showSlides(); javascript:showEventSlides();">
       <script src="js/first.js"></script>
      <?php  
       require_once("lib/header_html.php");
@@ -55,7 +55,6 @@ if($escaped_description&&$escaped_comment){
           <div class="numbertext">2 / 2</div>
           <img src="http://placehold.it/500x100">
         </div>
-
         <a class="prev" onclick="plusSlides(-1)">❮</a>
         <a class="next" onclick="plusSlides(1)">❯</a>
     </div>

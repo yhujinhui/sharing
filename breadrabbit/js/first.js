@@ -39,35 +39,35 @@ function showSlides() {
     if(count==2){
     	container[0].style.backgroundColor="#C6F4CC";
     }
-    if(count==2){
+    if(count==3){
         container[0].style.backgroundColor="#C6F4C9";
     }
     if(count==3){//사진 갯수
     	count=0;
     	slideIndex=0;
     }
-    setTimeout(showSlides, 5000); // Change image every 2 seconds
+    setTimeout(showSlides, 4000); // Change image every 2 seconds
 }
 
 //이벤트 배너
-var slideIndex = 1;
-showSlides(slideIndex);
+var slideEventIndex = 1;
+showEventSlides(slideEventIndex);
 
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  showEventSlides(slideEventIndex += n);
 }
 
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+  showEventSlides(slideEventIndex = n);
 }
 
-function showSlides(n) {
+function showEventSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+  if (n > slides.length) {slideEventIndex = 1}
+  if (n < 1) {slideEventIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
   }
-  slides[slideIndex-1].style.display = "block";
+  slides[slideEventIndex-1].style.display = "block";
 }

@@ -1,0 +1,45 @@
+.content{
+	/*border: 1px solid gray;*/
+    position: relative;
+	width: 1176px;
+	margin:0 auto 0 auto;
+}
+.content-title{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	font-size: 20px;
+	text-align: center;
+}
+.items{
+	float:left;
+	position: relative;
+	overflow: hidden;
+	border: 1px solid #9D979E;
+	margin: 5px 5px 5px 5px;
+}
+.items:hover{
+	border: 1px solid #9A38AF;
+
+}
+.img{
+}
+.eventlist{
+	text-align: center;
+	overflow: hidden;
+}
+.eventlist:after{ 
+	content:""; clear:both; display:block;
+}
+.explain{
+	text-align: center;
+}
+.event-title{
+	margin-top: 10px;
+}
+.date{
+	margin-top: 20px;
+}
+a{
+	color:black;
+	text-decoration: none;
+}

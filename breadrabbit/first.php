@@ -26,6 +26,8 @@ if($escaped_description&&$escaped_comment){
         <style type = "text/css">
           @import url("css/header.css");
           @import url("css/first.css");
+          @import url("css/footer_bottom.css");
+
         </style>
     </head>
     <body onload="javascript:showSlides();">
@@ -42,13 +44,23 @@ if($escaped_description&&$escaped_comment){
       </div>
       <?=$container_bottom?>
       <div class="event">
-        이벤트 참여 ㄲㄲㄲㄲ(디자인 해야함)
+        <div class="event-text">
+          이벤트
+        </div>
+        <div class="mySlides demo cursor">
+          <div class="numbertext">1 / 2</div>
+          <a href="event_explain.php" class="event-href"><img src="images/slide1.png" class="event-img"></a>
+        </div>
+        <div class="mySlides demo cursor">
+          <div class="numbertext">2 / 2</div>
+          <img src="http://placehold.it/500x100">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
     </div>
-      <div class="footer">
-        <footer>
-          <span><a href="introduce.html">개발자소개</a></span>
-          <span><a href="">이메일 문의</a></span>
-      </footer>
-      </div>
+    <?php  
+        require_once("lib/footer_bottom.php");
+    ?>
     </body>
 </html>

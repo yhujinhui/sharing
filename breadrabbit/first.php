@@ -1,6 +1,6 @@
 <?php  
 require_once("lib/header_php.php");
-$sql="select * from event left join event_winning on event.user_id=event_winning.user_id where event.user_id=event_winning.user_id";
+$sql="select * from story_evt left join event_winning on story_evt.user_id=event_winning.user_id where story_evt.user_id=event_winning.user_id";
 $result=mysqli_query($conn,$sql);
 $row=mysqli_fetch_array($result);
 $escaped_description=htmlspecialchars($row['description']);
@@ -17,6 +17,31 @@ if($escaped_description&&$escaped_comment){
   </div>
   ';
 }
+
+$sql="select count(*) from event";
+$result=mysqli_query($conn,$sql);
+$row=mysqli_fetch_array($result);
+$event_cnt=$row['count(*)'];
+
+$sql="select * from event";
+$result=mysqli_query($conn,$sql);
+$banner=array();
+$cnt=0;
+$slide="";
+while($row=mysqli_fetch_array($result)){
+  //rint_r($row);
+  $banner[$cnt]=$row['bannername'];
+  //print_r($banner[$cnt]);
+  $slide=$slide.
+  '
+  <div class="mySlides demo cursor">
+        <div class="numbertext">'.($cnt+1).' / '.($event_cnt).'</div>
+        <a href="event_explain.php?id='.$row['id'].'" class="event-href"><img src="eventImages/'.$banner[$cnt].'"></a>
+  </div>
+  ';
+}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -47,14 +72,11 @@ if($escaped_description&&$escaped_comment){
         <div class="event-text">
           이벤트
         </div>
-        <div class="mySlides demo cursor">
+        <!-- <div class="mySlides demo cursor">
           <div class="numbertext">1 / 2</div>
           <a href="event_explain.php" class="event-href"><img src="images/slide1.png" class="event-img"></a>
-        </div>
-        <div class="mySlides demo cursor">
-          <div class="numbertext">2 / 2</div>
-          <img src="http://placehold.it/500x100">
-        </div>
+        </div> -->
+        <?=$slide?>
         <a class="prev" onclick="plusSlides(-1)">❮</a>
         <a class="next" onclick="plusSlides(1)">❯</a>
     </div>

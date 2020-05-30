@@ -2,7 +2,7 @@
 	require_once("conn.php");
 	require_once("lib/admin_logchk.php");
 
-	$sql="select * from event";
+	$sql="select * from story_evt";
 	$result=mysqli_query($conn,$sql);
 
 	$list="";

@@ -15,6 +15,9 @@ require_once("lib/header_php.php");
         require_once("lib/header_html.php");
         ?>
             <div>
+                <div class="banner">
+                    
+                </div>
                 <form name="test" method="post" action="trialTestProc.php" onsubmit="return checksubmit();">
                     <div>
                         <div>사람들이 당신 뒷담화하는 걸 들었을 때 어떻게 할건가요?</div>

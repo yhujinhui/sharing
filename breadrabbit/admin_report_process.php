@@ -3,7 +3,7 @@ require_once("conn.php");
 
 if(!isset($_POST['chk'])){
 	echo "<script>
-	alert('체크해주세요');
+	alert('하나 이상 체크해주세요');
 	history.back();
 	</script>";
 }else{

@@ -20,7 +20,7 @@ if(isset($_SESSION['user_id'])){
 	<?php  
         require_once("lib/header_html.php");
     ?>
-	<form action="event_process.php" method="post">
+	<form action="event_story_process.php" method="post">
 		<textarea name="description" id="" cols="30" rows="10"></textarea>
 		<input type="hidden" name="id" value="<?=$escaped_id?>">
 		<input type="submit" value="참여하기" onclick="<?=$logchk?>">

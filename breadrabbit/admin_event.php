@@ -24,7 +24,6 @@
 	 	<tr>
 	 		<th><a href="admin_event_add.php">이벤트 추가</a></th>
 	 		<td>관리자가 직접 이벤트를 추가합니다</td>
-
 	 	</tr>
 	 </table>
 </body>

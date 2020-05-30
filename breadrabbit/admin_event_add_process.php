@@ -18,9 +18,9 @@ foreach($_FILES['eximg']['name'] as $f => $name){
     $uploadFile = $uploadBase.$uploadname;
 
     if(move_uploaded_file($_FILES['eximg']['tmp_name'][$f],$uploadFile)){
-        echo 'success';
+        //echo 'success';
     }else{
-        echo 'error';
+       // echo 'error';
     }
 }
 

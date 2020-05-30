@@ -11,7 +11,7 @@ if($escaped_description&&$escaped_comment){
   $container_bottom=
   '
   <div class="container-bottom">
-    <h1>오늘의 사연입니다</h1>
+    <h1>이달의 사연입니다</h1>
     <div class="content">'.$escaped_description.'</div>
     <div class="comment">'.$escaped_comment.'</div>
   </div>

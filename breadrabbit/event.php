@@ -5,29 +5,35 @@ $sql="select count(*) from event";
 $result=mysqli_query($conn,$sql);
 $row=mysqli_fetch_array($result);
 $event_cnt=$row['count(*)'];
-
-$sql="select * from event";
-$result=mysqli_query($conn,$sql);
-$banner=array();
-$cnt=0;
 $items="";
-while($row=mysqli_fetch_array($result)){
-  //rint_r($row);
-  $banner[$cnt]=$row['bannername'];
-  $items=$items.
-  '
-  <a href="event_explain.php?id='.$row['id'].'" class="items">
-		<span class="img">
-			<img src="eventImages/'.$banner[$cnt].'" alt="" width="380" height="270">
-			<div class="explain">
-				<div class="event-title">'.$row['evtname'].'</div>
-				<div class="date">기한 없음</div>
-			</div>
-		</span>
-	</a>
-  ';
-
+if($event_cnt<=0){
+	echo 
+	'
+	<script>alert("현재 진행중인 이벤트가 없습니다");history.back();</script>
+	';
+}else{
+	$sql="select * from event";
+	$result=mysqli_query($conn,$sql);
+	$banner=array();
+	$cnt=0;
+	while($row=mysqli_fetch_array($result)){
+	  //rint_r($row);
+	  $banner[$cnt]=$row['bannername'];
+	  $items=$items.
+	  '
+	  <a href="event_explain.php?id='.$row['id'].'" class="items">
+			<span class="img">
+				<img src="eventImages/'.$banner[$cnt].'" alt="" width="380" height="270">
+				<div class="explain">
+					<div class="event-title">'.$row['evtname'].'</div>
+					<div class="date">기한 없음</div>
+				</div>
+			</span>
+		</a>
+	  ';
+	}
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="ko">

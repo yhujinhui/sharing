@@ -30,3 +30,21 @@ function reportchk(){
     	return false;
 	}
 }
+function backcolorchange(min, max){
+	min = Math.ceil(min);
+ 	max = Math.floor(max);
+ 	ran = Math.floor(Math.random() * (max - min)) + min;
+ 	var body=document.body.style;
+ 	//alert(ran);
+ 	switch(ran){
+ 		case 0:body.backgroundColor="#CCFFCA";break;
+ 		case 1:body.backgroundColor="#FFCAEC";break;
+ 		case 2:body.backgroundColor="#CAF6FF";break;
+ 		case 3:body.backgroundColor="#FFFACA";break;
+ 		case 4:body.backgroundColor="#CADEFF";break;
+ 		case 5:body.backgroundColor="#EBFFCA";break;
+ 		case 6:body.backgroundColor="#ECCAFF";break;
+ 		case 7:body.backgroundColor="#FFABAB";break;
+ 		case 8:body.backgroundColor="#FFD4AB";break;
+ 	}
+}

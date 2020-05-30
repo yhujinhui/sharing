@@ -1,7 +1,6 @@
 <?php 
 require_once("conn.php");
 session_start();
-
 $filtered=array(
 	'id'=>mysqli_real_escape_string($conn,$_GET['id']),
 	'user_id'
@@ -37,7 +36,7 @@ if(isset($filtered['user_id'])){
 		"<form action='content_delete_process.php' method='post'>
 		<input type='hidden' name='user_id' value='".$filtered['user_id']."'>
 		<input type='hidden' name='id' value='".$row_content[4]."'>
-		<input type='submit' value='빵제거하기' onclick='return contentdeletechk()'></form>";
+		<input type='submit' class='submit' value='빵제거하기' onclick='return contentdeletechk()'></form>";
 	}
 }
 
@@ -67,7 +66,7 @@ while($row_comment=mysqli_fetch_array($result_comment)){
 			"<form action='comment_delete_process.php' method='post'>
 			<input type='hidden' name='user_id' value='".$filtered['user_id']."'>
 			<input type='hidden' name='id' value='".$escaped_comment_id."'>
-			  <input type='submit' value='삭제하기' onclick='return deletechk()'></form>";
+			  <input type='submit' class='submit' value='삭제하기' onclick='return deletechk()'></form>";
 		}
 	}
 	$comment_report="";
@@ -75,20 +74,30 @@ while($row_comment=mysqli_fetch_array($result_comment)){
 		$comment_report=
 		"<form action='comment_report_process.php' method='post'>
 		<input type='hidden' name='id' value='".$escaped_comment_id."'>
-		<input type='submit' value='신고하기' onclick='return reportchk()'></form>";
+		<input type='submit' class='submit' value='신고하기' onclick='return reportchk()'></form>";
 	}
-	$comment=$comment.
-	"<div class='comment'>
-		<span><img src='images/{$escaped_user_profile}profile.png' style='width:50px; height: 50px'></span>
-		<span> 이름:".$escaped_user_name."</span>
-		<span> 댓글내용:".$escaped_comment."</span>
-		<span> 댓글쓴 날짜:".$escaped_comment_created."</span>
-		<span>".$comment_delete."</span>
-		<span>".$comment_report."</span>
-		<span></span></div>
-		"
-	;
 	
+	$comment=$comment.
+	'
+	<div class="comment">
+		<div class="comment-profile">
+		<img src="images/'.$escaped_user_profile.'profile.png" class="profileimg">
+		</div>
+		<div class="comment-update">
+			'.$comment_delete.'
+			'.$comment_report.'
+		</div>
+		<div class="comment-name">
+			'.$escaped_user_name.'
+		</div>
+		<div class="comment-description">
+			'.$escaped_comment.'
+		</div>
+		<div class="comment-date">
+			'.$escaped_comment_created.'
+		</div>
+	</div>
+	';
 }
 
 ?>
@@ -99,35 +108,52 @@ while($row_comment=mysqli_fetch_array($result_comment)){
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link href="css/content.css" rel="stylesheet">
-
-</head>
-<body>
 	<script src="js/content.js"></script>
-	<div class="boxProfile"> 
-	<div id="title">제목:<?=$escaped_title?></div>
-	<div id="contentt">본문:<?=$escaped_description?></div>
-	<div id="name">이름:<?=$escaped_name?></div>
-	<div id="date">날짜:<?=$escaped_created?></div>
-
-	<div><img src='images/<?=$escaped_profile?>profile.png' id="profile" style="width:50px; height: 50px"></div>
-
+</head>
+<body onload="backcolorchange(0,9)">
+	
+	<div class="warraper">
+		<div class="offButton">
+			<a href="store.php?page=1&kinds=all"><img src="images/offButton.png" style="width:40px; height:40px"></a>
+		</div>
+		<div class="container">
+			<div class="header">
+				<div class="profile">
+					<img src='images/<?=$escaped_profile?>profile.png' class="profileimg">
+				</div>
+				<div class="update">
+					<?=$update?>
+					<?=$delete?>
+				</div>
+				<div class="user-name">
+					<?=$escaped_name?>	
+				</div>
+				<div class="date">
+					<?=$escaped_created?>
+				</div>
+			</div>
+			
+			<div class="main">
+				<div class="title">
+					<?=$escaped_title?>
+				</div>
+				<div class="description">
+					 <?=$escaped_description?> 
+				</div>
+			</div>
+			<div class="footer">
+				<div class="comment-title">댓글</div>
+				<?=$comment?>
+				<div class="post-comment">
+					<form action="content_process.php" method="post">
+						<div><textarea name="comment" id="comment" cols="33" required></textarea></div>
+						<input type="hidden" name=content_id value="<?=$filtered['id']?>">
+						<input type="hidden" name=user_id value="<?=$filtered['user_id']?>">
+				        <input type="submit" id="submitButton" name="submit" alt="" value="댓글달기" onclick="<?=$logchk?>">
+					</form>
+				</div>
+			</div>
+		</div>
 	</div>
-
-	<?=$update?>
-	<?=$delete?>
-	<br>
-	<br>
-	<div class="boxtwo">
-	<div id="commentdiv">
-		<div class="comment">
-			<?=$comment?>
-	</div>
-</div>
-	<form action="content_process.php" method="post">
-		<div><textarea name="comment" id="comment" cols="33"  required></textarea></div>
-		<input type="hidden" name=content_id value="<?=$filtered['id']?>">
-		<input type="hidden" name=user_id value="<?=$filtered['user_id']?>">
-        <input type="submit" id="submitButton" name="submit" alt="" value="댓글달기" onclick="<?=$logchk?>">
-	</form>
 </body>
 </html>

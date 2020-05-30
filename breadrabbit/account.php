@@ -22,13 +22,13 @@ require_once("lib/header_php.php");
 	<title><?=$escaped_name?>님 계정</title>
 	<link href="css/account.css" rel="stylesheet">
   <link href="css/header.css" rel="stylesheet">
+  <script src="js/account.js"></script>
+  <script src="js/header.js"></script>
 </head>
 <body>
   <?php  
       require_once("lib/header_html.php");
      ?>
-  <script src="js/account.js"></script>
-  <script src="js/first.js"></script>
   <div class="boxProfile"> 
     <div class="text">프로필</div>
     <div><img src="images/<?=$escaped_profile?>profile.png" alt="프로필"  class="image"></div>

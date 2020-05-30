@@ -42,8 +42,6 @@ if($event_cnt<=0){
 	<title>이벤트</title>
 	<link href="css/header.css" rel="stylesheet"> 
 	<link href="css/event.css" rel="stylesheet"> 
-	<link href="css/footer_bottom.css" rel="stylesheet"> 
-
 </head>
 <body>
 	<?php  
@@ -64,8 +62,5 @@ if($event_cnt<=0){
 	 		<?=$items?>
 	 	</div>
 	 </div>
-	 <?php  
-       require_once("lib/footer_bottom.php");
-     ?>
 </body>
 </html>

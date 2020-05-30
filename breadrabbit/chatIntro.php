@@ -8,7 +8,6 @@ require_once("lib/header_php.php");
         <title>상담</title>
         <style type = "text/css">
           @import url("css/header.css");
-          @import url("css/footer_bottom.css");
         </style>
         <link href="css/chatIntro.css" rel="stylesheet"> 
     </head>
@@ -33,8 +32,5 @@ require_once("lib/header_php.php");
         </div>
 
       </div>
-      <?php 
-        require_once("lib/footer_bottom.php");
-      ?>
     </body>
 </html>

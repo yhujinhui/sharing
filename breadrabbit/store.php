@@ -84,10 +84,10 @@ include("lib/page.php");
         @import url("css/header.css");
         @import url("css/store.css");
     </style>
+    <script src="js/header.js"></script>
+    <script src="js/store.js"></script>
 </head>
 <body onload="alert_selected_value('<?=$kinds?>')">
-    <script src="js/first.js"></script>
-    <script src="js/store.js"></script>
     <?php  
       require_once("lib/header_html.php");
     ?>

@@ -52,11 +52,12 @@ while($row=mysqli_fetch_array($result)){
           @import url("css/header.css");
           @import url("css/first.css");
           @import url("css/footer_bottom.css");
-
         </style>
+        <script src="js/first.js"></script>
+        <script src="js/header.js"></script>
     </head>
     <body onload="javascript:showSlides(); javascript:showEventSlides();">
-      <script src="js/first.js"></script>
+      
      <?php  
       require_once("lib/header_html.php");
      ?>

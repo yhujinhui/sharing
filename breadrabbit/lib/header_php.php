@@ -3,7 +3,7 @@ require_once("conn.php");
 session_start();
 
 $log='로그인';
-$escaped_name='';
+$escaped_header_name='';
 $log_href="login.php";
 $cookbread_href="login.php";
 $store_href="store.php?page=1&kinds=all";
@@ -21,7 +21,7 @@ if(isset($_SESSION['user_id'])){
   $cookbread_href="cookbread.php";
   $log='로그아웃';
   $logchk="";
-  $escaped_name=htmlspecialchars($row['name']).'님';
+  $escaped_header_name=htmlspecialchars($row['name']).'님';
 }
 ?>
 

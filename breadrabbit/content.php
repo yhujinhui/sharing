@@ -145,11 +145,11 @@ while($row_comment=mysqli_fetch_array($result_comment)){
 				<div class="comment-title">댓글</div>
 				<?=$comment?>
 				<div class="post-comment">
-					<form action="content_process.php" method="post">
+					<form action="content_process.php" class="form" method="post">
 						<div><textarea name="comment" id="comment" cols="33" required></textarea></div>
 						<input type="hidden" name=content_id value="<?=$filtered['id']?>">
 						<input type="hidden" name=user_id value="<?=$filtered['user_id']?>">
-				        <input type="submit" id="submitButton" name="submit" alt="" value="댓글달기" onclick="<?=$logchk?>">
+				        <input type="submit" class='submit' id="submitButton" name="submit" alt="" value="댓글달기" onclick="<?=$logchk?>">
 					</form>
 				</div>
 			</div>

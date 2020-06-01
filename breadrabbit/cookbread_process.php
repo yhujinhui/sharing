@@ -10,8 +10,8 @@
     );
     
     $query = 
-    "insert into content(title, description, created, kinds,user_id) 
-    values('{$filtered['title']}','{$filtered['description']}',now(),'{$filtered['kinds']}','{$filtered['user_id']}')";
+    "insert into content(title, description, created, kinds,user_id,views) 
+    values('{$filtered['title']}','{$filtered['description']}',now(),'{$filtered['kinds']}','{$filtered['user_id']}',0)";
 
     $result = mysqli_query($conn, $query);
 

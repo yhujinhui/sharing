@@ -7,7 +7,7 @@ $row=mysqli_fetch_array($result);
 $title=$row['evtname'];
 $event_go="";
 if(
-	$row['evtname']=="이달의 사연 이벤트"
+	$title=="이달의 사연 이벤트"
 
 ){
 	$event_go=
@@ -41,7 +41,7 @@ for($i = 0 ; $i < $cnt; $i++){
 	<title>Document</title>
 	<link href="css/header.css" rel="stylesheet"> 
 	<link href="css/event_explain.css" rel="stylesheet"> 
-	<link href="css/footer_bottom.css" rel="stylesheet"> 
+	<script src="js/header.js"></script>
 </head>
 <body>
 	<?php  
@@ -53,8 +53,5 @@ for($i = 0 ; $i < $cnt; $i++){
 		<?=$list?>
 		<?=$event_go?>
 	</div>
-	<?php  
-        require_once("lib/footer_bottom.php");
-    ?>
 </body>
 </html>

@@ -25,8 +25,8 @@ $next=$start_page+$page_group;
 if($next>$total_page)$next=$total_page;
 
 if($total_article>=1){
-	if($page!=1) $prev_group="<a href='store.php?page=$prev".$id."&kinds=".$kinds."'><</a>&nbsp;&nbsp;";
-	if($page!=$total_page) $next_group="<a href='store.php?page=$next".$id."&kinds=".$kinds."'>></a>&nbsp;&nbsp;";
+	if($page!=1) $prev_group="<a href='store.php?page=$prev".$id."&kinds=".$kinds."'>[이전]</a>&nbsp;&nbsp;";
+	if($page!=$total_page) $next_group="<a href='store.php?page=$next".$id."&kinds=".$kinds."'>[다음]</a>&nbsp;&nbsp;";
 	for($i=$start_page; $i<$end_page; $i++){
 		if($i>$total_page) break;
 		$paging =$paging."<a href='store.php?page=$i".$id."&kinds=".$kinds."'>$i</a>&nbsp;&nbsp;";

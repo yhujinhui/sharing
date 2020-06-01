@@ -16,9 +16,9 @@ function windowOnClick(event) {
  }
 
 trigger.addEventListener("click", toggleModal); 
- closeButton.addEventListener("click", toggleModal); 
- cancel.addEventListener("click", toggleModal); 
- window.addEventListener("click", windowOnClick); 
+closeButton.addEventListener("click", toggleModal); 
+cancel.addEventListener("click", toggleModal); 
+window.addEventListener("click", windowOnClick); 
 
  function alert_select_value(select){
     var selected_index = select.selectedIndex; // selectbox에서 선택된 index를 찾음 

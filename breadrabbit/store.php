@@ -1,7 +1,6 @@
 <?php 
 require_once('lib/header_php.php');
 
-$introduce="";
 $page=$_GET['page'];
 $kinds=$_GET['kinds'];
 
@@ -16,7 +15,7 @@ $pagerow=mysqli_fetch_array($pageresult);
 $total_article=$pagerow['totalCount'];//게시물 총 개수
 // print_r($total_article);
 
-$view_article=15;//페이지당 게시물 개수2
+$view_article=2;//페이지당 게시물 개수2
 if(!$page)$page=1;
 $start=($page-1)*$view_article;
 
@@ -27,49 +26,23 @@ if(isset($_SESSION['user_id'])){
     $id="&id=".$filtered_user_id;
     $option='<option value="mine">내빵</option>';
 }
-
 switch ($kinds) {
     case 'all':$sql="select * from content limit $start, $view_article";break;
-    case 'mine':$sql= "select kinds,id from content where user_id={$_SESSION['user_id']} limit $start, $view_article";break;
+    case 'mine':$sql= "select * from content where user_id={$_SESSION['user_id']} limit $start, $view_article";break;
     default:$sql= "select * from content where kinds='{$kinds}' limit $start, $view_article";break;
 }
-
 $result=mysqli_query($conn,$sql);
-
-$item='';
-$content1='';
-$content2='';
-$content3='';
-$breadlocation='';
-
-$cnt=0;
+$content='';
 while($row=mysqli_fetch_array($result)){
-    $row_top='';
-    $row_bottom='';
-    $cnt++;
-    //echo $cnt;
-    //echo print_r($row);
-    $escaped_bread=htmlspecialchars($row['kinds']);
-    $escaped_id=htmlspecialchars($row['id']);
-    $breadlocation='images/'.$escaped_bread.'.png';
-    
-    $item=$item.
-    "<span class='item'>
-        <a href='content.php?id={$escaped_id}'>
-            <img class='breadimg' src={$breadlocation}>
-        </a>
-    </span>"
-    ;
-    if($cnt<=5){
-        $content1=$content1.$item;
-        $item='';
-    }else if($cnt<=10){
-        $content2=$content2.$item;
-        $item='';
-    }else if($cnt<=15){
-        $content3=$content3.$item;
-        $item='';
-    }
+    $content=$content.
+    '
+    <a href="content.php?id='.$row['id'].'">
+        <div class="content">
+            <div class="top-title">'.$row['title'].'</div>
+            <div class="views">'.$row['views'].'</div>
+        </div>
+    </a>
+    ';
 }
 include("lib/page.php");
 ?>
@@ -91,34 +64,28 @@ include("lib/page.php");
     <?php  
       require_once("lib/header_html.php");
     ?>
-    
-    <main>
-        <span class="select">
-            <select id="select" name="select" onchange="alert_select_value(this)">
-                <option value="all">모든고민</option>
-                <option value="course">진로고민</option>
-                <option value="family">가족고민</option>
-                <option value="friend">친구고민</option>
-                <option value="love">사랑고민</option>
-                <option value="other">기타</option>
-                <?=$option?>
-            </select>
-        </span>
 
-        <div class="container">
-            <div class="row1">
-                <?=$content1?>
-            </div>
-            <div class="row2">
-                <?=$content2?>
-            </div>
-            <div class="row3">
-                <?=$content3?>
+    <div class="wraaper">
+        <div class="header">
+            <div class="post">게시물(<?=$total_article?>)</div>
+            <div class="selects">
+                <select id="select" name="select" onchange="alert_select_value(this)">
+                    <option value="all">모든고민</option>
+                    <option value="course">진로고민</option>
+                    <option value="family">가족고민</option>
+                    <option value="friend">친구고민</option>
+                    <option value="love">사랑고민</option>
+                    <option value="other">기타</option>
+                    <?=$option?>
+            </select>
             </div>
         </div>
-
-        
-    </main>
+        <div class="top">
+            <div class="top-title">제목</div>
+            <div class="top-views">조회수</div>
+        </div>
+        <?=$content?>
+    </div>
     <div class="footer">
         <div class="number">
             <?=$prev_group?>

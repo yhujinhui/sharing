@@ -17,10 +17,10 @@ function showSlides() {
     container[0].style.backgroundImage = "url('images/slide"+count+".png')";
     dots[slideIndex-1].className += " active";
     if(count==1){
-        container[0].style.backgroundColor="#F7C6C6";
+        container[0].style.backgroundColor="#f4e0e3";
     }
     if(count==2){
-    	container[0].style.backgroundColor="#C6F4CC";
+    	container[0].style.backgroundColor="#c6e2da";
     }
     if(count==3){
         container[0].style.backgroundColor="#C6F4C9";

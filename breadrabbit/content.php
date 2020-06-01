@@ -8,7 +8,6 @@ $filtered=array(
 $logchk='';
 $update='';
 $delete='';
-
 if(isset($_SESSION['user_id'])){
 	$filtered['user_id']=mysqli_real_escape_string($conn,$_SESSION['user_id']);
 	
@@ -27,6 +26,11 @@ $escaped_title=htmlspecialchars($row_content['title']);
 $escaped_description=htmlspecialchars($row_content['description']);
 $escaped_kinds=htmlspecialchars($row_content['kinds']);
 $escaped_name=htmlspecialchars($row_content['name']);
+$cnt=htmlspecialchars($row_content['views']);
+$cnt++;
+$sql=
+"update content set views={$cnt} where id={$filtered['id']}";
+mysqli_query($conn,$sql);
 if(isset($filtered['user_id'])){
 	if($filtered['user_id']==$row_content['user_id']){
 		$update=
@@ -48,6 +52,7 @@ $result_comment=mysqli_query($conn,$sql_comment);
 
 while($row_comment=mysqli_fetch_array($result_comment)){
 	$comment_delete='';	
+	$comment_report="";
 	// print_r($row_comment);
 	
 	$escaped_comment=htmlspecialchars($row_comment['comment']);
@@ -67,14 +72,12 @@ while($row_comment=mysqli_fetch_array($result_comment)){
 			<input type='hidden' name='user_id' value='".$filtered['user_id']."'>
 			<input type='hidden' name='id' value='".$escaped_comment_id."'>
 			  <input type='submit' class='submit' value='삭제하기' onclick='return deletechk()'></form>";
+		}else{
+			$comment_report=
+			"<form action='comment_report_process.php' method='post'>
+			<input type='hidden' name='id' value='".$escaped_comment_id."'>
+			<input type='submit' class='submit' value='신고하기' onclick='return reportchk()'></form>";
 		}
-	}
-	$comment_report="";
-	if($filtered['user_id']!=$row_comment['user_id']){
-		$comment_report=
-		"<form action='comment_report_process.php' method='post'>
-		<input type='hidden' name='id' value='".$escaped_comment_id."'>
-		<input type='submit' class='submit' value='신고하기' onclick='return reportchk()'></form>";
 	}
 	
 	$comment=$comment.

@@ -49,9 +49,10 @@ img{
 	height: 100%;
 }
 .container{
-	position:relative;
-  background: url(../images/slide01.png) no-repeat center center; 
-	background-color: #F7C6C6;
+	/*position:relative;*/
+  margin-top:80px;
+  background: url(../images/slide1.png) no-repeat center center; 
+	/*background-color: #f4e0e3;*/
 	/*border: 1px solid gray;*/
 	height: 620px;
 	background-size: contain;
@@ -61,7 +62,7 @@ img{
   margin-bottom: 5px;
   transform:translateX(-50%);
   left:50%;
-  bottom:0;
+  bottom:80px;
 }
 .container-bottom{
   border: 1px solid #F4EDF4;

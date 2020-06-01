@@ -7,22 +7,38 @@ $escaped_description=htmlspecialchars($row['description']);
 $escaped_comment=htmlspecialchars($row['comment']);
 $container_bottom="";
 
-if($escaped_description&&$escaped_comment){
-  $container_bottom=
-  '
-  <div class="container-bottom">
-    <h1>이달의 사연입니다</h1>
-    <div class="content">'.$escaped_description.'</div>
-    <div class="comment">'.$escaped_comment.'</div>
-  </div>
-  ';
-}
-
 $sql="select count(*) from event";
 $result=mysqli_query($conn,$sql);
 $row=mysqli_fetch_array($result);
 $event_cnt=$row['count(*)'];
-
+$event_title="";
+$plusSlides='';
+$sql="select * from event";
+$result=mysqli_query($conn,$sql);
+$row=mysqli_fetch_array($result);
+if($event_cnt>0){
+  if($row['evtname']=="이달의 사연 이벤트"){
+    if($escaped_description&&$escaped_comment){
+      $container_bottom=
+      '
+      <div class="container-bottom">
+        <h1>이달의 사연입니다</h1>
+        <div class="content">'.$escaped_description.'</div>
+        <div class="comment">'.$escaped_comment.'</div>
+      </div>
+      ';
+    }
+  }
+  $event_title=
+  '<div class="event-text">
+      이벤트
+  </div>';
+  $plusSlides=
+  '
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+  ';
+}
 $sql="select * from event";
 $result=mysqli_query($conn,$sql);
 $banner=array();
@@ -57,7 +73,6 @@ while($row=mysqli_fetch_array($result)){
         <script src="js/header.js"></script>
     </head>
     <body onload="javascript:showSlides(); javascript:showEventSlides();">
-      
      <?php  
       require_once("lib/header_html.php");
      ?>
@@ -70,16 +85,13 @@ while($row=mysqli_fetch_array($result)){
       </div>
       <?=$container_bottom?>
       <div class="event">
-        <div class="event-text">
-          이벤트
-        </div>
+        <?=$event_title?>
         <!-- <div class="mySlides demo cursor">
           <div class="numbertext">1 / 2</div>
           <a href="event_explain.php" class="event-href"><img src="images/slide1.png" class="event-img"></a>
         </div> -->
         <?=$slide?>
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
+        <?=$plusSlides?>
     </div>
     <?php  
         require_once("lib/footer_bottom.php");

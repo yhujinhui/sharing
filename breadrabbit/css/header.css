@@ -1,12 +1,17 @@
 header{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:0;
     background-color: #ffffff;
-    margin :0 100px;
+    padding:10px 100px 20px;
+    /*margin :0 100px;*/
 }
 .nav-log{
     float:right;
 }
 .nav{
-    margin-top: 40px;
+    /*margin-top: 40px;*/
     text-align: center;
     top:40px;
 }
@@ -29,7 +34,7 @@ li:hover{
 }
 .logo{
     position: absolute;
-    margin-left: 100px;
+    /*margin-left: 100px;*/
 }
 ul:after,.nav-log:after,.nav:after { content:""; clear:both; display:block; }
 #log,#name{

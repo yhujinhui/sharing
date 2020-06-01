@@ -10,12 +10,12 @@ require_once("lib/header_php.php");
           @import url("css/header.css");
         </style>
         <link href="css/chatIntro.css" rel="stylesheet"> 
+        <script src="js/header.js"></script>
     </head>
     <body>
         <?php  
         require_once("lib/header_html.php");
         ?>
-
       <div class="container">
         <div class="Intro">
             <div class="title">

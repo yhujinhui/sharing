@@ -1,59 +1,87 @@
-
+body{
+	background: #dfe6e9;
+}
 #list
 {
 	overflow-y		: scroll;
-	width			: 400px;
-	height			: 600px;
+	width			: 500px;
+	height			: 500px;
 	margin			: 0;
 	padding			: 5px;
-	border			: 1px solid #ccc;
+	/* border			: 1px solid #ccc; */
 	font-size		: 9pt;
-	font-family		: 'dotum', '돋움';
 }
 #list dt
 {
 	float			: left;
-	width			: 100px;
+	width			: 110px;
 	font-weight		: 700;
 }
 #list dd
 {
 	float			: left;
 	clear			: right;
-	width			: 270px;
+	width			: 350px;
 	margin			: 0;
 	margin-bottom	: 5px;
 }
 form
 {
-	width			: 400px;
+	width			: 500px;
 	padding			: 5px;
 	margin-top		: 5px;
-	border			: 1px solid #ffdd88;
-	background		: #ffffe3;
+	/* border			: 1px solid #ffdd88; */
+	/* background      : whitesmoke; */
 	font-size		: 0;
 }
 form input#name
 {
-	width			: 90px;
+	width			: 110px;
+	height          : 25px;
 	margin-right	: 5px;
 	padding			: 2px;
-	border			: 1px solid #ccc;
+	/* border			: 1px solid #ccc; */
 	font-size		: 9pt;
-	font-family		: 'dotum', '돋움';
 }
 form input#msg
 {
-	width			: 240px;
+	width			: 280px;
+	height          : 25px;
 	margin-right	: 5px;
 	padding			: 2px;
-	border			: 1px solid #ccc;
+	/* border			: 1px solid #ccc; */
 	font-size		: 9pt;
-	font-family		: 'dotum', '돋움';
 }
 form input#btn
 {
-	width			: 48px;
+	width			: 75px;
+	height          : 30px;
 	font-size		: 9pt;
-	font-family		: 'dotum', '돋움';
+}
+
+.mainBox{
+	float: left;
+	margin-left: 30em;
+	margin-top: 2em;
+	padding : 15px 15px 15px 15px;
+	background: #FFFFFF;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 15px;
+}
+.backButton{
+	float: left;
+	margin-left: 50em; 
+	margin-top: 2em;
+	width: 100px;
+    height: 40px;
+    border: 0;
+    outline: 0;
+    font-size: 14px;
+    background: #636e72;
+    color: #ffffff;
+}
+.backButton:hover{
+    background: #ffffff;
+    color: #636e72;
+    border: 1px solid #636e72;
 }

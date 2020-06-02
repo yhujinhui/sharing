@@ -1,4 +1,4 @@
- <header>
+<header>
   <link href="https://fonts.googleapis.com/css?family=Gothic+A1&display=swap" rel="stylesheet">
   
   <div class="nav">

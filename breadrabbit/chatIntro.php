@@ -51,13 +51,14 @@ require_once("lib/header_php.php");
                     <div>
                         <p class="inputName">닉네임을 작성해주세요</p>
                         <div>
-                            <form method="POST" action="chatting.php">
+                            <form method="post" action="chatting.php">
                                 <input type="text" name="nikname" class="inputnikname">
+                                <input type="submit" class="chattingButton" value="채팅 하러 가기">
                             </form>
                         </div>
                     </div>
                 </div>
-                <button class="chattingButton" onclick="window.location.href='chatting.php'" >채팅 하러 가기</button>
+                <!-- <button class="chattingButton" onclick="window.location.href='chatting.php'" >채팅 하러 가기</button> -->
             </div>
             
         </div>

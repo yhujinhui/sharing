@@ -17,6 +17,7 @@
     background: #EFEFEF;
     padding-top: 30px;
     padding-bottom: 30px;
+    height: 250px;
 
 }
 .container .Intro .subContent{
@@ -27,8 +28,9 @@
 .inputBox{
     background: #ffffff;
     width: 400px;
-    height: 90px;
-    margin-left: 35em;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 2px;
 }
 .inputName{
@@ -50,9 +52,7 @@
     background: #000000;
     color: #ffffff;
 
-    margin-top: 1.7em;
-    margin-left: 1em;
-
+    margin-top: 2.5em;
 }
 .container .Intro .chattingButton:hover{
     background: #ffffff;
@@ -60,10 +60,10 @@
     border: 1px solid #000000;
 }
 #wrap{
-  margin:30px auto;
-  margin-left: 450px;
-  margin-bottom: 100px;
-  width:600px;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
 }
 .fade_container { 
     position:relative;
@@ -78,4 +78,8 @@
 
 .fade_container .active{
    	z-index:1;
+}
+.imagee{
+    margin-left: auto;
+    margin-right: auto;
 }

@@ -10,6 +10,8 @@ body{
 	padding			: 5px;
 	/* border			: 1px solid #ccc; */
 	font-size		: 9pt;
+
+	background: #ffffff;
 }
 #list dt
 {
@@ -58,20 +60,23 @@ form input#btn
 	height          : 30px;
 	font-size		: 9pt;
 }
-
+.main{
+	margin-left: auto;
+    margin-right: auto;
+}
 .mainBox{
-	float: left;
-	margin-left: 30em;
-	margin-top: 2em;
-	padding : 15px 15px 15px 15px;
-	background: #FFFFFF;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	margin-left: auto;
+    margin-right: auto;
+    width: 510px;
+    margin-top: 2em;
+    padding: 15px 15px 15px 15px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 15px;
 }
 .backButton{
-	float: left;
-	margin-left: 50em; 
-	margin-top: 2em;
+	margin-left: auto;
+    margin-right: auto;
 	width: 100px;
     height: 40px;
     border: 0;

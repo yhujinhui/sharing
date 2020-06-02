@@ -19,7 +19,7 @@
           <a href="chatIntro.php">상담</a>
         </li>
         <li class="menu-items">
-          <a href="trialTest.php">심리검사</a>
+          <a href="ChooseTrialTest.php">심리검사</a>
         </li>
         <li class="menu-items">
           <a href="speech.php">연설</a>

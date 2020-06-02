@@ -14,21 +14,26 @@ require_once("lib/header_php.php");
         <?php  
         require_once("lib/header_html.php");
         ?>
-            <div>
-                <div class="banner">
-                    
-                </div>
+            <div class="container">
+            <div class="box"> <div class="percent">0%</div></div>
+
                 <form name="test" method="post" action="trialTestProc.php" onsubmit="return checksubmit();">
-                    <div>
-                        <div>사람들이 당신 뒷담화하는 걸 들었을 때 어떻게 할건가요?</div>
-                        <input type="radio" name="Q1" value="A"> 당황스럽고 눈물이 난다 <br>
-                        <input type="radio" name="Q1" value="B"> 신경 쓰지 않는다 <br>
-                        <input type="radio" name="Q1" value="C"> 뒷담화 한 사람들을 무시한다 <br>
-                        <input type="radio" name="Q1" value="D"> 화가 나지만 참는다 <br>
+
+                    <div class="one">
+                        <div class="Qone">사람들이 당신 뒷담화하는 걸 들었을 때 어떻게 할건가요?<br><br></div>
+                        <div class="view_1">
+                        <input type="radio" name="Q1" value="A"> 당황스럽고 눈물이 난다 <br><br>
+                        <input type="radio" name="Q1" value="B"> 신경 쓰지 않는다 <br><br>
+                        <input type="radio" name="Q1" value="C"> 뒷담화 한 사람들을 무시한다 <br><br>
+                        <input type="radio" name="Q1" value="D"> 화가 나지만 참는다 <br><br>
                         <input type="radio" name="Q1" value="E"> 가서 따진다
                     </div>
-    
-                    <div>
+                        
+
+                    </div>
+
+<!--                     
+                    <div class="two">
                         <div>당신은 주로 어떤 모임을 가지나요?</div>
                         <input type="radio" name="Q2" value="A"> 대부분 가족 모임 <br>
                         <input type="radio" name="Q2" value="B"> 오랜 친구들 모임 <br>
@@ -107,13 +112,16 @@ require_once("lib/header_php.php");
                         <input type="radio" name="Q10" value="C"> 용기 <br>
                         <input type="radio" name="Q10" value="D"> 분노 <br>
                         <input type="radio" name="Q10" value="E"> 증오
-                    </div>
+                    </div> -->
 
-                    <input type="submit" value="결과 확인">
+                    <!-- <input type="submit" value="결과 확인"> -->
 
                 </form>
+                <button class="next">다음</button>
+
             </div>
 
             <script src="js/trialTest.js"></script>
+
     </body>
 </html>

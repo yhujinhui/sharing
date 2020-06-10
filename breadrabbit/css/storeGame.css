@@ -1,0 +1,50 @@
+.center{
+    text-align: center;
+    position: absolute;
+    background-image: url("../images/store/loadBackGround.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    height: auto;
+    min-height: 2370px; 
+    height: 2370px;
+    margin-top: 5em;
+}
+.image{
+    /* border:1px solid gray; */
+    height: 400px;
+    width: 500px;
+}
+.game1,.game2,.game3{
+    text-align: center;
+    background-repeat : no-repeat;
+    background-size : cover;
+    height: 100%;
+    /* position: absolute; top:0; left: 0;
+    width: 100%;
+    height: 100%; */
+}
+.game1{
+    background-image: url("../images/store/load_1.png");
+
+   
+}
+.game2{
+    background-image: url("../images/store/load_2.png");
+    
+}
+.game3{
+    background-image: url("../images/store/load_3.png");
+}
+.image1{
+
+}
+.image2{
+
+}
+.image3{
+
+}

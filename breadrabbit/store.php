@@ -64,7 +64,7 @@ include("lib/page.php");
     <?php  
       require_once("lib/header_html.php");
     ?>
-
+    
     <div class="wraaper">
         <div class="header">
             <div class="post">게시물 <span class="totalNum">(<?=$total_article?>)</span></div>

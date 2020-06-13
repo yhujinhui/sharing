@@ -24,3 +24,18 @@ function chkBreadKinds(){
 function showWiseSaying(){
     window.open("wiseSaying.php","책 속의 한줄","left=100, top=100");
 }
+
+function clickpost(kinds){
+        if(kinds!=''){
+            document.getElementById("over").style.display="block";
+            document.getElementById("post").style.display="block";
+        }
+}
+function clickLocation(kinds){
+    location.href="cookbread.php?kinds="+kinds;
+}
+function clickover(url){
+    document.getElementById("over").style.display="none";
+    document.getElementById("post").style.display="none";
+    history.back();
+}

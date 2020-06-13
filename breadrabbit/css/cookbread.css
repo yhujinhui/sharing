@@ -1,9 +1,6 @@
 
 body{
-    width:1400px;
-    height: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0;
 }
 #breadImg{
     width: 150px;
@@ -64,4 +61,20 @@ input#submitButton:hover{
     border: 1px solid #000000;
     color: #000000;
 
+}
+.over{
+    width: 99.9%;
+    height: 99.8%;
+    background-color: #000000;
+    opacity: 0.5;
+
+    position:absolute;
+    border:1px solid gray;
+}
+.post{
+    width: 800px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    position:absolute;
 }

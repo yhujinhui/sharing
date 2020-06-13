@@ -4,7 +4,7 @@
   <div class="nav">
     <div class="nav-log">
         <a href="<?=$log_href?>" id="log" onclick="javascript:return logoutchk();" ><?=$log?></a>
-        <a href='account.php' id="name"><?=$escaped_header_name?>
+        <a href='account.php' id="name"><?=$escaped_header_name?></a>
    </div>
     <div class="logo"><a href=""><img src="" alt="">로고</a></div>
     <div class="menu">
@@ -32,5 +32,6 @@
         </li>
       </ul>
     </div>
+
   </div>
 </header>

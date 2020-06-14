@@ -1,5 +1,5 @@
 <?php 
-	session_start();
+	//session_start();
 	//print_r($_SESSION['id']);
 	//print_r($_SESSION['password']);
 	if(!isset($_SESSION['id'])){

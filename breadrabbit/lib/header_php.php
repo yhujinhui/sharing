@@ -19,7 +19,7 @@ if(isset($_SESSION['user_id'])){
   $row=mysqli_fetch_array($result);
   print_r(mysqli_error($conn));
   $log_href="";
-  $cookbread_href="cookbread.php";
+  $cookbread_href="cookbread.php?page=1";
   $log='로그아웃';
   $logchk="";
   $escaped_header_name=htmlspecialchars($row['name']).'님';

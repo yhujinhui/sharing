@@ -28,7 +28,7 @@
     $total_article=$pagerow['totalCount'];//게시물 총 개수
     // print_r($total_article);
 
-    $view_article=3;//페이지당 게시물 개수
+    $view_article=7;//페이지당 게시물 개수
     if(!$page)$page=1;
     $start=($page-1)*$view_article;
 
@@ -62,20 +62,25 @@
         <title>빵 굽기 화면</title>
         <link href="css/cookbread.css" rel="stylesheet"> 
         <style type = "text/css">
-            /* @import url("css/header.css"); */
+            @import url("css/header.css");
         </style>
+        <script src="js/header.js"></script>
+        <script src="js/cookbread.js"></script>
     </head>
 
     <body onload="clickpost('<?=$kinds?>')">
-                <div class="over" id="over" style="display:none" onclick="clickover('<?=$url?>')" >
+    <div class="over" id="over" style="display:none" onclick="clickover('<?=$url?>')" >
+
                     <div class="post" id="post" style="display:none">
                         <div class="list">
-                            <div>
+                            <!-- <div class="post">게시물 <span class="totalNum">(<?=$total_article?>)</span></div> -->
+                            <div class="top">
+                                <div class="top-title">제목</div>
+                                <div class="top-views">조회수</div>
+                            </div>
+                            <div class="contentBox">
                                 <?=$content?>
                             </div>
-                            <br>
-                            <hr>
-                            <br>
                             <div class="number">
                                 <span class="numberPrev"><?=$prev_group?> </span>
                                 <span class="numberPaging"><?=$paging?> </span>
@@ -99,6 +104,5 @@
                 <input type="submit" id="submitButton" name="submit" alt="빵 굽기!" value="빵 굽기">
             </div>
         </form>
-        <script src="js/cookbread.js"></script>
     </body>
 </html>

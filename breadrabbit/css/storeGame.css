@@ -29,8 +29,7 @@
 }
 .game1{
     background-image: url("../images/store/load_1.png");
-
-   
+    /* border: solid gray 1px; */
 }
 .game2{
     background-image: url("../images/store/load_2.png");
@@ -40,11 +39,23 @@
     background-image: url("../images/store/load_3.png");
 }
 .image1{
-
+    margin-top: 8em;
+    margin-left: 65em;
 }
 .image2{
-
+    margin-top: 15em;
+    margin-left: 2em;
+    width: 550px;
+    height: 450px;
 }
 .image3{
+    margin-top: 10em;
+    margin-left: 72em;
+}
+.title{
+    padding: 0px;
+}
+.subtext{
+    padding: 0px;
 
 }

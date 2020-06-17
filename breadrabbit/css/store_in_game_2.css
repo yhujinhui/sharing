@@ -1,0 +1,92 @@
+body{
+    background-image: url("../images/store/load_2.png");
+    background-repeat : no-repeat;
+    background-size : cover;
+    height: 100%
+}
+.width500px{
+    width: 450px; 
+    display: inline-block;
+}
+.center{
+    text-align: center;
+}
+#menuTable tr{
+    text-align: center;
+}
+#startBtn{
+    border: none; 
+    color: white; 
+    background-color: #1D6A96; 
+    width: 450px; 
+    height: 40px; 
+    padding: 5px; 
+    /* font-weight: bold;  */
+    font-size: 20pt; 
+    cursor: pointer; 
+    margin-bottom: 0.5em; 
+    margin-top: 1em;
+}
+#startBtn:hover{
+    color: #1D6A96; 
+    background-color: white; 
+    border: solid #1D6A96 1px; 
+    height: 40px;
+}
+#cardTable{
+    border-collapse: collapse;     
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    background: white;
+}
+#cardTable td{
+    border: 1px solid #85B8cB; 
+    width: 100px; 
+    height: 121px; 
+    text-align: center; 
+    cursor: pointer;
+}
+#cardTable td img{
+    max-width: 70px;
+}
+#cardTable td span{
+    font-size: 25pt; 
+    font-weight: bold; 
+    color: #1D6A96; 
+    display: none;
+}
+#countDown{
+    background-color: #1D6A96; 
+    color: white; 
+    font-size: 20pt; 
+    height: 40px;
+}
+#info{
+    width: 450px; 
+    height: 250px; 
+    background-color: #DDDDDD; 
+    color: white; 
+    padding-top: 250px;
+}
+#backBtn{
+    border: none; 
+    color: white; 
+    background-color: #1D6A96; 
+    width: 450px; 
+    height: 40px; 
+    padding: 5px; 
+    /* font-weight: bold;  */
+    font-size: 20pt; 
+    cursor: pointer; 
+    margin-bottom: 0.5em; 
+    margin-top: 1em;
+
+    font-size: 17px;
+} 
+#backBtn:hover{
+    color: #1D6A96; 
+    background-color: white; 
+    border: solid #1D6A96 1px; 
+    height: 40px;
+}

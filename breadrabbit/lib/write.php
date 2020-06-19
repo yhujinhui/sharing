@@ -3,10 +3,8 @@
         <a href=""></a>
     </header>
     <form action="<?=$formhref?>" method="post" name="formBread" onsubmit="return chkBreadKinds();">
-        <?php  
-        require_once("lib/header_html.php");
-        ?>
         
+
         <div>
             <div>
                 <img src="images/<?=$img_src?>.png" id="breadImg">

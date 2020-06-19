@@ -13,9 +13,6 @@
           <a href="first.php">홈</a>
         </li>
         <li class="menu-items">
-          <a href="<?=$event_href?>">이벤트</a>
-        </li>
-        <li class="menu-items">
           <a href="chatIntro.php">상담</a>
         </li>
         <li class="menu-items">

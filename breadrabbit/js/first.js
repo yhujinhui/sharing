@@ -23,7 +23,7 @@ function showSlides() {
     	container[0].style.backgroundColor="#c6e2da";
     }
     if(count==3){
-        container[0].style.backgroundColor="#C6F4C9";
+        container[0].style.backgroundColor="#d5d7d4";
     }
     if(count==3){//사진 갯수
     	count=0;
@@ -53,4 +53,8 @@ function showEventSlides(n) {
       slides[i].style.display = "none";
   }
   slides[slideEventIndex-1].style.display = "block";
+}
+
+function openEvent(){
+  window.open("popupEvent.html", "popup01", "width=400, height=360");
 }

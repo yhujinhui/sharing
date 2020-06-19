@@ -1,7 +1,3 @@
-function backPage(){
-    window.history.back();
-}
-
             // 게임 상태
             var gameState = '';
  
@@ -23,18 +19,18 @@ function backPage(){
             // 카드 배치
             function setTable(){
                 cards = [
-                '1.jpg','1.jpg', 
-                '2.jpg','2.jpg', 
-                '3.jpg','3.jpg', 
-                '4.jpg','4.jpg',
-                '5.jpg','5.jpg', 
-                '6.jpg','6.jpg',
-                '7.jpg','7.jpg',
-                '8.jpg','8.jpg',
-                '9.jpg','9.jpg',
-                '10.jpg','10.jpg', 
-                '11.jpg','11.jpg',
-                '12.jpg','12.jpg'
+                '1.jpg','1.jpg', // 나옹이
+                '2.jpg','2.jpg', // 파이리
+                '3.jpg','3.jpg', // 꼬부기
+                '4.jpg','4.jpg', // 이상해씨
+                '5.jpg','5.jpg', // 어니부기
+                '6.jpg','6.jpg', // 잉어킹
+                '7.jpg','7.jpg', // 푸린
+                '8.jpg','8.jpg', // 피카츄
+                '9.jpg','9.jpg', // 별가사리
+                '10.jpg','10.jpg', // 거북왕
+                '11.jpg','11.jpg', // 고라파덕
+                '12.jpg','12.jpg' // 리자드
                 ];
                 var cardTableCode = '<tr>';                
                 for(var i=0;i<20;i++) {
@@ -73,7 +69,7 @@ function backPage(){
                 var intervalID = setInterval(setText, 1000);
                 setTimeout(function(){
                     clearInterval(intervalID);
-                    $('#countDown').text('2ROUND');
+                    $('#countDown').text('start');
                     hiddenCards();
                     gameState = '';
                 }, 6000);

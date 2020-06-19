@@ -51,7 +51,6 @@ while($row=mysqli_fetch_array($result)){
   $slide=$slide.
   '
   <div class="mySlides demo cursor">
-        <div class="numbertext">'.($cnt+1).' / '.($event_cnt).'</div>
         <a href="event_explain.php?id='.$row['id'].'" class="event-href"><img src="eventImages/'.$banner[$cnt].'"></a>
   </div>
   ';
@@ -72,7 +71,7 @@ while($row=mysqli_fetch_array($result)){
         <script src="js/first.js"></script>
         <script src="js/header.js"></script>
     </head>
-    <body onload="javascript:showSlides(); javascript:showEventSlides();">
+    <body onload="javascript:openEvent(); javascript:showSlides(); javascript:showEventSlides();">
      <?php  
       require_once("lib/header_html.php");
      ?>
@@ -86,10 +85,9 @@ while($row=mysqli_fetch_array($result)){
       <?=$container_bottom?>
       <div class="event">
         <?=$event_title?>
-        <!-- <div class="mySlides demo cursor">
-          <div class="numbertext">1 / 2</div>
-          <a href="event_explain.php" class="event-href"><img src="images/slide1.png" class="event-img"></a>
-        </div> -->
+        <div class="mySlides demo cursor">
+          <a href="event_explain.php?title=후기 이벤트" class="event-href"><img src="images/slide1.png" class="event-img"></a>
+        </div>
         <?=$slide?>
         <?=$plusSlides?>
     </div>

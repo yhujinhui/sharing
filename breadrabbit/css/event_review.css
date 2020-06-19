@@ -1,0 +1,25 @@
+body{
+	margin:0;
+}
+.wrapper{
+	margin-top: 100px;
+	height: 100%;
+	background-color: #1c6b97;
+}
+.wrapper:after{ 
+	content:""; clear:both; display:block;
+}
+.container{
+	width: 1000px;
+	margin:0 auto;
+}
+.container-left{
+	height: 600px;
+	float: left;
+}
+.container-left img{
+	height: 100%;
+}
+.container-right{
+	float: right;
+}

@@ -1,7 +1,7 @@
 .content{
 	/*border: 1px solid gray;*/
 	width: 800px;
-	margin:140px auto 0 auto;
+	margin:100px auto 0 auto;
 }
 .content:after{ 
 	content:""; clear:both; display:block;

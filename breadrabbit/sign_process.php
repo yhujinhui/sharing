@@ -37,7 +37,14 @@ while($row=mysqli_fetch_array($result)){
 if($bool){
 	$sql_sign="insert sign(id,password,tel,name,profile) values('{$filtered['id']}','{$filtered['password']}','{$filtered['tel']}','{$filtered['name']}','{$filtered['profile']}')";
  	$check=mysqli_error($conn);
- 	$result_sign=mysqli_query($conn,$sql_sign);
+  $result_sign=mysqli_query($conn,$sql_sign);
+   
+  //재료 초기화 작업
+  $query = "insert into material(user_id) values('{$filtered['id']}')"; 	
+  $check=mysqli_error($conn);
+  $result_sign=mysqli_query($conn,$query);
+   
+
 	  echo '<script>
   			alert("회원가입을 완료하였습니다");
   			location.href="login.php";

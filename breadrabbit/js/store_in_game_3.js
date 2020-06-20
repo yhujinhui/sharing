@@ -105,7 +105,9 @@ function backPage(){
                         openCardId2 = '';
                         scorePlus();
                         if(++openedCtn == 12){
-                            alert('성공!!\n'+score+'점 입니다!');
+                            //alert('성공!!\n'+score+'점 입니다!');
+                            alert('성공!!');
+                            location.href="store_game_3_process.php";
                         }
                     }else { // 불일치
                         setTimeout(back, 1000);

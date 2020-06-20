@@ -1,10 +1,6 @@
 
-    <header>
-        <a href=""></a>
-    </header>
     <form action="<?=$formhref?>" method="post" name="formBread" onsubmit="return chkBreadKinds();">
         
-
         <div>
             <div>
                 <img src="images/<?=$img_src?>.png" id="breadImg">

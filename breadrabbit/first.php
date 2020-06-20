@@ -5,7 +5,6 @@ $result=mysqli_query($conn,$sql);
 $row=mysqli_fetch_array($result);
 $escaped_description=htmlspecialchars($row['description']);
 $escaped_comment=htmlspecialchars($row['comment']);
-$container_bottom="";
 
 $sql="select count(*) from event";
 $result=mysqli_query($conn,$sql);
@@ -17,18 +16,7 @@ $sql="select * from event";
 $result=mysqli_query($conn,$sql);
 $row=mysqli_fetch_array($result);
 if($event_cnt>0){
-  if($row['evtname']=="이달의 사연 이벤트"){
-    if($escaped_description&&$escaped_comment){
-      $container_bottom=
-      '
-      <div class="container-bottom">
-        <h1>이달의 사연입니다</h1>
-        <div class="content">'.$escaped_description.'</div>
-        <div class="comment">'.$escaped_comment.'</div>
-      </div>
-      ';
-    }
-  }
+ 
   $event_title=
   '<div class="event-text">
       이벤트
@@ -71,7 +59,7 @@ while($row=mysqli_fetch_array($result)){
         <script src="js/first.js"></script>
         <script src="js/header.js"></script>
     </head>
-    <body onload="javascript:openEvent(); javascript:showSlides(); javascript:showEventSlides();">
+    <body style="overflow-x:hidden" onload="javascript:openEvent(); javascript:showSlides(); javascript:showEventSlides();">
      <?php  
       require_once("lib/header_html.php");
      ?>
@@ -82,7 +70,69 @@ while($row=mysqli_fetch_array($result)){
           <span class="dot"></span> 
         </footer>
       </div>
-      <?=$container_bottom?>
+      <div class="trialTest">
+        <div class="title">
+          <span style="color: #1D6A96">다양한 </span>심리검사
+        </div>
+        <div class="explain">
+          심리검사를 통해서 본인의 고민 해결 성향을 알아보세요.
+        </div>
+        <hr width="500">
+        <div class="tests">
+          <div class="left">
+            <a href="">
+              <div class="animal-test">
+                <div class="left">
+                  <div class="animal-test-title">
+                    동물 유형<br>
+                    <span style="color: #1D6A96; font-size: 1.6rem;">심리검사</span>
+                  </div>
+                  <div class="animal-test-explain">
+                    고민 해결 방법을<br>
+                    제시합니다.
+                  </div>
+                </div>
+                <div class="right">
+                  <img src="images/animal_test_dog.png">
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="right">
+            <a href="">
+              <div class="love-test">
+                <div class="love-test-title">연애 성향 심리검사</div>
+                <div class="love-test-explain">
+                  연애 스타일을 알아보고<br>
+                  연인간의 일어나는 문제를<br>
+                  해결할 수 있는 방법을 제공
+                </div>
+                <div class="img">
+                  <img src="images/love_test_heart.png">
+                </div>
+              </div>
+            </a>
+            <a href="">
+              <div class="speech">
+                <div class="speech-title">
+                  유명인의<br>
+                  <span style="font-size: 2rem">연설</span>
+                </div>
+                <div class="bottom">
+                  <div class="left">
+                    <img src="images/test_speech_stevenJobs.png">
+                  </div>
+                  <div class="right">
+                    누구나 한번쯤은 겪을<br>
+                    인생고민은 연설 영상으로<br>
+                    해결해보세요.
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
       <div class="event">
         <?=$event_title?>
         <div class="mySlides demo cursor">

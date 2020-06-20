@@ -11,19 +11,19 @@
     font-size: 15px;
     margin-bottom: 5em;
 }
-
-
 .sub{
-    background: #EFEFEF;
+    background: #D1DDDB;
     padding-top: 30px;
     padding-bottom: 30px;
     height: 250px;
-
+    width: 100%;
 }
 .container .Intro .subContent{
     text-align: center;
     font-size: 15px;
     padding-bottom: 30px;
+    color: #283B42;
+
 }
 .inputBox{
     background: #ffffff;
@@ -41,7 +41,7 @@
 .inputnikname{
     width: 350px;
     height: 40px;
-    border: 1.5px solid #EFEFEF;
+    border: 1.5px solid #D1DDDB;
 }
 .container .Intro .chattingButton{
     width: 400px;
@@ -49,15 +49,15 @@
     border: 0;
     outline: 0;
     font-size: 14px;
-    background: #000000;
+    background: #283B42;
     color: #ffffff;
 
     margin-top: 2.5em;
 }
 .container .Intro .chattingButton:hover{
     background: #ffffff;
-    color: #000000;
-    border: 1px solid #000000;
+    color: #283B42;
+    border: 1px solid #283B42;
 }
 #wrap{
     margin-bottom: 100px;

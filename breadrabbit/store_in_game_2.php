@@ -7,8 +7,8 @@
     <head>
         <meta charset="utf-8">
         <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script src="js/store_in_game_1.js"></script>
-        <link href="css/store_in_game_1.css" rel="stylesheet"> 
+        <script src="js/store_in_game_2.js"></script>
+        <link href="css/store_in_game_2.css" rel="stylesheet"> 
 
         <title>상점</title>
     </head>
@@ -38,7 +38,7 @@
                     <table id='cardTable'>
                     </table>
                     <div id='info'>
-                        start 버튼을 눌러서 게임을 시작해주세요<br>
+                        start 버튼을 눌러주세요<br>
                     </div>
                 </div>
             </div>

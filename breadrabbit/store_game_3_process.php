@@ -1,7 +1,7 @@
 <?php 
     require_once('conn.php');
     session_start();
-
+    
     $total;
 
     $sql= "select * from material where user_id='{$_SESSION['id']}'";
@@ -11,7 +11,7 @@
         $total = $row['total'];
     }
 
-    $total = $total+1;
+    $total = $total+5;
 
     $query = "UPDATE material SET total=$total WHERE user_id='{$_SESSION['id']}'";
     $result2 = mysqli_query($conn, $query);

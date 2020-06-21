@@ -53,6 +53,14 @@
         ';
     }
     // include("lib/page.php");
+    //재료 개수
+    $sql= "select * from material where user_id='{$_SESSION['id']}'";
+    $result=mysqli_query($conn,$sql);
+
+    while($row=mysqli_fetch_array($result)){
+        $total = $row['total'];
+    }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -144,7 +152,12 @@
     ?>
                 <input type="hidden" name="user_id" value="<?=$escaped_user_id?>">
                 <input type="submit" id="submitButton" name="submit" alt="빵 굽기!" value="빵 굽기">
+
+                <div class="total">
+                    <p>남은 재료 개수 : <?= $total?>개</p>
+                </div>
             </div>
         </form>
+        
     </body>
 </html>

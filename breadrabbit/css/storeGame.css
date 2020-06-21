@@ -39,7 +39,7 @@
     background-image: url("../images/store/load_3.png");
 }
 .image1{
-    margin-top: 8em;
+    margin-top: 5em;
     margin-left: 65em;
 }
 .image2{
@@ -58,4 +58,12 @@
 .subtext{
     padding: 0px;
 
+}
+.cookbread{
+    position: relative;
+    /* left: 1px; */
+    top: 50px;
+    right: 500px;
+    width: 150px;
+    height: 70px;
 }

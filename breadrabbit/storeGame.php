@@ -32,6 +32,7 @@
         <div id="fullpage">
             <div class="section">
                 <div class="game1">
+                    <button class="cookbread" onclick = "location.href = 'cookbread.php' " >빵 구우러 가기</button>
                         <!-- <p class="title">Shop road</p> -->
                         <!-- <p class="subtext">상점에 방문하면 게임을 통해 빵굽기에 필요한 재료를 획득할 수 있습니다!</p> -->
                     <div class="image">

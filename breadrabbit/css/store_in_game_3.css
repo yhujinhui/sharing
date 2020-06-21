@@ -5,7 +5,7 @@ body{
     height: 100%
 }
 .width500px{
-    width: 450px; 
+    width: 600px; 
     display: inline-block;
 }
 .center{
@@ -18,7 +18,7 @@ body{
     border: none; 
     color: white; 
     background-color: #283B42; 
-    width: 450px; 
+    width: 600px; 
     height: 40px; 
     padding: 5px; 
     /* font-weight: bold;  */
@@ -48,7 +48,8 @@ body{
     cursor: pointer;
 }
 #cardTable td img{
-    max-width: 70px;
+    /* max-width: 70px; */
+    max-width: 95px;
 }
 #cardTable td span{
     font-size: 25pt; 
@@ -61,9 +62,10 @@ body{
     color: white; 
     font-size: 20pt; 
     height: 40px;
+    width: 600px;
 }
 #info{
-    width: 450px; 
+    width: 600px; 
     height: 250px; 
     background-color: #DDDDDD; 
     color: white; 
@@ -73,7 +75,7 @@ body{
     border: none; 
     color: white; 
     background-color: #283B42; 
-    width: 450px; 
+    width: 600px; 
     height: 40px; 
     padding: 5px; 
     /* font-weight: bold;  */

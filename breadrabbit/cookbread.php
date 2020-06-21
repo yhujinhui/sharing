@@ -70,7 +70,7 @@
     <body onload="clickpost('<?=$kinds?>')">
     <div class="over" id="over" style="display:none" onclick="clickover('<?=$url?>')" >
     
-        <div class="post" id="post" style="display:none">
+        <div class="post" id="post" style="display:none; overflow:auto; width:700px; height:400px">
             <div class="list">
 
                 <!-- <div class="post">게시물 <span class="totalNum">(<?=$total_article?>)</span></div> -->

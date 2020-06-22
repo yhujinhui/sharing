@@ -10,7 +10,7 @@ body{
 	content:""; clear:both; display:block;
 }
 .container{
-	width: 1000px;
+	width: 1500px;
 	margin:0 auto;
 }
 .container-left{
@@ -22,4 +22,42 @@ body{
 }
 .container-right{
 	float: right;
+	width: 700px;
+	margin-right: 3em;
+	margin-top: 5em;
+
+}
+.container-right .top p{
+	color: #ffffff;
+	font-size: 15px;
+}
+.container-right .top textarea{
+	width: 700px;
+    border-radius: 15px;
+
+}
+.container-right .bottom p{
+	color: #ffffff;
+	border: 0px;
+	font-size: 15px;
+}
+.container-right .bottom #tel{
+	width: 450px;
+	height: 40px;
+	border: 0px;
+    border-radius: 15px;
+
+}
+.container-right .bottom #button{
+	width: 200px;
+    height: 45px;
+    margin-left: 2.7em;
+    color: white;
+    background-color: #283b42;
+    border: 0px;
+    border-radius: 15px;
+}
+.container-right .bottom #button:hover{
+	color: gainsboro	;
+    background-color: #38555f;
 }

@@ -1,8 +1,7 @@
-body{
-    background-image: url("../images/store/load_1.png");
-    background-repeat : no-repeat;
-    background-size : cover;
-    height: 100%
+html,body{
+    height: 100%;
+    width: 100%;
+    margin:0;
 }
 .width500px{
     width: 450px; 
@@ -10,6 +9,10 @@ body{
 }
 .center{
     text-align: center;
+    background-image: url("../images/store/load_1.png");
+    background-repeat : no-repeat;
+    background-size : cover;
+    height: 100%;
 }
 #menuTable tr{
     text-align: center;

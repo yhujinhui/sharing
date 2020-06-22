@@ -29,11 +29,13 @@ if(isset($_SESSION['user_id'])){
 	    	<div class="container-right">
 	    		<form action="event_review_process.php" method="post">
 	    			<div class="top">
-						<textarea name="description" id="description" cols="30" rows="10"></textarea>
+						<p>후기를 남겨주세요</p>
+						<textarea name="description" id="description" cols="30" rows="13"></textarea>
 	    			</div>
 	    			<div class="bottom">
+						<p>전화번호</p>
 	    				<input type="text" name="tel" id="tel">
-	    				<input type="submit" value="참여하기" onclick="<?=$logchk?>">
+	    				<input type="submit" value="참여하기" onclick="<?=$logchk?>" id="button">
 	    			</div>
 				</form>
 	    	</div>

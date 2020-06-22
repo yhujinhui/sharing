@@ -3,10 +3,22 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<style>
+		body,html{
+			margin:0;
+			height: 100%;
+			width: 100%;
+		}
+		.wrapper{
+			background-image: url("images/popupEvent.png");
+		    background-repeat : no-repeat;
+		    background-size : cover;
+		    height: 100%
+		}
+	</style>
 </head>
 <body>
-	이벤트
-	<a href="" onclick="window.open('event_go.php?title=후기 이벤트')">참여하기</a>
-	
+	<div class="wrapper" onclick="window.open('event_go.php?title=후기 이벤트')">
+	</div>
 </body>
 </html>

@@ -6,15 +6,16 @@ $name=$_POST['nikname'];
 <!DOCTYPE html>
 <html lang="ko">
 	<head>
-		<title>상담</title>
+		<title>채팅</title>
 		<meta charset="utf-8">
 		<style type = "text/css">
           @import url("css/header.css");
         </style>
+        <link rel="stylesheet" type="text/css" href="css/chatting.css"/>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="js/chatting.js"></script>
-		<link rel="stylesheet" type="text/css" href="css/chatting.css"/>
+		<script src="js/message.js"></script>
 	</head>
-
 	<body>
 		<div class="main">
 			<div class="mainBox">

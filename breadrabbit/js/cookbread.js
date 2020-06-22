@@ -39,3 +39,26 @@ function clickover(url){
     document.getElementById("post").style.display="none";
     history.back();
 }
+
+//배너
+var slideEventIndex = 1;
+showSlides(slideEventIndex);
+
+function plusSlides(n) {
+  showSlides(slideEventIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideEventIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideEventIndex = 1}
+  if (n < 1) {slideEventIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  slides[slideEventIndex-1].style.display = "block";
+}

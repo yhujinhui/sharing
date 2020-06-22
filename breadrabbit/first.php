@@ -16,11 +16,6 @@ $sql="select * from event";
 $result=mysqli_query($conn,$sql);
 $row=mysqli_fetch_array($result);
 if($event_cnt>0){
- 
-  $event_title=
-  '<div class="event-text">
-      이벤트
-  </div>';
   $plusSlides=
   '
   <a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -56,7 +51,9 @@ while($row=mysqli_fetch_array($result)){
           @import url("css/first.css");
           @import url("css/footer_bottom.css");
         </style>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="js/first.js"></script>
+        <script src="js/message.js"></script>
         <script src="js/header.js"></script>
     </head>
     <body style="overflow-x:hidden" onload="javascript:openEvent(); javascript:showSlides(); javascript:showEventSlides();">
@@ -133,14 +130,14 @@ while($row=mysqli_fetch_array($result)){
           </div>
         </div>
       </div>
+      <div class="chat"></div>
       <div class="event">
-        <?=$event_title?>
         <div class="mySlides demo cursor">
           <a href="event_explain.php?title=후기 이벤트" class="event-href"><img src="images/slide1.png" class="event-img"></a>
         </div>
         <?=$slide?>
         <?=$plusSlides?>
-    </div>
+      </div>
     <?php  
         require_once("lib/footer_bottom.php");
     ?>

@@ -68,14 +68,13 @@
         <meta charset="UTF-8">
         <title>빵 굽기 화면</title>
         <link href="css/cookbread.css" rel="stylesheet"> 
-        <style type = "text/css">
-            @import url("css/header.css");
-        </style>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="js/header.js"></script>
+        <script src="js/message.js"></script>
         <script src="js/cookbread.js"></script>
     </head>
 
-    <body onload="clickpost('<?=$kinds?>')">
+    <body style="overflow-x:hidden" onload="clickpost('<?=$kinds?>'); javascript:showSlides();" >
     <div class="over" id="over" style="display:none" onclick="clickover('<?=$url?>')" >
     
         <div class="post" id="post" style="display:none; overflow:auto; width:700px; height:400px">
@@ -98,57 +97,76 @@
         </div>
     </div>
     <div class="wrapper">
-        <div class="breadlist">
-            <div class="bread">
-                <img src="images/course.png" onclick="clickpost('course'); clickLocation('course');">
-                <div class="title">
-                    진로
-                </div>
-                <div class="explain">
-                    설명
-                </div>
-            </div>
-            <div class="bread">
-                <img src="images/family.png" onclick="clickpost('family'); clickLocation('family');">
-                <div class="title">
-                    가족
-                </div>
-                <div class="explain">
-                    설명
-                </div>
-            </div>
-            <div class="bread">
-               <img src="images/friend.png" onclick="clickpost('friend'); clickLocation('friend');">
-                <div class="title">
-                    친구
-                </div>
-                <div class="explain">
-                    설명
-                </div>
-            </div>
-            <div class="bread">
-                 <img src="images/love.png" onclick="clickpost('love'); clickLocation('love');">
-                <div class="title">
-                    연애
-                </div>
-                <div class="explain">
-                    설명
-                </div>
-            </div>
-            <div class="bread">
-                <img src="images/other.png" onclick="clickpost('other'); clickLocation('other');">
-                <div class="title">
-                    기타
-                </div>
-                <div class="explain">
-                    설명
-                </div>
-            </div>
+        <div class="logo">
+            <a href="first.php"><img src="images/logo.png" alt=""></a>
         </div>
+        <hr width="1100px">
+        <div class="explain">
+            <div class="mySlides demo cursor">
+                <img src="images/slide1.png">
+            </div>
+            <div class="mySlides demo cursor">
+                <img src="images/slide2.png">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+         </div>
+         <div class="mid">
+             <div class="total">
+                 재료 : <?= $total?>개
+             </div>
+             <div class="cookBread">
+                 <a href="">빵 굽기</a>
+             </div>
+         </div>
+         <div class="container">
+             <div class="item">
+                  <img src="images/course.png" onclick="clickpost('course'); clickLocation('course');">
+                  <hr width="250px">
+                  <div class="title">
+                      진로
+                  </div>
+             </div>
+             <div class="item">
+                 <img src="images/family.png" onclick="clickpost('family'); clickLocation('family');">
+                 <hr width="250px">
+                  <div class="title">
+                      진로
+                  </div>
+             </div>
+             <div class="item">
+                 <img src="images/friend.png" onclick="clickpost('friend'); clickLocation('friend');">
+                 <hr width="250px">
+                  <div class="title">
+                      진로
+                  </div>
+             </div>
+             <div class="item">
+                 <img src="images/love.png" onclick="clickpost('love'); clickLocation('love');">
+                 <hr width="250px">
+                  <div class="title">
+                      진로
+                  </div>
+             </div>
+             <div class="item">
+                 <img src="images/other.png" onclick="clickpost('other'); clickLocation('other');">
+                 <hr width="250px">
+                  <div class="title">
+                      진로
+                  </div>
+             </div>
+             <div class="item">
+                 <img src="images/logo.png" alt="">
+                 <hr width="250px">
+                  <div class="title">
+                      진로
+                  </div>
+             </div>
+         </div>
     </div>          
-    <?php
-        require_once("lib/header_html.php");
-        require_once("lib/write.php");
+   <!--  <?php
+        // require_once("lib/header_html.php");
+        //require_once("lib/write.php");
     ?>
                 <input type="hidden" name="user_id" value="<?=$escaped_user_id?>">
                 <input type="submit" id="submitButton" name="submit" alt="빵 굽기!" value="빵 굽기">
@@ -157,7 +175,6 @@
                     <p>남은 재료 개수 : <?= $total?>개</p>
                 </div>
             </div>
-        </form>
-        
+        </form> -->
     </body>
 </html>

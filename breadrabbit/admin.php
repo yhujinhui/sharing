@@ -32,6 +32,11 @@
 				심의에 따라 신고당한 유저의 계정을 제지 및 댓글을 삭제할 수 있습니다.
 			</td>
 		</tr>
+		<tr>
+			<th><a href="admin_message.php">쪽지</a></th>
+			<td>유저들에게 쪽지를 보낼수 있습니다.
+			</td>
+		</tr>
 	</table>
 </body>
 </html>

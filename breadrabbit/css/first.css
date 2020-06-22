@@ -97,7 +97,7 @@ h1{
 /*다양한 심리검사*/
 .trialTest{
   /*border:1px solid gray;*/
-  margin:0 auto;
+  margin:0 auto 50px auto;
   width:1300px;
 }
 .trialTest .title{

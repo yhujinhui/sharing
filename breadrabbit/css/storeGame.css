@@ -13,11 +13,27 @@
     height: 2370px;
     margin-top: 5em;
 }
+.image:after{
+    content:"";clear:both;display: block;
+}
 .image{
     /* border:1px solid gray; */
-    height: 400px;
-    width: 500px;
+    /* height: 400px; */
+    padding-top:100px;
+    width: 90%;
+    margin:0 auto;
 }
+.image1{
+    float: right;
+}
+.image2{
+    float: left;
+
+}
+.image3{
+    float: right;
+}
+
 .game1,.game2,.game3{
     text-align: center;
     background-repeat : no-repeat;
@@ -26,6 +42,7 @@
     /* position: absolute; top:0; left: 0;
     width: 100%;
     height: 100%; */
+    margin-left: auto; margin-right: auto;
 }
 .game1{
     background-image: url("../images/store/load_1.png");
@@ -38,24 +55,18 @@
 .game3{
     background-image: url("../images/store/load_3.png");
 }
-.image1{
-    margin-top: 8em;
-    margin-left: 65em;
-}
-.image2{
-    margin-top: 15em;
-    margin-left: 2em;
-    width: 550px;
-    height: 450px;
-}
-.image3{
-    margin-top: 10em;
-    margin-left: 72em;
+
+.cookbread{
+    position: relative;
+    /* left: 1px; */
+    top: 50px;
+    right: 500px;
+    width: 150px;
+    height: 70px;
 }
 .title{
     padding: 0px;
 }
 .subtext{
     padding: 0px;
-
 }

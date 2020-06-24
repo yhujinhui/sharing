@@ -98,15 +98,15 @@
     </div>
     <div class="wrapper">
         <div class="logo">
-            <a href="first.php"><img src="images/logo.png" alt=""></a>
+            <a href="first.php"><img src="images/logo.PNG" alt=""></a>
         </div>
         <hr width="1100px">
         <div class="explain">
             <div class="mySlides demo cursor">
-                <img src="images/slide1.png">
+                <img src="images/cookslide1.png">
             </div>
             <div class="mySlides demo cursor">
-                <img src="images/slide2.png">
+                <img src="images/cookslide2.png">
             </div>
             <a class="prev" onclick="plusSlides(-1)">❮</a>
             <a class="next" onclick="plusSlides(1)">❯</a>
@@ -121,35 +121,35 @@
         </div>
         <div class="container">
             <div class="item">
-                <img src="images/course.png" onclick="window.open('cookbread_content.php?kinds=course', '_blank', 'width=500px,height=600px,status=no,toolbars=no,scrollbars=no'); return false;">
+                <img src="images/course.png" onclick="openPopupCourse()">
                 <hr width="250px">
                 <div class="title">
                     진로
                 </div> 
             </div>
             <div class="item">
-                <img src="images/family.png" onclick="window.open('cookbread_content.php?kinds=family', '_blank', 'width=500px,height=600px,status=no,toolbars=no,scrollbars=no'); return false;">
+                <img src="images/family.png" onclick="openPopupFamily()">
                 <hr width="250px">
                 <div class="title">
                     가족
                 </div>
             </div>
             <div class="item">
-                <img src="images/friend.png" onclick="window.open('cookbread_content.php?kinds=friend', '_blank', 'width=500px,height=600px,status=no,toolbars=no,scrollbars=no'); return false;">
+                <img src="images/friend.png" onclick="openPopupFriend()">
                 <hr width="250px">
                 <div class="title">
                     친구
                 </div>
             </div>
             <div class="item">
-                <img src="images/love.png" onclick="window.open('cookbread_content.php?kinds=love', '_blank', 'width=500px,height=600px,status=no,toolbars=no,scrollbars=no'); return false;">
+                <img src="images/love.png" onclick="openPopupLove()">
                 <hr width="250px">
                 <div class="title">
                     사랑
                 </div>
             </div>
             <div class="item">
-                <img src="images/other.png" onclick="window.open('cookbread_content.php?kinds=other', '_blank', 'width=500px,height=600px,status=no,toolbars=no,scrollbars=no'); return false;">
+                <img src="images/other.png" onclick="openPopupOther()">
                 <hr width="250px">
                 <div class="title">
                     기타

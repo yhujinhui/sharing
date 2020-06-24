@@ -121,45 +121,45 @@
         </div>
         <div class="container">
             <div class="item">
-                <img src="images/course.png" onclick="window.open('cookbread_content.php?kinds=course', '_blank', 'width=700px,height=700px,toolbars=no,scrollbars=no'); return false;">
+                <img src="images/course.png" onclick="window.open('cookbread_content.php?kinds=course', '_blank', 'width=500px,height=600px,status=no,toolbars=no,scrollbars=no'); return false;">
                 <hr width="250px">
                 <div class="title">
                     진로
                 </div> 
             </div>
             <div class="item">
-                <img src="images/family.png" onclick="window.open('cookbread_content.php?kinds=family', '_blank', 'width=700px,height=700px,toolbars=no,scrollbars=no'); return false;">
+                <img src="images/family.png" onclick="window.open('cookbread_content.php?kinds=family', '_blank', 'width=500px,height=600px,status=no,toolbars=no,scrollbars=no'); return false;">
                 <hr width="250px">
                 <div class="title">
-                    진로
+                    가족
                 </div>
             </div>
             <div class="item">
-                <img src="images/friend.png" onclick="window.open('cookbread_content.php?kinds=friend', '_blank', 'width=700px,height=700px,toolbars=no,scrollbars=no'); return false;">
+                <img src="images/friend.png" onclick="window.open('cookbread_content.php?kinds=friend', '_blank', 'width=500px,height=600px,status=no,toolbars=no,scrollbars=no'); return false;">
                 <hr width="250px">
                 <div class="title">
-                    진로
+                    친구
                 </div>
             </div>
             <div class="item">
-                <img src="images/love.png" onclick="window.open('cookbread_content.php?kinds=love', '_blank', 'width=700px,height=700px,toolbars=no,scrollbars=no'); return false;">
+                <img src="images/love.png" onclick="window.open('cookbread_content.php?kinds=love', '_blank', 'width=500px,height=600px,status=no,toolbars=no,scrollbars=no'); return false;">
                 <hr width="250px">
                 <div class="title">
-                    진로
+                    사랑
                 </div>
             </div>
             <div class="item">
-                <img src="images/other.png" onclick="window.open('cookbread_content.php?kinds=other', '_blank', 'width=700px,height=700px,toolbars=no,scrollbars=no'); return false;">
+                <img src="images/other.png" onclick="window.open('cookbread_content.php?kinds=other', '_blank', 'width=500px,height=600px,status=no,toolbars=no,scrollbars=no'); return false;">
                 <hr width="250px">
                 <div class="title">
-                    진로
+                    기타
                 </div>
             </div>
             <div class="item">
                 <img src="images/soldout.png" alt="">
                 <hr width="250px">
                 <div class="title">
-                    진로
+                    SOLD OUT
                 </div>
             </div>
         </div>

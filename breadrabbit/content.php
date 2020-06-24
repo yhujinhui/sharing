@@ -117,7 +117,7 @@ while($row_comment=mysqli_fetch_array($result_comment)){
 	
 	<div class="warraper">
 		<div class="offButton">
-			<a href="cookbread.php"><img src="images/offButton.png" style="width:40px; height:40px"></a>
+			<a href="cookbread_content.php?kinds=<?=$escaped_kinds?>"><img src="images/offButton.png" style="width:40px; height:40px"></a>
 		</div>
 		<div class="container">
 			<div class="header">
@@ -141,7 +141,7 @@ while($row_comment=mysqli_fetch_array($result_comment)){
 					<?=$escaped_title?>
 				</div>
 				<div class="description">
-					 <?=$escaped_description?> 
+					<?=$escaped_description?> 
 				</div>
 			</div>
 			<div class="footer">

@@ -86,20 +86,7 @@
     /*border:1px solid gray;*/
     margin:0 auto;
     text-align: center;
-    margin-top: 5em;
-}
-.mid>.total{
-    float:left;
-    margin-left: 15em;
-}
-.mid>.total>button{
-  background: url( "../images/material.png" ) no-repeat;
-  background-size : cover;
-
-  border: none;
-  width: 175px;
-  height: 160px;
-  cursor: pointer;  
+    margin-top: 1em;
 }
 .container>.item{
     /*float :left;*/
@@ -116,17 +103,31 @@
 }
 .cookBread{
     float:right;
-    margin-right: 15em;
+    margin-right: 5.1em;
 }
-.cookBread>button{
+.cookBread div{
     background: url( "../images/oven.png" ) no-repeat;
     background-size : cover;
+    width: 100px;
+    height: 50px;
+    overflow: hidden;
 
-    border: none;
-    width: 175px;
-    height: 160px;
-    cursor: pointer;  
+    text-align: center;
+    padding-top: 40px;
 }
+.cookBread div:hover{
+  background: url( "../images/material.png" ) no-repeat;
+  background-size : cover;
+
+}
+/* .cookBread button{
+  background: url( "../images/oven.png" ) no-repeat;
+  background-size : cover;
+  border: none;
+  width: 175px;
+  height: 160px;
+  cursor: pointer;  
+} */
 .over{
     /* height: 1000px; */
     width: 100%;

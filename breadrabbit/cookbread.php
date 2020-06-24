@@ -112,48 +112,44 @@
             <a class="next" onclick="plusSlides(1)">❯</a>
         </div>
         <div class="mid">
-            <div class="total">
-                <!-- <img src="images/material.png"> -->
-                <!-- 재료 : <?= $total?>개 -->
-                <button>재료 개수 : <?= $total?></button>
-            </div>
             <div class="cookBread">
-            <!-- <img src="images/oven.png"> -->
-                <button>빵굽기</button>
-                <!-- <button onclick="window.open('cookbreadform.php', '_blank', 'width=700px,height=700px,toolbars=no,scrollbars=no'); return false;">빵 굽기</button> -->
+                <div onmouseout="this.innerText='빵굽기'" onmouseover="this.innerText='재료 개수 : <?= $total?>'"
+                onclick="window.open('cookbreadform.php', '_blank', 'width=700px,height=700px,toolbars=no,scrollbars=no'); return false;">
+                    빵굽기
+                </div>
             </div>
         </div>
         <div class="container">
             <div class="item">
-                <img src="images/course.png" onclick="window.open('cookbread.php?kinds=course', '_blank', 'width=700px,height=700px,toolbars=no,scrollbars=no'); return false;">
+                <img src="images/course.png" onclick="window.open('cookbread_content.php?kinds=course', '_blank', 'width=700px,height=700px,toolbars=no,scrollbars=no'); return false;">
                 <hr width="250px">
                 <div class="title">
                     진로
                 </div> 
             </div>
             <div class="item">
-                <img src="images/family.png" onclick="clickpost('family'); clickLocation('family');">
+                <img src="images/family.png" onclick="window.open('cookbread_content.php?kinds=family', '_blank', 'width=700px,height=700px,toolbars=no,scrollbars=no'); return false;">
                 <hr width="250px">
                 <div class="title">
                     진로
                 </div>
             </div>
             <div class="item">
-                <img src="images/friend.png" onclick="clickpost('friend'); clickLocation('friend');">
+                <img src="images/friend.png" onclick="window.open('cookbread_content.php?kinds=friend', '_blank', 'width=700px,height=700px,toolbars=no,scrollbars=no'); return false;">
                 <hr width="250px">
                 <div class="title">
                     진로
                 </div>
             </div>
             <div class="item">
-                <img src="images/love.png" onclick="clickpost('love'); clickLocation('love');">
+                <img src="images/love.png" onclick="window.open('cookbread_content.php?kinds=love', '_blank', 'width=700px,height=700px,toolbars=no,scrollbars=no'); return false;">
                 <hr width="250px">
                 <div class="title">
                     진로
                 </div>
             </div>
             <div class="item">
-                <img src="images/other.png" onclick="clickpost('other'); clickLocation('other');">
+                <img src="images/other.png" onclick="window.open('cookbread_content.php?kinds=other', '_blank', 'width=700px,height=700px,toolbars=no,scrollbars=no'); return false;">
                 <hr width="250px">
                 <div class="title">
                     진로

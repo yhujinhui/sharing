@@ -58,7 +58,7 @@
  
             // 게임 시작
             function startGame() {
-                var sec = 6;
+                var sec = 4;
                 
                 $('#info').hide(); // 안내 문구 가리기
                 scoreInit(); // 점수 초기화
@@ -76,7 +76,7 @@
                     $('#countDown').text('1 ROUND');
                     hiddenCards();
                     gameState = '';
-                }, 6000);
+                }, 4000);
             }
  
  
@@ -106,7 +106,7 @@
                         openCardId2 = '';
                         scorePlus();
                         if(++openedCtn == 6){
-                            alert('성공!!\n'+score+'점 입니다!');
+                            alert('성공!!\n 재료 1개를 획득했습니다!');
                             location.href="store_game_1_process.php";
                         }
                     }else { // 불일치

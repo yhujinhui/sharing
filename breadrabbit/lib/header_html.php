@@ -15,9 +15,15 @@
         <li class="menu-items">
           <a href="<?=$event_href?>">이벤트</a>
         </li>
+<<<<<<< HEAD
         <li class="menu-items">
           <a href="chatIntro.php">상담</a>
         </li>
+=======
+        <!-- <li class="menu-items">
+          <a href="speech.php">연설</a>
+        </li> -->
+>>>>>>> 14c170f17b6553c5df4eda3876df2d0f39649369
         <li class="menu-items">
           <a href="trialTest.php">심리검사</a>
         </li>

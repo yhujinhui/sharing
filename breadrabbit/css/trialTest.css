@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .banner{
 	margin-top:40px;
 	background: url(../images/testbanner.png) no-repeat center center;
@@ -6,3 +7,203 @@
 	height: 620px;
 	background-size: contain; 
 }
+=======
+.container{
+	margin:0 auto;
+	font-family: 'NanumBarunGothic';
+}
+.container .box{
+	margin-top:-10%;
+	height:80px;
+	width:100%;
+	background-color:#ddc0f6;
+}
+.section{
+	
+}
+.s0{
+	
+	width:570px;
+	font-size:20px;
+	margin:0 auto;
+}
+.s0 .Qone{
+	text-align:center;
+	font-size:25px;
+}
+.s0 .view_1{
+	width:570px;
+	font-size:20px;
+	margin:0 auto;
+}
+
+.s1{
+	width:570px;
+	font-size:20px;
+	margin:0 auto;
+}
+.s1 .Qtwo{
+	text-align:center;
+	font-size:25px;
+}
+.s1 .view_2{
+	width:570px;
+	font-size:20px;
+	margin:0 auto;
+}
+
+.s2{
+	width:570px;
+	font-size:20px;
+	margin:0 auto;
+}
+.s2 .Qthree{
+	text-align:center;
+	font-size:25px;
+}
+.s2 .view_3{
+	width:570px;
+	font-size:20px;
+	margin:0 auto;
+}
+
+.s3{
+	width:570px;
+	font-size:20px;
+	margin:0 auto;
+}
+.s3 .Qfour{
+	text-align:center;
+	font-size:25px;
+}
+.s3 .view_4{
+	width:570px;
+	font-size:20px;
+	margin:0 auto;
+}
+
+.s4{
+	width:570px;
+	font-size:20px;
+	margin:0 auto;
+}
+.s4 .Qfive{
+	text-align:center;
+	font-size:25px;
+}
+.s4 .view_5{
+	width:570px;
+	font-size:20px;
+	margin:0 auto;
+}
+
+.s5{
+	width:570px;
+	font-size:20px;
+	margin:0 auto;
+}
+.s5 .Qsix{
+	text-align:center;
+	font-size:25px;
+}
+.s5 .view_6{
+	width:570px;
+	font-size:20px;
+	margin:0 auto;
+}
+
+.s6{
+	width:570px;
+	font-size:20px;
+	margin:0 auto;
+}
+.s6 .Qseven{
+	text-align:center;
+	font-size:25px;
+}
+.s6 .view_7{
+	width:570px;
+	font-size:20px;
+	margin:0 auto;
+}
+
+.s7{
+	width:570px;
+	font-size:20px;
+	margin:0 auto;
+}
+.s7 .Qeight{
+	text-align:center;
+	font-size:25px;
+}
+.s7 .view_8{
+	width:570px;
+	font-size:20px;
+	margin:0 auto;
+}
+
+.s8{
+	width:570px;
+	font-size:20px;
+	margin:0 auto;
+}
+.s8 .Qnine{
+	text-align:center;
+	font-size:25px;
+}
+.s8 .view_9{
+	width:570px;
+	font-size:20px;
+	margin:0 auto;
+}
+
+.s9{
+	width:570px;
+	font-size:20px;
+	margin:0 auto;
+}
+.s9 .Qten{
+	text-align:center;
+	font-size:25px;
+}
+.s9 .view_10{
+	width:570px;
+	font-size:20px;
+	margin:0 auto;
+}
+.container .s0 .box .percent{
+	float:left;
+	margin-top:30px;
+	margin-left:30%;
+	color:#AF19F7;
+	font-weight:bold;
+	font-size:20px;
+}
+
+.container .box .line{
+    float:left;
+    margin-left:33%;
+    margin-top:-15px;
+    width:40%;
+    height:5px;
+    background-color: white;
+}
+
+
+
+.container .next{
+	float: left;
+    margin-top: 7%;
+	margin-left: 38%;
+	margin-bottom:0%;
+    width: 300px;
+    height: 50px;
+    border: 0;
+    outline: 0;
+	border-radius:50px;
+    font-size: 14px;
+    background: #AF19F7;
+    color: #ffffff;
+}
+
+>>>>>>> 14c170f17b6553c5df4eda3876df2d0f39649369

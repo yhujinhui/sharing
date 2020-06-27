@@ -23,18 +23,18 @@ function backPage(){
             // 카드 배치
             function setTable(){
                 cards = [
-                '1.jpg','1.jpg', 
-                '2.jpg','2.jpg', 
-                '3.jpg','3.jpg', 
-                '4.jpg','4.jpg',
-                '5.jpg','5.jpg', 
-                '6.jpg','6.jpg',
-                '7.jpg','7.jpg',
-                '8.jpg','8.jpg',
-                '9.jpg','9.jpg',
-                '10.jpg','10.jpg', 
-                '11.jpg','11.jpg',
-                '12.jpg','12.jpg'
+                    '1.png','1.png', 
+                    '2.png','2.png', 
+                    '3.png','3.png', 
+                    '4.png','4.png',
+                    '5.png','5.png', 
+                    '6.png','6.png', 
+                    '7.png','7.png', 
+                    '8.png','8.png',
+                    '9.png','9.png',
+                    '10.png','10.png',
+                    '11.png','11.png',
+                    '12.png','12.png'
                 ];
                 var cardTableCode = '<tr>';                
                 for(var i=0;i<20;i++) {
@@ -106,7 +106,7 @@ function backPage(){
                         openCardId2 = '';
                         scorePlus();
                         if(++openedCtn == 10){
-                            alert('성공!!\n'+score+'점 입니다!');
+                            alert('성공!!\n재료 3개를 획득했습니다');
                             location.href="store_game_2_process.php";
                         }
                     }else { // 불일치

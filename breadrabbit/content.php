@@ -117,7 +117,11 @@ while($row_comment=mysqli_fetch_array($result_comment)){
 	
 	<div class="warraper">
 		<div class="offButton">
+<<<<<<< HEAD
 			<a href="store.php?page=1&kinds=all"><img src="images/offButton.png" style="width:40px; height:40px"></a>
+=======
+			<a href="cookbread_content.php?kinds=<?=$escaped_kinds?>"><img src="images/offButton.png" style="width:40px; height:40px"></a>
+>>>>>>> 14c170f17b6553c5df4eda3876df2d0f39649369
 		</div>
 		<div class="container">
 			<div class="header">
@@ -141,7 +145,7 @@ while($row_comment=mysqli_fetch_array($result_comment)){
 					<?=$escaped_title?>
 				</div>
 				<div class="description">
-					 <?=$escaped_description?> 
+					<?=$escaped_description?> 
 				</div>
 			</div>
 			<div class="footer">

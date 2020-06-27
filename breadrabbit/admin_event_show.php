@@ -38,7 +38,7 @@
 				<td>'.$row['evtname'].'</td>
 				<td>'.$row['bannername'].'</td>
 				<td>'.$row['exname'].'</td>
-				<td><input type="checkbox" name="chk[]" value='.$row['id'].'></td>
+					<td><input type="checkbox" name="chk[]" value='.$row['id'].'></td>
 			</tr>
 			';
 		}
@@ -60,14 +60,6 @@
 				<th>배너사진</th>
 				<th>이벤트설명사진</th>
 				<th>삭제<input type="submit" onclick="return deleteeventchk()" value="삭제하기"></th>
-			</tr>
-			<tr>
-				<td><a href="admin_event_go.php?title=후기 이벤트">후기 이벤트</a></td>
-				<td>기한 없음</td>
-				<td></td>
-				<td></td>
-				<td></td>
-
 			</tr>
 			<?=$list?>
 		</form>

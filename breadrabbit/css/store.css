@@ -14,105 +14,29 @@
 }
 .post{
     float:left;
-    font-size: 30px;
-    line-height: 28px;
-    
-}
-.totalNum{
-    font-size: 25px;
-    color: gray;
 }
 .selects{
     float:right;
-}
-#select{
-    width: 100px; /* 원하는 너비설정 */ 
-    padding: .6em .6em;
-    border: 0px;
 }
 .top{
     border-bottom: 1px solid gray;
     padding-top: 10px;
     padding-bottom: 10px;
-
-    height: 40px;
 }
 .top-title{
     float:left;
-    margin-top: 10px;
-    margin-left: 30px;
-
-    font-size: 17px;
-}
-.title{
-    margin-left: 30px;
-    font-size: 15px;
 }
 .top-views{
     float:right;
-    margin-top: 10px;
-    margin-right: 30px;
-
-    font-size: 17px;
-}
-.views{
-    margin-right: 50px;
-    font-size: 15px;
-
-    height: 30px;
 }
 .content{
     border-bottom: 1px solid gray;
-    padding-top: 12px;
-    padding-bottom: 2px;
-}
-.contentBox{
-    height:  380px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 .title{
     float:left;
 }
 .views{
      float:right;
-}
-.breadBox{
-    padding-left: 39em;
-    margin-bottom: 2em;
-}
-.breadBox .breadButton{
-    width: 127px;
-    height: 35px;
-    border: 0;
-    outline: 0;
-    font-size: 14px;
-    background: #2f3640;
-    color: #ffffff; 
-}
-.breadButton:hover{
-    background: #ffffff;
-    color: #2f3640;
-    border: 1px solid #2f3640;
-}
-.number{
-    float: left;
-    margin-left: 40em;
-    width: 280px;
-}
-.number .numberPrev{
-    display:inline-block;
-    width: 60px;
-    text-align: center;
-}
-.number .numberPaging{
-    display:inline-block;
-    width: 120px;
-    text-align: center;
-}
-.number .numberNext{
-    display:inline-block;
-    width: 60px;
-    text-align: center;
-}   
-.number .numberPaging .paging{
-    background: red;
 }

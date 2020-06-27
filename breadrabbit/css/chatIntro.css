@@ -11,75 +11,23 @@
     font-size: 15px;
     margin-bottom: 5em;
 }
-.sub{
-    background: #D1DDDB;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    height: 250px;
-    width: 100%;
-}
-.container .Intro .subContent{
-    text-align: center;
-    font-size: 15px;
-    padding-bottom: 30px;
-    color: #283B42;
-
-}
-.inputBox{
-    background: #ffffff;
-    width: 400px;
-    height: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 2px;
-}
-.inputName{
-    font-size: 10px;
-    text-align: left;
-    margin-left: 2.5em;
-}
-.inputnikname{
-    width: 350px;
-    height: 40px;
-    border: 1.5px solid #D1DDDB;
-}
 .container .Intro .chattingButton{
-    width: 400px;
-    height: 60px;
+    width: 120px;
+    height: 120px;
     border: 0;
     outline: 0;
     font-size: 14px;
-    background: #283B42;
+    background: #2f3640;
     color: #ffffff;
+    border-radius: 50%;
+    margin-bottom: 8em;
 
-    margin-top: 2.5em;
 }
 .container .Intro .chattingButton:hover{
     background: #ffffff;
-    color: #283B42;
-    border: 1px solid #283B42;
+    color: #2f3640;
+    border: 1px solid #2f3640;
 }
-#wrap{
-    margin-bottom: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 600px;
-}
-.fade_container { 
-    position:relative;
-	width:300px; 
-	height:400px; 
-}
-.fade_container img{
-  position:absolute;
-  width:100%;
-  height:100%;
-}
-
-.fade_container .active{
-   	z-index:1;
-}
-.imagee{
-    margin-left: auto;
-    margin-right: auto;
+.container .Intro .content2{
+    font-size: 13px;
 }

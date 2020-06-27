@@ -117,7 +117,7 @@ while($row_comment=mysqli_fetch_array($result_comment)){
 	
 	<div class="warraper">
 		<div class="offButton">
-			<a href="cookbread.php"><img src="images/offButton.png" style="width:40px; height:40px"></a>
+			<a href="store.php?page=1&kinds=all"><img src="images/offButton.png" style="width:40px; height:40px"></a>
 		</div>
 		<div class="container">
 			<div class="header">

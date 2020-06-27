@@ -2,9 +2,6 @@ body{
 	margin-left: auto;
 	margin-right: auto;
 }
-.bottom:after,.love-test:after,.animal-test:after,.tests:after{ 
-  content:""; clear:both; display:block;
-}
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
@@ -46,7 +43,7 @@ body{
 .active {
   background-color: #666666;
 }
-.mySlides img{
+img{
 	/*position: absolute; top:0; left: 0;*/
 	width: 100%;
 	height: 100%;
@@ -62,10 +59,10 @@ body{
 }
 .container footer{
   position:absolute; 
-  margin-bottom: 5px;
+  /*margin-bottom: 5px;*/
   transform:translateX(-50%);
   left:50%;
-  bottom:3%;
+  bottom:0;
 }
 .container-bottom{
   border: 1px solid #F4EDF4;
@@ -94,117 +91,6 @@ body{
 h1{
   margin-top:50px;
 }
-/*다양한 심리검사*/
-.trialTest{
-  /*border:1px solid gray;*/
-  margin:0 auto 50px auto;
-  width:1300px;
-}
-.trialTest .title{
-  margin-top: 50px;
-  text-align: center;
-  font-size: 1.5rem;
-}
-.trialTest .explain{
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 40px;
-  font-size: 1.2rem;
-}
-.tests{
-  /*border:1px solid gray;*/
-  width:900px;
-  margin:100px auto 0 auto;
-}
-.tests .left{
-  float:left;
-}
-.left .animal-test{
-  background-color: #f7f7f7;
-  width:500px;
-  height: 400px;
-}
-
-.animal-test .left{
-  margin-top:130px;
-  margin-left: 30px;
-  float:left;
-}
-.animal-test-title{
-  font-size: 1.9rem;
-}
-.animal-test-explain{
-  margin-top: 10px;
-  font-size: 1rem;
-}
-.tests .right{
-
-  float:right;
-  width:400px;
-}
-.animal-test>.right>img{
-  width: 100%;
-}
-.animal-test>.right{
-  margin-top:50px;
-  float:right;
-  width:300px;
-}
-.right .love-test{
-  height: 200px;
-  background-color: #396278;
-  color: #ffffff;
-}
-.love-test-title{
-  padding-top: 20px;
-  text-align: center;
-  font-size: 1.7rem;
-}
-.love-test-explain{
-  margin-top: 15px;
-  text-align: center;
-  font-size: 1.2rem;
-}
-.love-test .img{
-  float:left;
-  height:50px;
-  margin-left: 20px;
-}
-.love-test .img img{
-  height: 100%;
-}
-.right .speech{
-  position:relative; 
-  height: 200px;
-  background-color: #30b1e3;
-  color: #ffffff;
-}
-.speech-title{
-  padding-top:10px;
-  margin-right: 10px;
-  text-align: right;
-  font-size: 1.7rem;
-}
-.speech .bottom{
-  position:absolute; 
-  bottom:0; 
-}
-.speech .bottom .left{
-  height:120px;
-  float:left;
-}
-.speech .bottom .left img{
-  height: 100%;
-}
-.speech .bottom .right{
-  position:absolute; 
-  text-align: right;
-  font-size: 1rem;
-  width:200px;
-  left: 190px;
-  top:30px;
-}
-/*다양한 심리검사*/
 
 /*이벤트 배너*/
 .event {

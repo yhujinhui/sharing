@@ -21,6 +21,7 @@ $img_src=$escaped_kinds;
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+    <script src="js/cookbread.js"></script>
     <link href="css/cookbread.css" rel="stylesheet">   
 </head>
  <body onload="alerted_selected_value('<?=$escaped_kinds?>')">
@@ -32,7 +33,5 @@ $img_src=$escaped_kinds;
             <input type="submit" id="submitButton" name="submit" alt="빵 굽기!" value="">
         </div>
     </form>
-
-    <script src="js/cookbread.js"></script>
 </body>
 </html>

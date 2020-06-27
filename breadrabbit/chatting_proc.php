@@ -8,8 +8,8 @@ $db=$conn;
 //$db = mysqli_connect('localhost','root','mirim2','chat','3307');
 
 $db->query('SET NAMES utf8');
-$res = $db->query('SELECT * FROM chat WHERE date > "' . $_GET['date'] . '"');
-
+$res = $db->query('SELECT * FROM chat WHERE date > "' . $_GET['date'] . '" && chat_group_id='.$_GET['id']);
+//$res = $db->query('SELECT * FROM chat WHERE date > "' . $_GET['date'] . '"');
 //echo 'SELECT * FROM chat WHERE date > "' . $_GET['date'] . '"';
 //echo $_GET['date'];
 
@@ -41,6 +41,4 @@ if (!$db_conn) {
 $query = 'SELECT * FROM chat WHERE date > "' . $_GET['date'] . '"';
 $result = mysqli_query($db_conn, $query);
 */
-
-
 ?>

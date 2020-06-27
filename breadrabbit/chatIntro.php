@@ -49,10 +49,8 @@ require_once("lib/header_php.php");
                 </div>
                 <div class="inputBox">
                     <div>
-                        <p class="inputName">닉네임을 작성해주세요</p>
                         <div>
-                            <form method="post" action="chatting.php">
-                                <input type="text" name="nikname" class="inputnikname">
+                            <form method="post" action="chat_group.php">
                                 <input type="submit" class="chattingButton" value="채팅 하러 가기">
                             </form>
                         </div>

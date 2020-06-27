@@ -13,12 +13,19 @@
 			background-image: url("images/popupEvent.png");
 		    background-repeat : no-repeat;
 		    background-size : cover;
-		    height: 100%
+		    margin: 0 auto;
+		    height: 90%;
+			width: 90%;
 		}
 	</style>
+	<script src="js/popup.js"></script>
 </head>
-<body>
+<body onload="">
 	<div class="wrapper" onclick="window.open('event_go.php?title=후기 이벤트')">
+	</div>
+	<div class="close">
+		<input type="checkbox" id="check" onclick="closePopup()">
+		오늘하루 보지 않기
 	</div>
 </body>
 </html>

@@ -18,6 +18,7 @@ $sql=
 $result=mysqli_query($conn,$sql);
 $row=mysqli_fetch_array($result);
 $total_article=$row['totalCount'];//게시물 총 개수
+$cnt=$total_article;
 if($total_article==0){
 	$total_article=1;
 }
@@ -30,6 +31,7 @@ $sql=
 $result=mysqli_query($conn,$sql);
 $list="";
 $primary="";
+
 while($row=mysqli_fetch_array($result)){
 	if(empty($row['password'])){
 		$primary="unLock";
@@ -41,7 +43,7 @@ while($row=mysqli_fetch_array($result)){
 	<a href='#' onclick='primaryChk(\"".$primary."\",".$row['_id'].",\"".$row['title']."\")'>
 	<div class='list'>
 		<div class='no'>
-			".$row['_id']."
+			".$cnt--."
 		</div>
 		<div class='chatTitle'>
 			".$row['title']."

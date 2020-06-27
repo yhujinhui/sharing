@@ -5,8 +5,12 @@ var chatManager = new function(){
 	var interval	= 500;
 	var xmlHttp		= new XMLHttpRequest();  //서버와 상호작용하기 위함
 	var finalDate	= '';
+	var chat_group_id          = -1;
 
-
+	this.getId= function(id){
+		chat_group_id=id;
+		//alert(chat_group_id);
+	}
 	// Ajax Setting
 	//서버 응답에 따른 로직 작성
 	xmlHttp.onreadystatechange = function()
@@ -36,6 +40,7 @@ var chatManager = new function(){
 	// 채팅내용 가져오기
 	this.proc = function()
 	{
+		//alert(chat_group_id);
 		// 중복실행 방지 플래그가 ON이면 실행하지 않음
 		if(!idle)
 		{
@@ -46,7 +51,7 @@ var chatManager = new function(){
 		idle = false;
 		
 		// Ajax 통신
-		xmlHttp.open("GET", "chatting_proc.php?date=" + encodeURIComponent(finalDate), true);
+		xmlHttp.open("GET", "chatting_proc.php?id="+chat_group_id+"&date=" + encodeURIComponent(finalDate), true);
 		xmlHttp.send();
 	}
 
@@ -86,6 +91,7 @@ var chatManager = new function(){
 		var xmlHttpWrite	= new XMLHttpRequest();
 		var name			= frm.name.value;
 		var msg				= frm.msg.value;
+		var chat_group_id	= frm.chat_group_id.value;
 		var param			= [];
 		
 		// 이름이나 내용이 입력되지 않았다면 실행하지 않음
@@ -93,10 +99,10 @@ var chatManager = new function(){
 		{
 			return false;
 		}
-		
 		// POST Parameter 구축
 		param.push("name=" + encodeURIComponent(name));
 		param.push("msg=" + encodeURIComponent(msg));
+		param.push("chat_group_id=" + encodeURIComponent(chat_group_id));
 				
 		// Ajax 통신
 		xmlHttpWrite.open("POST", "chatting_write.php", true);

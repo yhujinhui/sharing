@@ -56,5 +56,25 @@ function showEventSlides(n) {
 }
 
 function openEvent(){
-  window.open("popupEvent.html", "popup01", "width=400, height=360");
+  let value=getCookie("popupYN");
+  if(value!="N"){
+  //alert(value);
+
+    window.open("popupEvent.html", "popup01", "width=400, height=360");
+  }
 }
+
+// 쿠키 가져오기 함수
+    function getCookie(cName) {
+    cName = cName + '=';
+    var cookieData = document.cookie;
+    var start = cookieData.indexOf(cName);
+    var cValue = '';
+    if(start != -1){
+    start += cName.length;
+    var end = cookieData.indexOf(';', start);
+    if(end == -1)end = cookieData.length;
+    cValue = cookieData.substring(start, end);
+    }
+    return unescape(cValue);
+    }

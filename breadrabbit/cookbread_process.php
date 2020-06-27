@@ -39,7 +39,7 @@
             echo mysqli_error($conn);
     
         }else{
-            header("Location: cookbread.phpS");
+            header("Location: cookbread.php");
         }
     }else{
         echo

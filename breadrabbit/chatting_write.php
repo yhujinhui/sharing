@@ -15,10 +15,11 @@ $res = $db->query('
 */
 
 $res = $db->query('
-	INSERT INTO chat(name, msg, date)
+	INSERT INTO chat(name, msg, chat_group_id,date)
 	VALUES(
 		"' . $db->real_escape_string($_POST['name']) . '",
 		"' . $db->real_escape_string($_POST['msg']) . '",
+		"' . $db->real_escape_string($_POST['chat_group_id']) . '",
 		NOW()
 	)
 ');

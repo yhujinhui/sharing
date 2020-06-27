@@ -64,6 +64,7 @@ while($row_comment=mysqli_fetch_array($result_comment)){
 	$result_user=mysqli_query($conn,$sql_user);
 	$row_user=mysqli_fetch_array($result_user);
 	$escaped_user_profile=htmlspecialchars($row_user['profile']);
+	print_r($escaped_user_profile);
 	$escaped_user_name=htmlspecialchars($row_user['name']);
 	if(isset($filtered['user_id'])){
 		if($filtered['user_id']==$row_comment['user_id']){

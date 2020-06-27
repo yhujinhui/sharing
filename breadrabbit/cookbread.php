@@ -1,28 +1,78 @@
 <?php 
+    require_once('lib/header_php.php'); 
     require_once("conn.php");
     require_once("lib/logchk.php");
-   
+    $url="cookbread.php";
+    $kinds='';
     if(isset($_SESSION['user_id'])){
         $escaped_user_id=mysqli_real_escape_string($conn,$_SESSION['user_id']);
+    }
+    if(isset($_GET['kinds'])){
+        $kinds=$_GET['kinds'];
     }
     $escaped_title='';
     $escaped_description='';
     $img_src='course';
     $formhref="cookbread_process.php";
+
+    switch($kinds){
+        case 'all':$pagesql="select count(*) totalCount from content";break;
+        case 'mine':$pagesql="select count(*) totalCount from content where user_id={$_SESSION['user_id']}";break;
+        default : $pagesql="select count(*) totalCount from content where kinds='{$kinds}'";break;
+    }
+
+    $pageresult=mysqli_query($conn,$pagesql);
+    $pagerow=mysqli_fetch_array($pageresult);
+    $total_article=$pagerow['totalCount'];//게시물 총 개수
+    // print_r($total_article);
+
+    
+    // if(!$page)$page=1;
+    // $start=($page-1)*$view_article;
+    $start=0;
+    $view_article=20;//페이지당 게시물 개수
+    // $id='';
+    // $option='';
+
+    switch ($kinds) {
+        case 'all':$sql="select * from content limit $start, $view_article";break;
+        case 'mine':$sql= "select * from content where user_id={$_SESSION['user_id']} limit $start, $view_article";break;
+        default:$sql= "select * from content where kinds='{$kinds}' limit $start, $view_article";break;
+    }
+    $result=mysqli_query($conn,$sql);
+    $content='';
+    while($row=mysqli_fetch_array($result)){
+        $content=$content.
+        '
+            <a href="content.php?id='.$row['id'].'">
+                <div class="content">
+                    <div class="title">'.$row['title'].'</div>
+                    <div class="views">'.$row['views'].'</div>
+                </div>
+            </a>
+        ';
+    }
+    // include("lib/page.php");
+    //재료 개수
+    $sql= "select * from material where user_id='{$_SESSION['id']}'";
+    $result=mysqli_query($conn,$sql);
+
+    while($row=mysqli_fetch_array($result)){
+        $total = $row['total'];
+    }
+
 ?>
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
         <title>빵 굽기 화면</title>
-        <link href="css/cookbread.css" rel="stylesheet">
-        <script src="js/cookbread.js"></script> 
+        <link href="css/cookbread.css" rel="stylesheet"> 
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="js/header.js"></script>
+        <script src="js/message.js"></script>
+        <script src="js/cookbread.js"></script>
     </head>
-<<<<<<< HEAD
-     <body>
-    <?php
-        require_once("lib/write.php");
-=======
 
     <body style="overflow-x:hidden" onload="clickpost('<?=$kinds?>'); javascript:showSlides();" >
     <div class="over" id="over" style="display:none" onclick="clickover('<?=$url?>')" >
@@ -117,11 +167,14 @@
     <!--  <?php
         // require_once("lib/header_html.php");
         //require_once("lib/write.php");
->>>>>>> 14c170f17b6553c5df4eda3876df2d0f39649369
     ?>
-    <input type="hidden" name="user_id" value="<?=$escaped_user_id?>">
-    <input type="submit" id="submitButton" name="submit" alt="빵 굽기!" value="">
-    </div>
-    </form>
-</body>
+                <input type="hidden" name="user_id" value="<?=$escaped_user_id?>">
+                <input type="submit" id="submitButton" name="submit" alt="빵 굽기!" value="빵 굽기">
+
+                <div class="total">
+                    <p>남은 재료 개수 : <?= $total?>개</p>
+                </div>
+            </div>
+        </form> -->
+    </body>
 </html>

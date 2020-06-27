@@ -22,11 +22,6 @@ function chkBreadKinds(){
     }
 }
 
-<<<<<<< HEAD
-function showWiseSaying(){
-    window.open("wiseSaying.php","책 속의 한줄","left=100, top=100");
-}
-=======
 
 
 function clickpost(kinds){
@@ -114,4 +109,3 @@ function openPopupOther() {
     window.open('cookbread_content.php?kinds=other', '_blank', 'width='+ _width +', height='+ _height +', left=' + _left + ', top='+ _top );
 }
 
->>>>>>> 14c170f17b6553c5df4eda3876df2d0f39649369

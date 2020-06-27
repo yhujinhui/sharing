@@ -5,7 +5,6 @@ $result=mysqli_query($conn,$sql);
 $row=mysqli_fetch_array($result);
 $escaped_description=htmlspecialchars($row['description']);
 $escaped_comment=htmlspecialchars($row['comment']);
-$container_bottom="";
 
 $sql="select count(*) from event";
 $result=mysqli_query($conn,$sql);
@@ -17,22 +16,6 @@ $sql="select * from event";
 $result=mysqli_query($conn,$sql);
 $row=mysqli_fetch_array($result);
 if($event_cnt>0){
-  if($row['evtname']=="이달의 사연 이벤트"){
-    if($escaped_description&&$escaped_comment){
-      $container_bottom=
-      '
-      <div class="container-bottom">
-        <h1>이달의 사연입니다</h1>
-        <div class="content">'.$escaped_description.'</div>
-        <div class="comment">'.$escaped_comment.'</div>
-      </div>
-      ';
-    }
-  }
-  $event_title=
-  '<div class="event-text">
-      이벤트
-  </div>';
   $plusSlides=
   '
   <a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -51,7 +34,6 @@ while($row=mysqli_fetch_array($result)){
   $slide=$slide.
   '
   <div class="mySlides demo cursor">
-        <div class="numbertext">'.($cnt+1).' / '.($event_cnt).'</div>
         <a href="event_explain.php?id='.$row['id'].'" class="event-href"><img src="eventImages/'.$banner[$cnt].'"></a>
   </div>
   ';
@@ -69,10 +51,12 @@ while($row=mysqli_fetch_array($result)){
           @import url("css/first.css");
           @import url("css/footer_bottom.css");
         </style>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="js/first.js"></script>
+        <script src="js/message.js"></script>
         <script src="js/header.js"></script>
     </head>
-    <body onload="javascript:showSlides(); javascript:showEventSlides();">
+    <body style="overflow-x:hidden" onload="javascript:openEvent(); javascript:showSlides(); javascript:showEventSlides();">
      <?php  
       require_once("lib/header_html.php");
      ?>
@@ -83,9 +67,6 @@ while($row=mysqli_fetch_array($result)){
           <span class="dot"></span> 
         </footer>
       </div>
-<<<<<<< HEAD
-      <?=$container_bottom?>
-=======
       <div class="trialTest">
         <div class="title">
           <span style="color: #1D6A96">다양한 </span>심리검사
@@ -150,16 +131,13 @@ while($row=mysqli_fetch_array($result)){
         </div>
       </div>
       <div class="chat"></div>
->>>>>>> 14c170f17b6553c5df4eda3876df2d0f39649369
       <div class="event">
-        <?=$event_title?>
-        <!-- <div class="mySlides demo cursor">
-          <div class="numbertext">1 / 2</div>
-          <a href="event_explain.php" class="event-href"><img src="images/slide1.png" class="event-img"></a>
-        </div> -->
+        <div class="mySlides demo cursor">
+          <a href="event_explain.php?title=후기 이벤트" class="event-href"><img src="images/slide1.png" class="event-img"></a>
+        </div>
         <?=$slide?>
         <?=$plusSlides?>
-    </div>
+      </div>
     <?php  
         require_once("lib/footer_bottom.php");
     ?>

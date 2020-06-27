@@ -17,13 +17,13 @@ function showSlides() {
     container[0].style.backgroundImage = "url('images/slide"+count+".png')";
     dots[slideIndex-1].className += " active";
     if(count==1){
-        container[0].style.backgroundColor="#F8C9AD";
+        container[0].style.backgroundColor="#f4e0e3";
     }
     if(count==2){
-    	container[0].style.backgroundColor="#A2E3FF";
+    	container[0].style.backgroundColor="#c6e2da";
     }
     if(count==3){
-        container[0].style.backgroundColor="#D5D7D4";
+        container[0].style.backgroundColor="#d5d7d4";
     }
     if(count==3){//사진 갯수
     	count=0;
@@ -53,4 +53,8 @@ function showEventSlides(n) {
       slides[i].style.display = "none";
   }
   slides[slideEventIndex-1].style.display = "block";
+}
+
+function openEvent(){
+  window.open("popupEvent.html", "popup01", "width=400, height=360");
 }

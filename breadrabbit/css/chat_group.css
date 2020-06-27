@@ -1,0 +1,208 @@
+.container{
+	/*border:1px solid gray;*/
+	width: 1200px;
+	margin:70px auto 0 auto;
+}
+.wrapper:after,.bottom:after,.main:after{ 
+	content:""; clear:both; display:block;
+}
+.container>.title{
+	font-size: 2.2rem;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.container>.main{
+	position:relative; 
+	text-align: center;
+}
+.main>.left,.main>.right{
+	position:absolute; 
+	transform:translateY(-50%);
+  	top:50%;
+	width:50px;
+}
+.main>.left{
+	left:0;
+}
+.main>.right{
+	right:0;
+}
+.main>.left,.main>.right,.main>.board{
+	display: inline-block;
+}
+
+.main>.board{
+	position:relative; 
+	/*border:1px solid gray;*/
+	border-radius: 10px;
+	background-color: #f2f2f2;
+	width:1080px;
+	height: 500px;
+	margin:0 auto;
+	padding:25px 0;
+}
+.left>img,.right>img{
+	width:100%;
+}
+.board>.title{
+	width:1010px;
+}
+.board>.title,.board>.lists{
+	text-align: center;
+	margin:0 auto;
+}
+.board>.lists{
+	width:1000px;
+}
+.title>.no{
+	/*border:1px solid gray;*/
+	width:130px;
+}
+.title>.chatTitle{
+	/*border:1px solid gray;*/
+	width:700px;
+}
+.title>.primary{
+	/*border:1px solid gray;*/
+	width:130px;
+}
+.primary>img{
+	width:40%;
+}
+.title>.no,.title>.chatTitle,.title>.primary{
+	display: inline-block;
+	margin:0 5px;
+	border-radius: 20px;
+	background-color: #283c43;
+	padding:5px 0;
+	color:#ffffff;
+}
+.lists>a{
+	color:black;
+	text-decoration: none;
+}
+.lists>a>.list{
+	text-align: center;
+	background-color: #ffffff;
+	padding:5px 0;
+	margin:10px 5px;
+	border-radius: 20px;
+}
+.list>.no{
+	width:102px;
+}
+.list>.chatTitle{
+	width:715px;
+}
+.list>.primary{
+	width:100px;
+}
+.list>.no,.list>.chatTitle,.list>.primary{
+	display: inline-block;
+	margin:0 5px;
+	vertical-align: middle;
+	padding: 5px 0;
+}
+.list>.chatTitle{
+	border-left: 1px solid gray;
+	border-right: 1px solid gray;
+}
+
+.board>.page{
+	/*margin:20px auto 0 auto;*/
+	border-radius: 20px;
+	background-color: #283c43;
+	color: #ffffff;
+	width: 80px;
+	padding:5px 0;
+	position:absolute; 
+ 	margin-bottom: 5px;
+ 	transform:translateX(-50%);
+  	left:50%;
+ 	bottom:3%;
+}
+.wrapper>.bottom{
+	width:1000px;
+	/*border:1px solid gray;*/
+	margin:10px auto 0 auto;
+}
+.bottom>.create-group{
+	float:right;
+	background-color: #1c6b97;
+	border-radius: 20px;
+	padding:5px 0;
+	width:100px;
+	text-align: center;
+}
+.create-group>a{
+	color:#ffffff;
+	text-decoration: none;
+}
+.wrapper>.password{
+	/*position:;*/
+	/*padding:20px 0;*/
+	display: none;
+	background-color: #1c6b97;
+	position: absolute;
+	top:43%;
+    left:50%;
+    transform: translate(-50%,-50%);
+	border:1px solid gray;
+	border-radius: 30px;
+	width: 1050px;
+	height: 600px;
+	margin:0 auto;
+	z-index: 1;
+}
+.password>.wrapper{
+	width:550px;
+	margin:0 auto;
+}
+.password>.wrapper>.title{
+	margin-top: 120px;
+	text-align: center;
+	color: #ffffff;
+	font-size:2rem;
+}
+.password>.wrapper>form>.inputpwd,.password>.wrapper>.chatTitle{
+	line-height: 50px;
+	height: 50px;
+	text-align: center;
+	font-size:1.5rem;
+}
+#password,.password>.wrapper>.chatTitle{
+	background-color: #f2f2f2;
+	border-radius: 30px;
+}
+.password>.wrapper>.chatTitle{
+	margin: 50px auto 20px auto;
+}
+.password>.wrapper>form>.inputpwd{
+	margin:30px auto;
+}
+.inputpwd>#password{
+	border: 1px solid #f2f2f2;
+	height: 99%;
+	width: 99%;
+}
+.password>.wrapper>form>.button{
+	float:right;
+	width: 20%;
+	height: 45px;
+}
+#pwdbutton{
+	background-color: #f2bc36;
+	border: 1px solid #f2bc36;
+	border-radius: 25px;
+	height: 100%;
+	width: 100%;
+}
+.password>.offButton{
+	width:50px;
+	float:right;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+.offButton>img{
+	width: 100%;
+}

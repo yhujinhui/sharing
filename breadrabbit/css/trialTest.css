@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-.banner{
-	margin-top:40px;
-	background: url(../images/testbanner.png) no-repeat center center;
-	background-color: #c65aff;
-	/*border: 1px solid gray;*/
-	height: 620px;
-	background-size: contain; 
-}
-=======
 .container{
 	margin:0 auto;
 	font-family: 'NanumBarunGothic';
@@ -206,4 +196,3 @@
     color: #ffffff;
 }
 
->>>>>>> 14c170f17b6553c5df4eda3876df2d0f39649369

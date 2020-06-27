@@ -15,7 +15,7 @@ $pagerow=mysqli_fetch_array($pageresult);
 $total_article=$pagerow['totalCount'];//게시물 총 개수
 // print_r($total_article);
 
-$view_article=2;//페이지당 게시물 개수2
+$view_article=1;//페이지당 게시물 개수2
 if(!$page)$page=1;
 $start=($page-1)*$view_article;
 
@@ -36,12 +36,12 @@ $content='';
 while($row=mysqli_fetch_array($result)){
     $content=$content.
     '
-    <a href="content.php?id='.$row['id'].'">
-        <div class="content">
-            <div class="top-title">'.$row['title'].'</div>
-            <div class="views">'.$row['views'].'</div>
-        </div>
-    </a>
+        <a href="content.php?id='.$row['id'].'">
+            <div class="content">
+                <div class="title">'.$row['title'].'</div>
+                <div class="views">'.$row['views'].'</div>
+            </div>
+        </a>
     ';
 }
 include("lib/page.php");
@@ -64,10 +64,10 @@ include("lib/page.php");
     <?php  
       require_once("lib/header_html.php");
     ?>
-
+    
     <div class="wraaper">
         <div class="header">
-            <div class="post">게시물(<?=$total_article?>)</div>
+            <div class="post">게시물 <span class="totalNum">(<?=$total_article?>)</span></div>
             <div class="selects">
                 <select id="select" name="select" onchange="alert_select_value(this)">
                     <option value="all">모든고민</option>
@@ -84,13 +84,18 @@ include("lib/page.php");
             <div class="top-title">제목</div>
             <div class="top-views">조회수</div>
         </div>
-        <?=$content?>
+        <div class="contentBox">
+            <?=$content?>
+        </div>
+        <div class="breadBox">
+            <button class="breadButton" onclick="window.location.href='login.php'">빵 굽기</button>
+        </div>
     </div>
     <div class="footer">
         <div class="number">
-            <?=$prev_group?>
-            <?=$paging?>
-            <?=$next_group?>
+            <span class="numberPrev"><?=$prev_group?> </span>
+            <span class="numberPaging"><?=$paging?> </span>
+            <span class="numberNext"><?=$next_group?> </span>            
         </div>
     </div>
 </body>

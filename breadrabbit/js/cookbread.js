@@ -109,3 +109,9 @@ function openPopupOther() {
     window.open('cookbread_content.php?kinds=other', '_blank', 'width='+ _width +', height='+ _height +', left=' + _left + ', top='+ _top );
 }
 
+/* Demo purposes only */
+$(".hover").mouseleave(
+    function() {
+        $(this).removeClass("hover");
+    }
+);

@@ -77,7 +77,7 @@ while($row=mysqli_fetch_array($result)){
         <hr width="500">
         <div class="tests">
           <div class="left">
-          <a href="trialTest.php">
+            <a href="">
               <div class="animal-test">
                 <div class="left">
                   <div class="animal-test-title">
@@ -96,7 +96,7 @@ while($row=mysqli_fetch_array($result)){
             </a>
           </div>
           <div class="right">
-          <a href="trialTest2.php">
+            <a href="">
               <div class="love-test">
                 <div class="love-test-title">연애 성향 심리검사</div>
                 <div class="love-test-explain">
@@ -109,7 +109,7 @@ while($row=mysqli_fetch_array($result)){
                 </div>
               </div>
             </a>
-            <a href="speech.php">
+            <a href="">
               <div class="speech">
                 <div class="speech-title">
                   유명인의<br>

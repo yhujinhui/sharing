@@ -1,48 +1,97 @@
 .banner{
 	margin-top:40px;
-	background: url(../images/testbanner.png) no-repeat center center;
-	background-color: #AF19F7;
+	background-color:#3B2F84;
 	/*border: 1px solid gray;*/
-	height: 620px;
+	height: 700px;
 	background-size: contain; 
 }
 
-.trial_one{
+.title{
+    color:white;
+    margin-left:170px;
+    font-size:27px;
+    font-weight:bold;
+}
+
+.desc{
+    color:white;
+    margin-left:170px;
+    font-size:20px;
+}
+.banner .trial_one{
     float: left;
-    margin-top: 2%;
-    margin-left: 30%;
-    width: 150px;
-    height: 150px;
+    margin-top: 5%;
+    margin-left: 11%;
+    width: 180px;
+    height: 50px;
     border: 0;
     outline: 0;
-    border-radius:50%;
+    border-radius:15px;
+    border: 1px solid #ffffff;
     font-size: 14px;
-    background: #AF19F7;
+    background: #3B2F84;
     color: #ffffff;
 }
-.trial_two{
+.banner .trial_one:hover{
+    background: #ffffff;
+    color: #3B2F84;
+    border: 1px solid #2f3640;
+}
+.banner .trial_two{
     float: left;
-    margin-top: 2%;
-    margin-left:5%;
-    width: 150px;
-    height: 150px;
+    margin-top: 10%;
+    margin-left: -12%;
+    width: 180px;
+    height: 50px;
     border: 0;
     outline: 0;
-    border-radius:50%;
+    border-radius:15px;
+    border: 1px solid #ffffff;
     font-size: 14px;
-    background: #AF19F7;
+    background: #3B2F84;
     color: #ffffff;
 }
- .trial_three{
-    width: 150px;
-    height: 150px;
+.banner .trial_two:hover{
+    background: #ffffff;
+    color: #3B2F84;
+    border: 1px solid #2f3640;
+}
+.banner2{
+	margin-top:0px;
+	background-color:#3B2F84;
+	/*border: 1px solid gray;*/
+	height: 700px;
+	background-size: contain; 
+}
+.banner2 .title2{
+    color:white;
+    margin-left:170px;
+    font-size:27px;
+    font-weight:bold;
+}
+
+.banner2 .desc2{
+    color:white;
+    margin-left:170px;
+    font-size:20px;
+}
+
+.banner2 .trial_three{
     float: left;
-    margin-top: 2%;
-    margin-left:5%;
+    margin-top: 5%;
+    margin-left: 11%;
+    width: 180px;
+    height: 50px;
     border: 0;
     outline: 0;
-    border-radius:50%;
+    border-radius:15px;
+    border: 1px solid #ffffff;
     font-size: 14px;
-    background: #AF19F7;
+    background: #3B2F84;
     color: #ffffff;
-} 
+}
+.banner2 .trial_three:hover{
+    background: #ffffff;
+    color: #3B2F84;
+    border: 1px solid #2f3640;
+}

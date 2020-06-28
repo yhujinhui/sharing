@@ -69,6 +69,9 @@
         <title>빵 굽기 화면</title>
         <link href="css/cookbread.css" rel="stylesheet"> 
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script src="https://www.littlesnippets.net/css/codepen-result.css"></script>
+
         <script src="js/header.js"></script>
         <script src="js/message.js"></script>
         <script src="js/cookbread.js"></script>
@@ -121,47 +124,70 @@
         </div>
         <div class="container">
             <div class="item">
-                <img src="images/course.png" onclick="openPopupCourse()">
-                <hr width="250px">
-                <div class="title">
-                    진로
-                </div> 
+                <figure class="snip1504">
+                    <img src="images/course.png" alt="sample57" />
+                        <figcaption onclick="openPopupCourse()">
+                            <h3>진로</h3>
+                            <h5>진로에 대한 고민을 둘러보세요</h5>
+                        </figcaption>
+                </figure>
+                <a href="#"></a>
             </div>
             <div class="item">
-                <img src="images/family.png" onclick="openPopupFamily()">
-                <hr width="250px">
-                <div class="title">
-                    가족
-                </div>
+                <figure class="snip1504">
+                    <img src="images/family.png" alt="sample57" />
+                        <figcaption onclick="openPopupFamily()">
+                            <h3>가족</h3>
+                            <h5>가족에 대한 고민을 둘러보세요</h5>
+                        </figcaption>
+                </figure>
             </div>
             <div class="item">
-                <img src="images/friend.png" onclick="openPopupFriend()">
-                <hr width="250px">
-                <div class="title">
-                    친구
-                </div>
+                <figure class="snip1504">
+                    <img src="images/friend.png" alt="sample57" />
+                        <figcaption onclick="openPopupFriend()">
+                            <h3>친구</h3>
+                            <h5>친구에 대한 고민을 둘러보세요</h5>
+                        </figcaption>
+                </figure>
             </div>
             <div class="item">
-                <img src="images/love.png" onclick="openPopupLove()">
-                <hr width="250px">
-                <div class="title">
-                    사랑
-                </div>
+                <figure class="snip1504">
+                    <img src="images/love.png" alt="sample57" />
+                        <figcaption onclick="openPopupLove()">
+                            <h3>사랑</h3>
+                            <h5>사랑에 대한 고민을 둘러보세요</h5>
+                        </figcaption>
+                </figure>
             </div>
             <div class="item">
-                <img src="images/other.png" onclick="openPopupOther()">
-                <hr width="250px">
-                <div class="title">
-                    기타
-                </div>
+                <figure class="snip1504">
+                    <img src="images/other.png" alt="sample57" />
+                        <figcaption onclick="openPopupOther()">
+                            <h3>기타</h3>
+                            <h5>다양한 고민을 둘러보세요</h5>
+                        </figcaption>
+                </figure>
             </div>
             <div class="item">
-                <img src="images/soldout.png" alt="">
-                <hr width="250px">
-                <div class="title">
-                    SOLD OUT
-                </div>
+                <figure class="snip1504">
+                    <img src="images/soldout.png" alt="sample57" />
+                        <figcaption>
+                            <h3>SOLD OUT</h3>
+                            <h5>아직 빵이 준비되지 않았습니다</h5>
+                        </figcaption>
+                </figure>
             </div>
+
+            <!-- <figure class="snip1504">
+                <img src="images/soldout.png" alt="sample57" />
+                    <figcaption>
+                        <h3>기타</h3>
+                        <h5>다양한 고민을 둘러보세요</h5>
+                    </figcaption>
+            </figure> -->
+
+
         </div>
     </div>          
     <!--  <?php

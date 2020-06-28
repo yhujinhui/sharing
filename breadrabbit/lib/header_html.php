@@ -35,14 +35,14 @@
           <!-- <a href="ChooseTrialTest.php">심리검사</a> -->
         </li>
 
-        <li class="menu-items">
+        <!-- <li class="menu-items">
           <div class="link-6">
             <a href="speech.php">
               <span class="thin">연설</span>
             </a>
           </div>
-          <!-- <a href="speech.php">연설</a> -->
-        </li>
+          <a href="speech.php">연설</a>
+        </li> -->
 
         <li class="menu-items">
           <div class="link-6">

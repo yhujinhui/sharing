@@ -21,7 +21,7 @@
       @import url("css/sign.css");
     </style>
   </head>
-  <body class="text-center" onload="document.querySelector('body').style.backgroundColor='#F5E5DE';">
+  <body class="text-center" onload="document.querySelector('body').style.backgroundColor='#fffffff';">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="js/sign.js"></script> 
     <a href=""><img src="images/logo.png" alt="로고" height="200px" width="200px" id="logo"></a>

@@ -18,7 +18,7 @@
 				<label for="input_id">
 				<div><input type="text" name='id' placeholder="아이디를 입력해주세요" id="input_id" autocomplete='off' required ></div>
 	    	</label>
-	    	<div><input type="submit" value="확인" cols="30" style="font-size:1rem; font-family: 'NanumBarunGothic'; background-color:#FCE6C3; border:0; outline: 0"></div>
+	    	<div><input type="submit" value="확인" cols="30" style="font-size:1rem;  font-family: 'NanumBarunGothic'; background-color:#4F4890; color:white; border:0; outline: 0; width:100px; height:30px; margin-top:10px"></div>
     	</form>
 	</div>
 </body>

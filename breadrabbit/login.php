@@ -31,7 +31,7 @@
   </script>
 
   </head>
-  <body class="text-center" onload="document.querySelector('body').style.backgroundColor='#F5E5DE';">
+  <body class="text-center" onload="document.querySelector('body').style.backgroundColor='#ffffff';">
     <a href="first.php"><img src="images/logo.png" alt="로고" height="200px" width="200px" id="logo"></a> 
     <!-- 로고 누르면 다시 첫 화면 -->
     <div id="content-center" class="text-center">
@@ -46,9 +46,9 @@
       			<label for="input_password">
         			<div><input type="password" name='password' placeholder="password" id="input_password" autocomplete='off'></div>
             </label><br>
-      			<div><input type="submit" value="로그인" cols="30" style="font-size:2rem; background-color:#FCE6C3; border:0; outline: 0"></div>
+      			<div><input type="submit" value="로그인" cols="30" style="font-size:2rem; background-color:#4F4890; border:0; outline: 0; color:white;"></div>
     		</form>
-        <p><a href="sign.php" id='sign' style="margin-top:8px;">회원가입</a></p>  
+        <p><a href="sign.php" id='sign' style="margin-top:8px; background-color:#4F4890; color:white;">회원가입</a></p>  
         <hr width="400px"color="gray" size="1">
         <nav id="nav" >
           <a href="" onclick="showPopup();">아이디찾기</a><!--이름과 전화번호 + 팝업창으로--> 

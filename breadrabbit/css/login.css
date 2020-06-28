@@ -2,18 +2,22 @@ body{
   background-color: white;
   transition: all 2s;
 }
-
+img{
+  height: 100px;
+  width: 300px;
+  margin: 4em 0 4em 0;
+}
 h1{
   margin: 50px 0px 70px 0px;
 }
 div input {
 
   margin-top: 3px;
-  border: 1px solid #F4CEA4;
- 
+  border: 1px solid #4F4890;
+
 }
 div input:focus{
-  outline:2px solid #F4CEA4;
+  outline:2px solid #4F4890;
 }
 
 #title{
@@ -23,7 +27,7 @@ div input:focus{
 #nav{
   margin-bottom: 40px;
 }
- 
+
 #sign{
   background-color:#FCE6C3;
   text-decoration: none;
@@ -31,10 +35,10 @@ div input:focus{
   color:black;
   padding:14px 160px 14px 160px;
   display:inline-block;
- /*/ border: 0.5px solid gray;*/
+/*/ border: 0.5px solid gray;*/
 }
 #content-center{
-  border: 1px solid #FFFFFF;
+  border: 1px solid #4F4890;
   margin: -20px auto 0px auto;
   background-color: #FFFFFF;
   width: 800px;

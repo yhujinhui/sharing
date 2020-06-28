@@ -9,8 +9,8 @@
 
 
 .container{
-	border:1px solid gray;
-	margin-left: 100px;
-	margin-right: 100px;
-	text-align: center;
+	border:1px solid #4F4890;
+	margin: 3em 3em 3em 3em;
+    text-align: center;
+    padding: 3em 3em 3em 5em;
 }

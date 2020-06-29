@@ -1,10 +1,43 @@
-body .boxProfile{
+.box{
+    margin-top:100px;
+    margin-left:500px;
+	background-color:#7765ec;
+	/*border: 1px solid gray;*/
+    height: 500px;
+    width:500px;
+    border-radius:30px;
+	background-size: contain; 
+}
+.box .desc{
+    color:white;
+    margin-left:40px;
+    margin-top:50px;
+}
+
+.box .back{
     float: left;
-    margin-left:27%;
-    margin-top:2%;
-    left: 30%;
-    width: 50%;
-    height: 50%;
-    background: #D8D8D8;
-   
+    margin-top: 18%;
+    margin-left:30%;
+    width: 180px;
+    height: 50px;
+    border: 0;
+    outline: 0;
+    border-radius:15px;
+    font-size: 14px;
+    background: #3B2F84;
+    color: #ffffff;
+}
+.box .back:hover{
+    float: left;
+    margin-top: 18%;
+    margin-left:30%;
+    width: 180px;
+    height: 50px;
+    border: 0;
+    outline: 0;
+    border-radius:15px;
+    border: 1px solid #7765ec;
+    font-size: 14px;
+    background: #ffffff;
+    color: #7765ec;
 }
